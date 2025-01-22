@@ -25,7 +25,7 @@
 #include <stddef.h>                     // Defines NULL
 #include <stdbool.h>                    // Defines true
 #include <stdlib.h>                     // Defines EXIT_FAILURE
-#include "config/curiosity_nvdi_10_1inch/sys_tasks.h"
+#include "sys_tasks.h"
 
 
 // *****************************************************************************
