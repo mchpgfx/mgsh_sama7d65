@@ -279,26 +279,13 @@ bool DSI_Write(DSI_GENERIC_HEADER * hdr, DSI_GENERIC_PAYLOAD * pld)
         /* DCS Long Write */
         case 0x39:
         {
-            uint32_t pld_size  = 0;
-
             /* Check size against max FIFO depth (~4128 bytes) */
             if (hdr->longPacket.size > 4096 || hdr->longPacket.size == 0)
             {
                 return true;
             }
-            else if (hdr->longPacket.size < 4)
-            {
-                pld_size = 1;
-            }
-            else if (hdr->longPacket.size % 4)
-            {
-                pld_size = hdr->longPacket.size + 4 - (hdr->longPacket.size % 4);
-                pld_size /= 4;
-            }
-            else
-            {
-                pld_size = hdr->longPacket.size / 4;
-            }
+
+            uint32_t pld_size = (hdr->longPacket.size + 3) >> 2;
 
             for (int idx = 0; idx < pld_size; idx++)
             {

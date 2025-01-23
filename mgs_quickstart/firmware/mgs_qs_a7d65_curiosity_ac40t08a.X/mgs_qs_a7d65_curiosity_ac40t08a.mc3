@@ -14463,7 +14463,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\definitions.h</file>
-         <hash>6db700fdbfa6761e9f7096e46d466942f42c6c8bbf483a16f60d3198f09aeb0d</hash>
+         <hash>6636d264ce13224ff2ebd6ceba1683663b9df9b90c5e9711fdaf2479ffc92956</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\device.h</file>
@@ -14519,7 +14519,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\driver\controller\xlcdc\bridge\dsi\plib_dsi.c</file>
-         <hash>2c7b536504d4679f0b60ebeff188e80c3e598d19c650b326827e9589e788ec88</hash>
+         <hash>7afd0e492629cf0b254137160ef8ea7883fa28616275d64a815423e9df56e0bd</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\driver\controller\xlcdc\bridge\dsi\plib_dsi.h</file>
