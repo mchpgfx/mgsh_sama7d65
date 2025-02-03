@@ -4,7 +4,7 @@
 
 
 project: mgs_quickstart
-creation_date: 2025-01-22T20:37:21.170+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2025-02-03T14:08:38.618-07:00[America/Phoenix]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 10
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.5.1
@@ -14,10 +14,10 @@ harmony_version: v1.5.4
 compiler: XC32 4.45
 
 modules:
-    - {name: "core", version: "master"}
-    - {name: "csp", version: "master"}
+    - {name: "core", version: "v3.13.5"}
+    - {name: "csp", version: "v3.20.0"}
     - {name: "CMSIS_5", version: "5.9.0"}
-    - {name: "gfx", version: "dev"}
+    - {name: "gfx", version: "v3.16.0"}
 
 packs:
     - {name: "SAMA7D65_DFP", version: "1.2.47"}

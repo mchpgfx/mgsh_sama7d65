@@ -56,7 +56,7 @@ extern "C" {
 #define LE_COHERENT_MEMORY                   LE_COHERENT_ATTR
 
 
-#define LE_DEFAULT_COLOR_MODE                LE_COLOR_MODE_RGBA_8888
+#define LE_DEFAULT_COLOR_MODE                LE_COLOR_MODE_RGB_565
 #define LE_TOUCH_ORIENTATION                 0
 #define LE_RENDER_ORIENTATION                0
 #define LE_DRIVER_LAYER_MODE                 1
@@ -151,7 +151,7 @@ extern "C" {
 // renderer configuration
 //#define LE_VSYNC_STALL
 
-#define LE_LAYER_COUNT                     2
+#define LE_LAYER_COUNT                     1
 
 #define LE_WIDGET_MAX_EVENT_FILTERS        2
 
@@ -159,7 +159,7 @@ extern "C" {
 #define LE_ALPHA_BLENDING_ENABLED          1
 #define LE_SCRATCH_BUFFER_COUNT            1
 #define LE_SCRATCH_BUFFER_SIZE_KB          3600
-#define LE_SCRATCH_BUFFER_PADDING          1
+#define LE_SCRATCH_BUFFER_PADDING          0
 #define LE_SCRATCH_BIG_ENDIAN              0
 #define LE_USE_ARC_SCAN_FILL               1
 #define LE_ARC_SMOOTH_EDGE                 LE_FALSE

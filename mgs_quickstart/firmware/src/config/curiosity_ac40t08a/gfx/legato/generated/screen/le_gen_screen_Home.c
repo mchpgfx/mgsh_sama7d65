@@ -2,7 +2,6 @@
 
 // screen member widget declarations
 static leWidget* root0;
-static leWidget* root1;
 
 leWidget* Home_BackgroundPanel;
 leImageWidget* Home_ImageWidgetMCHPLogo;
@@ -73,24 +72,13 @@ leResult screenShow_Home(void)
     Home_ButtonWidgetQuickStart->fn->setReleasedEventCallback(Home_ButtonWidgetQuickStart, event_Home_ButtonWidgetQuickStart_OnReleased);
     root0->fn->addChild(root0, (leWidget*)Home_ButtonWidgetQuickStart);
 
-    leAddRootWidget(root0, 0);
-    leSetLayerColorMode(0, LE_COLOR_MODE_RGBA_8888);
-
-    // layer 1
-    root1 = leWidget_New();
-    root1->fn->setSize(root1, LE_DEFAULT_SCREEN_WIDTH, LE_DEFAULT_SCREEN_HEIGHT);
-    root1->fn->setBackgroundType(root1, LE_WIDGET_BACKGROUND_NONE);
-    root1->fn->setMargins(root1, 0, 0, 0, 0);
-    root1->flags |= LE_WIDGET_IGNOREEVENTS;
-    root1->flags |= LE_WIDGET_IGNOREPICK;
-
     Home_LabelWidget_0 = leLabelWidget_New();
     Home_LabelWidget_0->fn->setPosition(Home_LabelWidget_0, 302, 405);
     Home_LabelWidget_0->fn->setSize(Home_LabelWidget_0, 188, 100);
     Home_LabelWidget_0->fn->setScheme(Home_LabelWidget_0, &OrangeScheme);
     Home_LabelWidget_0->fn->setBackgroundType(Home_LabelWidget_0, LE_WIDGET_BACKGROUND_NONE);
     Home_LabelWidget_0->fn->setString(Home_LabelWidget_0, (leString*)&string_strFast);
-    root1->fn->addChild(root1, (leWidget*)Home_LabelWidget_0);
+    root0->fn->addChild(root0, (leWidget*)Home_LabelWidget_0);
 
     Home_LabelWidget_1 = leLabelWidget_New();
     Home_LabelWidget_1->fn->setPosition(Home_LabelWidget_1, 287, 545);
@@ -98,7 +86,7 @@ leResult screenShow_Home(void)
     Home_LabelWidget_1->fn->setScheme(Home_LabelWidget_1, &BlueScheme);
     Home_LabelWidget_1->fn->setBackgroundType(Home_LabelWidget_1, LE_WIDGET_BACKGROUND_NONE);
     Home_LabelWidget_1->fn->setString(Home_LabelWidget_1, (leString*)&string_strEasy);
-    root1->fn->addChild(root1, (leWidget*)Home_LabelWidget_1);
+    root0->fn->addChild(root0, (leWidget*)Home_LabelWidget_1);
 
     Home_LabelWidget_2 = leLabelWidget_New();
     Home_LabelWidget_2->fn->setPosition(Home_LabelWidget_2, 232, 675);
@@ -106,10 +94,10 @@ leResult screenShow_Home(void)
     Home_LabelWidget_2->fn->setScheme(Home_LabelWidget_2, &GreenScheme);
     Home_LabelWidget_2->fn->setBackgroundType(Home_LabelWidget_2, LE_WIDGET_BACKGROUND_NONE);
     Home_LabelWidget_2->fn->setString(Home_LabelWidget_2, (leString*)&string_strSmart);
-    root1->fn->addChild(root1, (leWidget*)Home_LabelWidget_2);
+    root0->fn->addChild(root0, (leWidget*)Home_LabelWidget_2);
 
-    leAddRootWidget(root1, 1);
-    leSetLayerColorMode(1, LE_COLOR_MODE_RGBA_8888);
+    leAddRootWidget(root0, 0);
+    leSetLayerColorMode(0, LE_COLOR_MODE_RGB_565);
 
     showing = LE_TRUE;
 
@@ -119,7 +107,6 @@ leResult screenShow_Home(void)
 void screenUpdate_Home(void)
 {
     root0->fn->setSize(root0, root0->rect.width, root0->rect.height);
-    root1->fn->setSize(root1, root1->rect.width, root1->rect.height);
 }
 
 void screenHide_Home(void)
@@ -133,11 +120,6 @@ void screenHide_Home(void)
     Home_ImageWidgetMCHPLogo = NULL;
     Home_ImageWidgetMGSLogo = NULL;
     Home_ButtonWidgetQuickStart = NULL;
-
-    leRemoveRootWidget(root1, 1);
-    leWidget_Delete(root1);
-    root1 = NULL;
-
     Home_LabelWidget_0 = NULL;
     Home_LabelWidget_1 = NULL;
     Home_LabelWidget_2 = NULL;
@@ -164,10 +146,6 @@ leWidget* screenGetRoot_Home(uint32_t lyrIdx)
         case 0:
         {
             return root0;
-        }
-        case 1:
-        {
-            return root1;
         }
         default:
         {

@@ -58,15 +58,15 @@
 /* Not Cached */
 #define FB_CACHE_NC             __attribute__ ((section(".region_nocache"), aligned (32)))
 /* Frame Buffer Pointer Type */
-#define FB_COL_MODE             XLCDC_RGB_COLOR_MODE_RGBA_8888
-#define FB_BPP_TYPE             uint32_t
+#define FB_COL_MODE             XLCDC_RGB_COLOR_MODE_RGB_565
+#define FB_BPP_TYPE             uint16_t
 #define FB_PTR_TYPE             FB_BPP_TYPE *
 #define FB_TYPE_SZ              sizeof(FB_BPP_TYPE)
 
 /* Driver Settings */
 #define XLCDC_HOR_RES           720
 #define XLCDC_VER_RES           1280
-#define XLCDC_TOT_LAYERS        2
+#define XLCDC_TOT_LAYERS        1
 #define XLCDC_BUF_PER_LAYER     1
 
 /* Local Data */
@@ -80,7 +80,6 @@ typedef enum
 /* Generated Layer Order */
 static const char layerOrder[XLCDC_TOT_LAYERS] = {
     XLCDC_LAYER_BASE,
-    XLCDC_LAYER_OVR1,
 };
 
 const char *DRIVER_NAME = "XLCDC";

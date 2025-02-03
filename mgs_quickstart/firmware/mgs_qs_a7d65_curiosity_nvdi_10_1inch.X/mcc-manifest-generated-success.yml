@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: mgs_qs_a7d65_curiosity_nvdi_10_1inch
-creation_date: 2025-01-22T20:34:01.463+05:30[Asia/Calcutta]
+creation_date: 2025-02-03T13:46:37.118-07:00[America/Phoenix]
 operating_system: Windows 10
 mcc_mode: IDE
 mcc_mode_version: v6.20
@@ -18,7 +18,7 @@ device_library: {library_class: com.microchip.mcc.harmony.Harmony3Library, name:
     V3, version: 1.5.4}
 packs: {name: SAMA7D65_DFP, version: 1.2.47}
 modules:
-- {name: core, type: HARMONY, version: master}
-- {name: csp, type: HARMONY, version: master}
+- {name: core, type: HARMONY, version: v3.13.5}
+- {name: csp, type: HARMONY, version: v3.20.0}
 - {name: CMSIS_5, type: HARMONY, version: 5.9.0}
-- {name: gfx, type: HARMONY, version: dev}
+- {name: gfx, type: HARMONY, version: v3.16.0}
