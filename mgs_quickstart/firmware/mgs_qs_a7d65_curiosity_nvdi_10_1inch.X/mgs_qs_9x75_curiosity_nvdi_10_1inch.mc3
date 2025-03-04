@@ -9210,7 +9210,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_nvdi_10_1inch\osal\osal.h</file>
-         <hash>8404fbe44807fa0484ffb38843a72cb9af8e31c9c30bd1b2594e609b8ea317d9</hash>
+         <hash>1cfe3b61d9693b2369922041eef33fe16b3c1ccd9c85d4ded808b805f90a869c</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_nvdi_10_1inch\osal\osal_definitions.h</file>
@@ -9218,7 +9218,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_nvdi_10_1inch\osal\osal_impl_basic.h</file>
-         <hash>67ce72d34fd1e4dee0b6937fa026ab2c7bd285f82a24da09742c68333adaf0fc</hash>
+         <hash>65e68edbc0320d0407399f65e6d06ff7e6d3d7697231cf1fe0a1fdf1d65f0463</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_nvdi_10_1inch\peripheral\clk\plib_clk.c</file>
@@ -9238,7 +9238,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_nvdi_10_1inch\peripheral\flexcom\twi\master\plib_flexcom0_twi_master.c</file>
-         <hash>ddb43627e16273565fc63468acd4615fc87eae0beb9f14df8e351edb614d2030</hash>
+         <hash>a242d023730935b29ad75cf888754d600e4402c816bf4921165d39e2172c7dc6</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_nvdi_10_1inch\peripheral\flexcom\twi\master\plib_flexcom0_twi_master.h</file>
@@ -9250,7 +9250,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_nvdi_10_1inch\peripheral\gic\plib_gic.c</file>
-         <hash>328e673c53877613f438f08ff00c7f967c8f72008f6bc601ee86581421d72d0f</hash>
+         <hash>652f010257718bf16946014b8e0e4ea88ec50b9f2dedc92e15042ed8e4dce9d9</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_nvdi_10_1inch\peripheral\gic\plib_gic.h</file>
@@ -9274,7 +9274,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_nvdi_10_1inch\peripheral\tc\plib_tc0.c</file>
-         <hash>472d1e0f1a021bb38d923c2001a52648deb48d6dba3094ac449faf522e4c6916</hash>
+         <hash>a3c5945fd8f09a0a48718a997b01c63ad41dd9665786d5eb6e2fca7b6e62baf1</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_nvdi_10_1inch\peripheral\tc\plib_tc0.h</file>
