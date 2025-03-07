@@ -2,13 +2,13 @@
 
 manifest_file_version: 1.0.0
 project: mgs_qs_a7d65_curiosity_ac40t08a
-creation_date: 2025-03-04T12:19:04.587-07:00[America/Phoenix]
-operating_system: Windows 10
+creation_date: 2025-03-07T12:40:58.358-07:00[America/Phoenix]
+operating_system: Windows 11
 mcc_mode: IDE
-mcc_mode_version: v6.20
+mcc_mode_version: v6.25
 device_name: SAMA7D65
 compiler: XC32 4.50
-mcc_version: 5.5.1
+mcc_version: 5.5.2
 mcc_core_version: 5.7.1
 content_manager_version: 5.0.1
 is_mcc_offline: false

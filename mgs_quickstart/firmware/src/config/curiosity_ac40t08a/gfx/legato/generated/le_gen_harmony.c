@@ -24,7 +24,7 @@
 // DOM-IGNORE-END
 #include "gfx/legato/generated/le_gen_harmony.h"
 
-#include "gfx/driver/controller/xlcdc/drv_gfx_xlcdc.h"
+#include "definitions.h"
 
 #include "system/input/sys_input.h"
 
