@@ -169,7 +169,7 @@ void XLCDC_SetupBaseLayer(void)
     /* Configure Color Mode */
     LCDC_REGS->LCDC_BASECFG1 = LCDC_BASECFG1_CLUTEN(0) |
                                 LCDC_BASECFG1_GAM(0) |
-                                LCDC_BASECFG1_RGBMODE(13) |
+                                LCDC_BASECFG1_RGBMODE(3) |
                                 LCDC_BASECFG1_CLUTMODE(3);
 
     /* Configure Row Striding */
@@ -215,7 +215,7 @@ void XLCDC_SetupOVR1Layer(void)
     /* Configure Color Mode */
     LCDC_REGS->LCDC_OVR1CFG1 = LCDC_OVR1CFG1_CLUTEN(0) |
                                 LCDC_OVR1CFG1_GAM(0) |
-                                LCDC_OVR1CFG1_RGBMODE(13) |
+                                LCDC_OVR1CFG1_RGBMODE(3) |
                                 LCDC_OVR1CFG1_CLUTMODE(3);
 
     /* Configure Window Position */
@@ -283,7 +283,7 @@ void XLCDC_SetupHEOLayer(void)
     LCDC_REGS->LCDC_HEOCFG1 = LCDC_HEOCFG1_CLUTEN(0) |
                                LCDC_HEOCFG1_YCCEN(0) |
                                LCDC_HEOCFG1_GAM(0) |
-                               LCDC_HEOCFG1_RGBMODE(13) |
+                               LCDC_HEOCFG1_RGBMODE(3) |
                                LCDC_HEOCFG1_CLUTMODE(3) |
                                LCDC_HEOCFG1_YCCMODE(0) |
                                LCDC_HEOCFG1_YCC422ROT(0) |
@@ -951,8 +951,6 @@ void XLCDC_Initialize(void)
     XLCDC_EnableClocks();
     XLCDC_SetupTimingEngine();
     XLCDC_SetupBaseLayer();
-    XLCDC_SetupOVR1Layer();
-    XLCDC_SetupHEOLayer();
     XLCDC_EnableBacklight();
     XLCDC_Start();
 }

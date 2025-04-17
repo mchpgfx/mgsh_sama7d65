@@ -63,7 +63,8 @@
               </logicalFolder>
               <logicalFolder name="generated" displayName="generated" projectFiles="true">
                 <logicalFolder name="screen" displayName="screen" projectFiles="true">
-                  <itemPath>../src/config/curiosity_ac69T88a/gfx/legato/generated/screen/le_gen_screen_Screen0.h</itemPath>
+                  <itemPath>../src/config/curiosity_ac69T88a/gfx/legato/generated/screen/le_gen_screen_Help.h</itemPath>
+                  <itemPath>../src/config/curiosity_ac69T88a/gfx/legato/generated/screen/le_gen_screen_Home.h</itemPath>
                 </logicalFolder>
                 <itemPath>../src/config/curiosity_ac69T88a/gfx/legato/generated/le_gen_scheme.h</itemPath>
                 <itemPath>../src/config/curiosity_ac69T88a/gfx/legato/generated/le_gen_init.h</itemPath>
@@ -575,7 +576,8 @@
                   <itemPath>../src/config/curiosity_ac69T88a/gfx/legato/generated/image/le_gen_images.c</itemPath>
                 </logicalFolder>
                 <logicalFolder name="screen" displayName="screen" projectFiles="true">
-                  <itemPath>../src/config/curiosity_ac69T88a/gfx/legato/generated/screen/le_gen_screen_Screen0.c</itemPath>
+                  <itemPath>../src/config/curiosity_ac69T88a/gfx/legato/generated/screen/le_gen_screen_Help.c</itemPath>
+                  <itemPath>../src/config/curiosity_ac69T88a/gfx/legato/generated/screen/le_gen_screen_Home.c</itemPath>
                 </logicalFolder>
                 <itemPath>../src/config/curiosity_ac69T88a/gfx/legato/generated/le_gen_scheme.c</itemPath>
                 <itemPath>../src/config/curiosity_ac69T88a/gfx/legato/generated/le_gen_stringtable.c</itemPath>
@@ -854,9 +856,14 @@
       </logicalFolder>
       <itemPath>../src/main.c</itemPath>
       <itemPath>../src/config/curiosity_ac69T88a/pin_configurations.csv</itemPath>
+      <itemPath>../src/app_screen_help.c</itemPath>
+      <itemPath>../src/app_screen_home.c</itemPath>
       <itemPath>../src/app.c</itemPath>
     </logicalFolder>
   </logicalFolder>
+  <sourceRootList>
+    <Elem>../src</Elem>
+  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="curiosity_ac69T88a" type="2">
@@ -865,7 +872,7 @@
         <targetDevice>SAMA7D65</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>PK5Tool</platformTool>
+        <platformTool>noID</platformTool>
         <languageToolchain>XC32</languageToolchain>
         <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
@@ -909,6 +916,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value="-marm"/>
         <property key="cast-align" value="false"/>
         <property key="code-model" value="default"/>
         <property key="const-model" value="default"/>
@@ -988,6 +996,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -1033,6 +1042,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>

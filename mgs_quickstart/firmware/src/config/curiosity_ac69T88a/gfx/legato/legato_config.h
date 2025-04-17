@@ -56,13 +56,13 @@ extern "C" {
 #define LE_COHERENT_MEMORY                   LE_COHERENT_ATTR
 
 
-#define LE_DEFAULT_COLOR_MODE                LE_COLOR_MODE_RGBA_8888
+#define LE_DEFAULT_COLOR_MODE                LE_COLOR_MODE_RGB_565
 #define LE_TOUCH_ORIENTATION                 0
 #define LE_RENDER_ORIENTATION                0
 #define LE_DRIVER_LAYER_MODE                 1
 #define LE_DYNAMIC_VTABLES                   0
 
-#define LE_ASSERT_ENABLE                     0
+#define LE_ASSERT_ENABLE                     1
 #define LE_DEBUG                             0 // internal use only, do not change
 #define LE_DEBUG_RENDERER                    0 // internal use only, do not change
 
@@ -158,7 +158,7 @@ extern "C" {
 // renderer config
 #define LE_ALPHA_BLENDING_ENABLED          1
 #define LE_SCRATCH_BUFFER_COUNT            1
-#define LE_SCRATCH_BUFFER_SIZE_KB          256
+#define LE_SCRATCH_BUFFER_SIZE_KB          1536
 #define LE_SCRATCH_BUFFER_PADDING          0
 #define LE_SCRATCH_BIG_ENDIAN              0
 #define LE_USE_ARC_SCAN_FILL               1

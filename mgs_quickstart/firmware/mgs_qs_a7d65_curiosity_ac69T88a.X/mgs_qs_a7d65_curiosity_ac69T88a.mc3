@@ -12979,7 +12979,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="le_gfx_driver_xlcdc" name="TotalNumLayers"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;le_gfx_driver_xlcdc&gt;
   &lt;le_gfx_driver_xlcdc dnOrder=&quot;0&quot; id=&quot;TotalNumLayers&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;le_gfx_driver_xlcdc&quot; value=&quot;1&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/le_gfx_driver_xlcdc&gt;
 &lt;/le_gfx_driver_xlcdc&gt;
 </value>
@@ -13085,7 +13087,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="le_gfx_driver_xlcdc" name="XLMColMode"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;le_gfx_driver_xlcdc&gt;
   &lt;le_gfx_driver_xlcdc dnOrder=&quot;0&quot; id=&quot;XLMColMode&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;0&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/le_gfx_driver_xlcdc&gt;
 &lt;/le_gfx_driver_xlcdc&gt;
 </value>
@@ -13103,7 +13107,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="le_gfx_driver_xlcdc" name="XLMEnableHEO"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;le_gfx_driver_xlcdc&gt;
   &lt;le_gfx_driver_xlcdc dnOrder=&quot;0&quot; id=&quot;XLMEnableHEO&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/le_gfx_driver_xlcdc&gt;
 &lt;/le_gfx_driver_xlcdc&gt;
 </value>
@@ -13112,7 +13118,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="le_gfx_driver_xlcdc" name="XLMEnableOVR1"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;le_gfx_driver_xlcdc&gt;
   &lt;le_gfx_driver_xlcdc dnOrder=&quot;0&quot; id=&quot;XLMEnableOVR1&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;false&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/le_gfx_driver_xlcdc&gt;
 &lt;/le_gfx_driver_xlcdc&gt;
 </value>
@@ -13130,7 +13138,12 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="le_gfx_driver_xlcdc" name="XLMHEOVIDPRI"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;le_gfx_driver_xlcdc&gt;
   &lt;le_gfx_driver_xlcdc dnOrder=&quot;0&quot; id=&quot;XLMHEOVIDPRI&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Attributes dnOrder=&quot;0&quot;&gt;
+      &lt;Boolean dnOrder=&quot;0&quot; id=&quot;visible&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
+      &lt;/Boolean&gt;
+    &lt;/Attributes&gt;
+    &lt;Values dnOrder=&quot;1&quot;/&gt;
   &lt;/le_gfx_driver_xlcdc&gt;
 &lt;/le_gfx_driver_xlcdc&gt;
 </value>
@@ -15130,7 +15143,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac69T88a\gfx\driver\controller\xlcdc\drv_gfx_xlcdc.c</file>
-         <hash>e805b6bae5d30c30bd494692f1000a8a08a9f7bfe3e82a9b711adde29f146fa6</hash>
+         <hash>75f9ff63e944d08e0a231e5c2347075561d6c883e6d51dd31109b4f2cfa8e4c4</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac69T88a\gfx\driver\controller\xlcdc\drv_gfx_xlcdc.h</file>
@@ -15138,7 +15151,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac69T88a\gfx\driver\controller\xlcdc\plib\plib_xlcdc.c</file>
-         <hash>da10f2aa05a512ab76704ec75fac1a201cf0fb409288d46bf6c695753ecf01ec</hash>
+         <hash>36ca28317698fcaeef31635b5a22ac54c5241de4eca1c353bf1a8733e857fd03</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac69T88a\gfx\driver\controller\xlcdc\plib\plib_xlcdc.h</file>
@@ -15322,15 +15335,15 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac69T88a\gfx\legato\generated\font\le_gen_fonts.c</file>
-         <hash>46f1500d35be7d335c1ed6942aa3d570d7ac7446047fec34c2f3873349eda675</hash>
+         <hash>d3be2f64552dab3afa06f8763c7cd39f936419ecc82c0d8bedc6290559808c65</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac69T88a\gfx\legato\generated\image\le_gen_images.c</file>
-         <hash>f9b216a3bcda7fd3f6c12705055b4390bdc68d14cdb183182d801b1462f6d4f4</hash>
+         <hash>5a9019027184a788816d2664c90cb649283683aa78fc0031e84c9e130783bd71</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac69T88a\gfx\legato\generated\le_gen_assets.h</file>
-         <hash>f082f0e1c2f1ba80d20165b2279e6e336e4941908b029223b2ee89e9e6ad1a3d</hash>
+         <hash>c38b453e07db2af4604f92d4de08a8157c970e8b24246cf429491bd584d1a1b8</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac69T88a\gfx\legato\generated\le_gen_globalpalette.c</file>
@@ -15346,31 +15359,39 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac69T88a\gfx\legato\generated\le_gen_init.c</file>
-         <hash>75ffb17636f0083587b55af305ebc83961548c12c397f0c8e8895a21111f9e16</hash>
+         <hash>f272122713709033bf4ddd0d3ae0255dae82e054a43deba58488635163e313ee</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac69T88a\gfx\legato\generated\le_gen_init.h</file>
-         <hash>ff64245a1cfefc55213a1ff89de4029ef6f3763069eeb726f329cd26c0452bdb</hash>
+         <hash>0d15e977b4969ae61968b9ec97cbe98c6b0ef7d1093c499402f668d0414c196d</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac69T88a\gfx\legato\generated\le_gen_scheme.c</file>
-         <hash>bed6057f7bd12e28e587dbaa97aafe826ee042d098c08621ec5d436fdde7f124</hash>
+         <hash>72d0243091cac8f99b5eb9306cd9ebc532ec62b13b64d6f7641a405f7f81f238</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac69T88a\gfx\legato\generated\le_gen_scheme.h</file>
-         <hash>21c6f25ee167e7946221d8e248bc4a414a440b96fffecb8ebd74cd6b162fbfd4</hash>
+         <hash>116f3d2f34e8571b8a8c9aa94fccadf8ceed85514192f185fca6c08466e76048</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac69T88a\gfx\legato\generated\le_gen_stringtable.c</file>
-         <hash>c2f7d4dae1f6491861b1caab5e5138974c08de272bf5e52b7c4144ce14e234fd</hash>
+         <hash>ce3d039bdbaf798b3c9299252e34cd6b22e64c6498e9399e8de21c0cabc0ed33</hash>
       </entry>
       <entry>
-         <file>..\src\config\curiosity_ac69T88a\gfx\legato\generated\screen\le_gen_screen_Screen0.c</file>
-         <hash>a80cf9bd95a9f831e576ef5857d782139580a65dc85a17992b5426e1e9216aa1</hash>
+         <file>..\src\config\curiosity_ac69T88a\gfx\legato\generated\screen\le_gen_screen_Help.c</file>
+         <hash>9ed821101e4aa71f884861c691f3c0e3ab4850419825da97a17ad7a7fe3d7b6f</hash>
       </entry>
       <entry>
-         <file>..\src\config\curiosity_ac69T88a\gfx\legato\generated\screen\le_gen_screen_Screen0.h</file>
-         <hash>5507257291aab0d86b9c1a51e78e43216314b7f49dd2793908c319267f892baa</hash>
+         <file>..\src\config\curiosity_ac69T88a\gfx\legato\generated\screen\le_gen_screen_Help.h</file>
+         <hash>587f4ba4877220aaabdb8efc9d55b8763646346cad965a18d78434f8c8d25c09</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\curiosity_ac69T88a\gfx\legato\generated\screen\le_gen_screen_Home.c</file>
+         <hash>db10303041d7665af27d3a7475fac30cf914565a9c9c168b33128b346369b195</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\curiosity_ac69T88a\gfx\legato\generated\screen\le_gen_screen_Home.h</file>
+         <hash>8d176a2257b4ab8dd7a61e06f58ad3e1057bd26bfaccd3994defd11b0f7c3521</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac69T88a\gfx\legato\image\jpeg\jidctint.c</file>
@@ -15518,7 +15539,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac69T88a\gfx\legato\legato_config.h</file>
-         <hash>8c00c18254d7b5fd4b84ce52d7cceb809ae72c589329d5fc50d0eb4c4c9a6674</hash>
+         <hash>c6ceea6554baa5e6eff2a56e39eb465d7c5d597addd77b96a3c503a07581e17d</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac69T88a\gfx\legato\memory\legato_fixedheap.c</file>

@@ -63,77 +63,134 @@ extern const lePalette leGlobalPalette;
  *****************************************************************************/
 /*********************************
  * Legato Image Asset
- * Name:   mchpLogo_small
- * Size:   120x28 pixels
+ * Name:   icnHomePressed
+ * Size:   40x40 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage mchpLogo_small;
+extern leImage icnHomePressed;
 
 /*********************************
  * Legato Image Asset
- * Name:   MHGS_logo_smaller
- * Size:   180x169 pixels
+ * Name:   icnHomeReleased
+ * Size:   40x40 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage MHGS_logo_smaller;
+extern leImage icnHomeReleased;
 
 /*********************************
  * Legato Image Asset
- * Name:   QuickstartDown_WQVGA
- * Size:   160x74 pixels
+ * Name:   mchpBlackLogo
+ * Size:   206x48 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage QuickstartDown_WQVGA;
+extern leImage mchpBlackLogo;
 
 /*********************************
  * Legato Image Asset
- * Name:   QuickstartUp_WQVGA
- * Size:   160x74 pixels
+ * Name:   mgsLogo
+ * Size:   240x67 pixels
  * Type:   RGB Data
  * Format: RGBA_8888
  ***********************************/
-extern leImage QuickstartUp_WQVGA;
+extern leImage mgsLogo;
+
+/*********************************
+ * Legato Image Asset
+ * Name:   imgButton1
+ * Size:   240x67 pixels
+ * Type:   RGB Data
+ * Format: RGBA_8888
+ ***********************************/
+extern leImage imgButton1;
+
+/*********************************
+ * Legato Image Asset
+ * Name:   imgButton2
+ * Size:   240x67 pixels
+ * Type:   RGB Data
+ * Format: RGBA_8888
+ ***********************************/
+extern leImage imgButton2;
+
+/*********************************
+ * Legato Image Asset
+ * Name:   QR
+ * Size:   256x256 pixels
+ * Type:   RGB Data
+ * Format: RGBA_8888
+ ***********************************/
+extern leImage QR;
 
 /*****************************************************************************
  * Legato Graphics Font Assets
  *****************************************************************************/
 /*********************************
  * Legato Font Asset
- * Name:         NotoSans_Regular
- * Height:       21
- * Baseline:     22
+ * Name:         bigFont
+ * Height:       19
+ * Baseline:     61
  * Style:        Antialias
  * Glyph Count:  95
  * Range Count:  8
  * Glyph Ranges: 0x20-0x7E
 ***********************************/
-extern leRasterFont NotoSans_Regular;
+extern leRasterFont bigFont;
+
+/*********************************
+ * Legato Font Asset
+ * Name:         smallFont
+ * Height:       19
+ * Baseline:     27
+ * Style:        Antialias
+ * Glyph Count:  95
+ * Range Count:  9
+ * Glyph Ranges: 0x20-0x7E
+***********************************/
+extern leRasterFont smallFont;
+
+/*********************************
+ * Legato Font Asset
+ * Name:         extraSmallFont
+ * Height:       19
+ * Baseline:     21
+ * Style:        Antialias
+ * Glyph Count:  95
+ * Range Count:  11
+ * Glyph Ranges: 0x20-0x7E
+***********************************/
+extern leRasterFont extraSmallFont;
 
 /*****************************************************************************
  * Legato String Table
  * Encoding        ASCII
  * Language Count: 1
- * String Count:   3
+ * String Count:   6
  *****************************************************************************/
 
 // language IDs
 #define language_Default    0
 
 // string IDs
-#define stringID_Smart    0
-#define stringID_Easy    1
-#define stringID_Fast    2
+#define stringID_strQuickstart    0
+#define stringID_srtHelp    1
+#define stringID_strSmart    2
+#define stringID_strBack    3
+#define stringID_strFast    4
+#define stringID_strEasy    5
 
 extern const leStringTable stringTable;
 
 
 // string list
-extern leTableString string_Smart;
-extern leTableString string_Easy;
-extern leTableString string_Fast;
+extern leTableString string_strQuickstart;
+extern leTableString string_srtHelp;
+extern leTableString string_strSmart;
+extern leTableString string_strBack;
+extern leTableString string_strFast;
+extern leTableString string_strEasy;
 
 void initializeStrings(void);
 //DOM-IGNORE-BEGIN

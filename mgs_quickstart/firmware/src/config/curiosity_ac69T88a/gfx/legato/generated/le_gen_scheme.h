@@ -4,9 +4,9 @@
 #include "gfx/legato/legato.h"
 
 extern const leScheme WhiteScheme;
-extern const leScheme RedScheme;
-extern const leScheme GreenScheme;
 extern const leScheme BlueScheme;
+extern const leScheme OrangeScheme;
+extern const leScheme GreenScheme;
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
