@@ -39,7 +39,7 @@
  ******************************************************************************/
 
 
-#include "peripheral/pio/plib_pio.h"
+#include "definitions.h"
 #include "driver/i2c/drv_i2c.h"
 #include "driver/input/drv_maxtouch.h"
 #include "system/input/sys_input.h"

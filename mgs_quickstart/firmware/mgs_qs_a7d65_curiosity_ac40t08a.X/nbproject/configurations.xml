@@ -246,6 +246,10 @@
                   <itemPath>../src/config/curiosity_ac40t08a/peripheral/flexcom/twi/master/plib_flexcom_twi_master_common.h</itemPath>
                 </logicalFolder>
               </logicalFolder>
+              <logicalFolder name="usart" displayName="usart" projectFiles="true">
+                <itemPath>../src/config/curiosity_ac40t08a/peripheral/flexcom/usart/plib_flexcom_usart_local.h</itemPath>
+                <itemPath>../src/config/curiosity_ac40t08a/peripheral/flexcom/usart/plib_flexcom6_usart.h</itemPath>
+              </logicalFolder>
             </logicalFolder>
             <logicalFolder name="gic" displayName="gic" projectFiles="true">
               <itemPath>../src/config/curiosity_ac40t08a/peripheral/gic/plib_gic.h</itemPath>
@@ -256,9 +260,9 @@
             <logicalFolder name="pio" displayName="pio" projectFiles="true">
               <itemPath>../src/config/curiosity_ac40t08a/peripheral/pio/plib_pio.h</itemPath>
             </logicalFolder>
-            <logicalFolder name="tc" displayName="tc" projectFiles="true">
-              <itemPath>../src/config/curiosity_ac40t08a/peripheral/tc/plib_tc0.h</itemPath>
-              <itemPath>../src/config/curiosity_ac40t08a/peripheral/tc/plib_tc_common.h</itemPath>
+            <logicalFolder name="rtt" displayName="rtt" projectFiles="true">
+              <itemPath>../src/config/curiosity_ac40t08a/peripheral/rtt/plib_rtt.h</itemPath>
+              <itemPath>../src/config/curiosity_ac40t08a/peripheral/rtt/plib_rtt_common.h</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="system" displayName="system" projectFiles="true">
@@ -368,7 +372,6 @@
             <itemPath>../src/packs/SAMA7D65_DFP/component/chipid.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/sha.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/pwm.h</itemPath>
-            <itemPath>../src/packs/SAMA7D65_DFP/component/pmonc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/icm.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/bsc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/component/xdmac.h</itemPath>
@@ -428,7 +431,6 @@
             <itemPath>../src/packs/SAMA7D65_DFP/instance/flexcom10.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/i3cc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/tcpcb.h</itemPath>
-            <itemPath>../src/packs/SAMA7D65_DFP/instance/pmonc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/piod.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/mcan0.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/pit64b5.h</itemPath>
@@ -814,6 +816,9 @@
                   <itemPath>../src/config/curiosity_ac40t08a/peripheral/flexcom/twi/master/plib_flexcom0_twi_master.c</itemPath>
                 </logicalFolder>
               </logicalFolder>
+              <logicalFolder name="usart" displayName="usart" projectFiles="true">
+                <itemPath>../src/config/curiosity_ac40t08a/peripheral/flexcom/usart/plib_flexcom6_usart.c</itemPath>
+              </logicalFolder>
             </logicalFolder>
             <logicalFolder name="gic" displayName="gic" projectFiles="true">
               <itemPath>../src/config/curiosity_ac40t08a/peripheral/gic/plib_gic.c</itemPath>
@@ -824,8 +829,8 @@
             <logicalFolder name="pio" displayName="pio" projectFiles="true">
               <itemPath>../src/config/curiosity_ac40t08a/peripheral/pio/plib_pio.c</itemPath>
             </logicalFolder>
-            <logicalFolder name="tc" displayName="tc" projectFiles="true">
-              <itemPath>../src/config/curiosity_ac40t08a/peripheral/tc/plib_tc0.c</itemPath>
+            <logicalFolder name="rtt" displayName="rtt" projectFiles="true">
+              <itemPath>../src/config/curiosity_ac40t08a/peripheral/rtt/plib_rtt.c</itemPath>
             </logicalFolder>
           </logicalFolder>
           <logicalFolder name="stdio" displayName="stdio" projectFiles="true">
@@ -870,13 +875,13 @@
         <targetDevice>SAMA7D65</targetDevice>
         <targetHeader></targetHeader>
         <targetPluginBoard></targetPluginBoard>
-        <platformTool>noID</platformTool>
+        <platformTool>samice</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.50</languageToolchainVersion>
+        <languageToolchainVersion>4.60</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMA7D65_DFP" vendor="Microchip" version="1.2.47"/>
+        <pack name="SAMA7D65_DFP" vendor="Microchip" version="1.4.54"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="boot.load_adr" value=""/>
@@ -914,6 +919,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value="-D__CORTEX_A=7 -D__TIM_PRESENT=1 -marm"/>
         <property key="cast-align" value="false"/>
         <property key="code-model" value="default"/>
         <property key="const-model" value="default"/>
@@ -957,7 +963,7 @@
         <property key="use-cci" value="false"/>
         <property key="use-iar" value="false"/>
         <property key="use-indirect-calls" value="false"/>
-        <appendMe value="-marm"/>
+        <appendMe value="-D__CORTEX_A=7 -D__TIM_PRESENT=1 -marm"/>
       </C32>
       <C32-AR>
         <property key="additional-options-chop-files" value="false"/>
@@ -993,6 +999,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -1038,6 +1045,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>

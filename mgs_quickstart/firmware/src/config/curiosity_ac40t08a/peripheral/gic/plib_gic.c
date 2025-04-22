@@ -72,8 +72,8 @@ static const struct {
     uint32_t  irqSecurity;
 }gicIrqConfig[] =
 {
+    {RTT_IRQn, RTT_InterruptHandler, GIC_IRQ_CONFIG_LEVEL, 0, GIC_IRQ_GROUP_SECURE},
     {FLEXCOM0_IRQn, FLEXCOM0_InterruptHandler, GIC_IRQ_CONFIG_LEVEL, 0, GIC_IRQ_GROUP_SECURE},
-    {TC0_CH0_IRQn, TC0_CH0_InterruptHandler, GIC_IRQ_CONFIG_LEVEL, 0, GIC_IRQ_GROUP_SECURE},
 };
 
 // *****************************************************************************

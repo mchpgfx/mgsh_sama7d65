@@ -96,7 +96,7 @@ static void initPeripheralClocks(void)
     {
         {ID_PIOA, 1U, 0U, 0U, 0U},
         {ID_FLEXCOM0, 1U, 0U, 0U, 0U},
-        {ID_TC0_CHANNEL0, 1U, 0U, 0U, 0U},
+        {ID_FLEXCOM6, 1U, 0U, 0U, 0U},
         {EOL_MARKER, 0U, 0U, 0U, 0U}//end of list marker
     };
 

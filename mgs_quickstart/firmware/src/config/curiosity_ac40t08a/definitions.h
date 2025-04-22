@@ -14,7 +14,7 @@
 
 //DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2025 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -48,22 +48,24 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include <stdio.h>
 #include "gfx/legato/generated/le_gen_harmony.h"
 #include "peripheral/dwdt/plib_dwdt.h"
+#include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/clk/plib_clk.h"
 #include "peripheral/gic/plib_gic.h"
-#include "peripheral/mmu/plib_mmu.h"
 #include "peripheral/pio/plib_pio.h"
 #include "gfx/driver/controller/xlcdc/bridge/dsi/plib_dsi.h"
-#include "peripheral/tc/plib_tc0.h"
+#include "peripheral/flexcom/usart/plib_flexcom6_usart.h"
 #include "peripheral/flexcom/twi/master/plib_flexcom0_twi_master.h"
 #include "driver/i2c/drv_i2c.h"
 #include "system/time/sys_time.h"
 #include "system/input/sys_input.h"
 #include "gfx/driver/controller/xlcdc/plib/plib_xlcdc.h"
 #include "gfx/driver/controller/xlcdc/drv_gfx_xlcdc.h"
-#include "driver/input/drv_maxtouch.h"
+#include "peripheral/rtt/plib_rtt.h"
 #include "gfx/display/touch_display.h"
+#include "driver/input/drv_maxtouch.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"

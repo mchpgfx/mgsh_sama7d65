@@ -15,7 +15,7 @@
 
 // DOM-IGNORE-BEGIN
 /*******************************************************************************
-* Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
+* Copyright (C) 2025 Microchip Technology Inc. and its subsidiaries.
 *
 * Subject to your compliance with these terms, you may use Microchip software
 * and any derivatives exclusively with Microchip products. It is your
@@ -175,19 +175,19 @@ SYSTEM_OBJECTS sysObj;
 // <editor-fold defaultstate="collapsed" desc="SYS_TIME Initialization Data">
 
 static const SYS_TIME_PLIB_INTERFACE sysTimePlibAPI = {
-    .timerCallbackSet = (SYS_TIME_PLIB_CALLBACK_REGISTER)TC0_CH0_TimerCallbackRegister,
-    .timerStart = (SYS_TIME_PLIB_START)TC0_CH0_TimerStart,
-    .timerStop = (SYS_TIME_PLIB_STOP)TC0_CH0_TimerStop ,
-    .timerFrequencyGet = (SYS_TIME_PLIB_FREQUENCY_GET)TC0_CH0_TimerFrequencyGet,
-    .timerPeriodSet = (SYS_TIME_PLIB_PERIOD_SET)TC0_CH0_TimerPeriodSet,
-    .timerCompareSet = (SYS_TIME_PLIB_COMPARE_SET)TC0_CH0_TimerCompareSet,
-    .timerCounterGet = (SYS_TIME_PLIB_COUNTER_GET)TC0_CH0_TimerCounterGet,
+    .timerCallbackSet = (SYS_TIME_PLIB_CALLBACK_REGISTER)RTT_CallbackRegister,
+    .timerStart = (SYS_TIME_PLIB_START)RTT_Enable,
+    .timerStop = (SYS_TIME_PLIB_STOP)RTT_Disable,
+    .timerFrequencyGet = (SYS_TIME_PLIB_FREQUENCY_GET)RTT_FrequencyGet,
+    .timerPeriodSet = (SYS_TIME_PLIB_PERIOD_SET)NULL,
+    .timerCompareSet = (SYS_TIME_PLIB_COMPARE_SET)RTT_AlarmValueSet,
+    .timerCounterGet = (SYS_TIME_PLIB_COUNTER_GET)RTT_TimerValueGet,
 };
 
 static const SYS_TIME_INIT sysTimeInitData =
 {
     .timePlib = &sysTimePlibAPI,
-    .hwTimerIntNum = TC0_CH0_IRQn,
+    .hwTimerIntNum = RTT_IRQn,
 };
 
 // </editor-fold>
@@ -199,6 +199,29 @@ static const SYS_TIME_INIT sysTimeInitData =
 // Section: Local initialization functions
 // *****************************************************************************
 // *****************************************************************************
+
+/*******************************************************************************
+  Function:
+    void STDIO_BufferModeSet ( void )
+
+  Summary:
+    Sets the buffering mode for stdin and stdout
+
+  Remarks:
+ ********************************************************************************/
+static void STDIO_BufferModeSet(void)
+{
+    /* MISRAC 2012 deviation block start */
+    /* MISRA C-2012 Rule 21.6 deviated 2 times in this file.  Deviation record ID -  H3_MISRAC_2012_R_21_6_DR_3 */
+
+    /* Make stdin unbuffered */
+    setbuf(stdin, NULL);
+
+    /* Make stdout unbuffered */
+    setbuf(stdout, NULL);
+    /* MISRAC 2012 deviation block end */
+}
+
 
 /* MISRAC 2012 deviation block end */
 
@@ -218,25 +241,28 @@ void SYS_Initialize ( void* data )
     /* MISRAC 2012 deviation block start */
     /* MISRA C-2012 Rule 2.2 deviated in this file.  Deviation record ID -  H3_MISRAC_2012_R_2_2_DR_1 */
 
+    STDIO_BufferModeSet();
+
+
   
     DWDT_Initialize();
+    MMU_Initialize();
     CLK_Initialize();
 
 	GIC_Initialize();
-    MMU_Initialize();
     PIO_Initialize();
 
 
 
     DSI_Initialize();
 
- 
-    TC0_CH0_TimerInitialize(); 
-     
-    
+    FLEXCOM6_USART_Initialize();
+
     FLEXCOM0_TWI_Initialize();
 
     XLCDC_Initialize();
+
+	RTT_Initialize();
 
 
     /* MISRAC 2012 deviation block start */

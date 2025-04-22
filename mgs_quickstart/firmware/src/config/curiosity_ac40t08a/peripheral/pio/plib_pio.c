@@ -80,6 +80,10 @@ void PIO_Initialize ( void )
    PIOC_REGS->PIO_CFGR = 0x4U;
 
 
+ /* Port D Peripheral function B configuration */
+   PIOD_REGS->PIO_MSKR = 0xc0000U;
+   PIOD_REGS->PIO_CFGR = 0x2U;
+
 
 
 

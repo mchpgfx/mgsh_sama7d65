@@ -1,23 +1,24 @@
 /*******************************************************************************
-  TC Peripheral Library Interface Header File
+  FLEXCOM6 USART PLIB
 
   Company
     Microchip Technology Inc.
 
   File Name
-    plib_tc0.h
+    plib_flexcom6_usart.h
 
   Summary
-    TC peripheral library interface.
+    FLEXCOM6 USART peripheral library interface.
 
   Description
-    This file defines the interface to the TC peripheral library.  This
+    This file defines the interface to the FLEXCOM6 USART peripheral library. This
     library provides access to and control of the associated peripheral
     instance.
 
-******************************************************************************/
+  Remarks:
+    None.
+*******************************************************************************/
 
-// DOM-IGNORE-BEGIN
 /*******************************************************************************
 * Copyright (C) 2018 Microchip Technology Inc. and its subsidiaries.
 *
@@ -40,89 +41,60 @@
 * ANY WAY RELATED TO THIS SOFTWARE WILL NOT EXCEED THE AMOUNT OF FEES, IF ANY,
 * THAT YOU HAVE PAID DIRECTLY TO MICROCHIP FOR THIS SOFTWARE.
 *******************************************************************************/
-// DOM-IGNORE-END
 
-#ifndef PLIB_TC0_H    // Guards against multiple inclusion
-#define PLIB_TC0_H
-
+#ifndef PLIB_FLEXCOM6_USART_H // Guards against multiple inclusion
+#define PLIB_FLEXCOM6_USART_H
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Included Files
 // *****************************************************************************
 // *****************************************************************************
-
-/*  This section lists the other files that are included in this file.
-*/
-
-
-#include "plib_tc_common.h"
+/* This section lists the other files that are included in this file. */
+#include "device.h"
+#include "plib_flexcom_usart_local.h"
 
 // DOM-IGNORE-BEGIN
-#ifdef __cplusplus  // Provide C++ Compatibility
-
+#ifdef __cplusplus // Provide C++ Compatibility
 extern "C" {
-
 #endif
-
 // DOM-IGNORE-END
-
-// *****************************************************************************
-// *****************************************************************************
-// Section: Data Types
-// *****************************************************************************
-// *****************************************************************************
-/*  The following data type definitions are used by the functions in this
-    interface and should be considered part it.
-*/
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Interface Routines
 // *****************************************************************************
 // *****************************************************************************
-/* The following functions make up the methods (set of possible operations) of
-   this interface.
-*/
+#define FLEXCOM6_USART_FrequencyGet()    (uint32_t)(100000000UL)
 
-// *****************************************************************************
+/****************************** FLEXCOM6 USART API *********************************/
 
-  
+void FLEXCOM6_USART_Initialize( void );
 
+FLEXCOM_USART_ERROR FLEXCOM6_USART_ErrorGet( void );
 
- 
+bool FLEXCOM6_USART_SerialSetup( FLEXCOM_USART_SERIAL_SETUP *setup, uint32_t srcClkFreq );
 
+bool FLEXCOM6_USART_Write( void *buffer, const size_t size );
 
+bool FLEXCOM6_USART_Read( void *buffer, const size_t size );
 
-void TC0_CH0_TimerInitialize (void);
+uint8_t FLEXCOM6_USART_ReadByte(void);
 
-void TC0_CH0_TimerStart (void);
+void FLEXCOM6_USART_WriteByte(uint8_t data);
 
-void TC0_CH0_TimerStop (void);
+bool FLEXCOM6_USART_TransmitterIsReady( void );
 
-void TC0_CH0_TimerPeriodSet (uint32_t period);
-
-void TC0_CH0_TimerCompareSet (uint32_t compare);
-
-uint32_t TC0_CH0_TimerFrequencyGet (void);
-
-uint32_t TC0_CH0_TimerPeriodGet (void);
-
-uint32_t TC0_CH0_TimerCounterGet (void);
-
-void TC0_CH0_TimerCallbackRegister(TC_TIMER_CALLBACK callback, uintptr_t context);
+bool FLEXCOM6_USART_ReceiverIsReady( void );
 
 
-
- 
-
- 
+bool FLEXCOM6_USART_TransmitComplete( void );
 
 
-#ifdef __cplusplus // Provide C++ Compatibility
-}
+// DOM-IGNORE-BEGIN
+#ifdef __cplusplus  // Provide C++ Compatibility
+    }
 #endif
+// DOM-IGNORE-END
 
-#endif //PLIB_TC0_H
-
-/* End of File */
+#endif //PLIB_FLEXCOM6_USART_H
