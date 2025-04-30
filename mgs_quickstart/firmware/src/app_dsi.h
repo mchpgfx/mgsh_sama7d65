@@ -5,7 +5,7 @@
     Microchip Technology Inc.
 
   File Name:
-    app.h
+    app_dsi.h
 
   Summary:
     This header file provides prototypes and definitions for the application.
@@ -13,13 +13,13 @@
   Description:
     This header file provides function prototypes and data type definitions for
     the application.  Some of these are required by the system (such as the
-    "APP_Initialize" and "APP_Tasks" prototypes) and some of them are only used
-    internally by the application (such as the "APP_STATES" definition).  Both
+    "APP_DSI_Initialize" and "APP_DSI_Tasks" prototypes) and some of them are only used
+    internally by the application (such as the "APP_DSI_STATES" definition).  Both
     are defined here for convenience.
 *******************************************************************************/
 
-#ifndef _APP_H
-#define _APP_H
+#ifndef _APP_DSI_H
+#define _APP_DSI_H
 
 // *****************************************************************************
 // *****************************************************************************
@@ -32,7 +32,19 @@
 #include <stddef.h>
 #include <stdlib.h>
 #include "configuration.h"
+#include "definitions.h"
 
+#ifdef RTOS_ENABLED
+#define CLOCK_TICK_TIMER_PERIOD_MS 10
+#else
+#define CLOCK_TICK_TIMER_PERIOD_MS 30
+#endif
+
+#define NUM_COUNT_SEC_TICK (1000/CLOCK_TICK_TIMER_PERIOD_MS)
+#define NUM_COUNT_TAP_TICK (200/CLOCK_TICK_TIMER_PERIOD_MS) 
+
+#define FPS_STR_SIZE 32
+    
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
 
@@ -46,6 +58,23 @@ extern "C" {
 // Section: Type Definitions
 // *****************************************************************************
 // *****************************************************************************
+
+extern int clock_sec;
+extern int clock_min;
+extern int clock_hr;
+
+extern unsigned int idle_secs;
+
+extern volatile unsigned int tick_count;
+extern unsigned int tick_count_last;
+extern volatile unsigned int sec_count;
+extern int last_sec_count;
+extern unsigned int fps;
+extern unsigned int cpu_free;
+extern char fpsStrBuff[];
+extern bool stats_enabled;
+extern leChar fpsStrCharBuff[];
+extern leFixedString fpsStr;
 
 // *****************************************************************************
 /* Application states
@@ -61,11 +90,11 @@ extern "C" {
 typedef enum
 {
     /* Application's state machine's initial state. */
-    APP_STATE_INIT=0,
-    APP_STATE_SERVICE_TASKS,
+    APP_DSI_STATE_INIT=0,
+    APP_DSI_STATE_SERVICE_TASKS,
     /* TODO: Define states used by the application state machine. */
 
-} APP_STATES;
+} APP_DSI_STATES;
 
 
 // *****************************************************************************
@@ -84,11 +113,11 @@ typedef enum
 typedef struct
 {
     /* The application's current state */
-    APP_STATES state;
+    APP_DSI_STATES state;
 
     /* TODO: Define any additional data used by the application. */
 
-} APP_DATA;
+} APP_DSI_DATA;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -106,7 +135,7 @@ typedef struct
 
 /*******************************************************************************
   Function:
-    void APP_Initialize ( void )
+    void APP_DSI_Initialize ( void )
 
   Summary:
      MPLAB Harmony application initialization routine.
@@ -114,7 +143,7 @@ typedef struct
   Description:
     This function initializes the Harmony application.  It places the
     application in its initial state and prepares it to run so that its
-    APP_Tasks function can be called.
+    APP_DSI_Tasks function can be called.
 
   Precondition:
     All other system initialization routines should be called before calling
@@ -128,19 +157,19 @@ typedef struct
 
   Example:
     <code>
-    APP_Initialize();
+    APP_DSI_Initialize();
     </code>
 
   Remarks:
     This routine must be called from the SYS_Initialize function.
 */
 
-void APP_Initialize ( void );
+void APP_DSI_Initialize ( void );
 
 
 /*******************************************************************************
   Function:
-    void APP_Tasks ( void )
+    void APP_DSI_Tasks ( void )
 
   Summary:
     MPLAB Harmony Demo application tasks function
@@ -161,14 +190,14 @@ void APP_Initialize ( void );
 
   Example:
     <code>
-    APP_Tasks();
+    APP_DSI_Tasks();
     </code>
 
   Remarks:
     This routine must be called from SYS_Tasks() routine.
  */
 
-void APP_Tasks( void );
+void APP_DSI_Tasks( void );
 
 //DOM-IGNORE-BEGIN
 #ifdef __cplusplus
@@ -176,7 +205,7 @@ void APP_Tasks( void );
 #endif
 //DOM-IGNORE-END
 
-#endif /* _APP_H */
+#endif /* _APP_DSI_H */
 
 /*******************************************************************************
  End of File

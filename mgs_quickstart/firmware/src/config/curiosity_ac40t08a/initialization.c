@@ -296,6 +296,9 @@ void SYS_Initialize ( void* data )
 
 
     /* MISRAC 2012 deviation block end */
+    APP_DSI_Initialize();
+
+
 
 
     /* MISRAC 2012 deviation block end */

@@ -5,7 +5,7 @@
     Microchip Technology Inc.
 
   File Name:
-    app.c
+    app_dsi.c
 
   Summary:
     This file contains the source code for the MPLAB Harmony application.
@@ -27,13 +27,43 @@
 // *****************************************************************************
 // *****************************************************************************
 
-#include "app.h"
+#include "app_dsi.h"
+#ifdef RTOS_ENABLED
+#include "task.h"
+#endif
 
 // *****************************************************************************
 // *****************************************************************************
 // Section: Global Data Definitions
 // *****************************************************************************
 // *****************************************************************************
+
+unsigned int idle_secs = 0;
+unsigned int demo_mode_count_secs = 0;
+unsigned int demo_mode_event_idx = 0;
+bool demo_mode_on = true;
+bool demo_mode_enabled = false;
+volatile unsigned int tick_count = 0;
+unsigned int tick_count_last = 0;
+volatile unsigned int sec_count = 0;
+int last_sec_count = 0;
+int clock_sec = 0;
+int clock_min = 0;
+int clock_hr = 12;
+unsigned int last_frame_count = 0;
+unsigned int fps;
+unsigned int cpu_free;
+bool stats_enabled = 0;
+static SYS_TIME_HANDLE timer = SYS_TIME_HANDLE_INVALID;
+uint32_t event_parm = 0;
+char fpsStrBuff[FPS_STR_SIZE];
+leChar fpsStrCharBuff[FPS_STR_SIZE] = {0};
+
+leFixedString fpsStr;
+
+#ifdef RTOS_ENABLED
+extern unsigned int Task_Usage(void);
+#endif
 
 // *****************************************************************************
 /* Application Data
@@ -45,12 +75,12 @@
     This structure holds the application's data.
 
   Remarks:
-    This structure should be initialized by the APP_Initialize function.
+    This structure should be initialized by the APP_DSI_Initialize function.
 
     Application strings and buffers are be defined outside this structure.
 */
 
-APP_DATA appData;
+APP_DSI_DATA app_dsiData;
 
 // *****************************************************************************
 // *****************************************************************************
@@ -58,19 +88,56 @@ APP_DATA appData;
 // *****************************************************************************
 // *****************************************************************************
 
-/* TODO:  Add any necessary callback functions.
-*/
+#ifdef RTOS_ENABLED
+void RTOS_AppConfigureTimerForRuntimeStats()
+{
+    //do nothing
+    tick_count = 0;
+}
 
-// *****************************************************************************
-// *****************************************************************************
-// Section: Application Local Functions
-// *****************************************************************************
-// *****************************************************************************
+uint32_t RTOS_AppGetRuntimeCounterValue(void)
+{
+    return tick_count;
+}
+#endif
 
-
-/* TODO:  Add any necessary local functions.
-*/
-
+static void Timer_Callback ( uintptr_t context)
+{
+    tick_count++;
+    
+    if (tick_count % NUM_COUNT_SEC_TICK == 0)
+    {
+        
+        if (leRenderer_GetDrawCount() > last_frame_count)
+        {
+            fps = leRenderer_GetDrawCount() - last_frame_count;
+            last_frame_count = leRenderer_GetDrawCount();
+        }
+        else
+        {
+            fps = 0;
+        }
+                
+        sec_count++;
+        idle_secs++;
+        
+        clock_sec++;
+        if (clock_sec == 60)
+        {
+            clock_sec = 0;
+            clock_min++;
+            if (clock_min == 60)
+            {
+                clock_min = 0;
+                clock_hr++;
+                if (clock_hr == 24)
+                {
+                    clock_hr = 0;
+                }
+            }
+        }        
+    }    
+}
 
 // *****************************************************************************
 // *****************************************************************************
@@ -80,61 +147,60 @@ APP_DATA appData;
 
 /*******************************************************************************
   Function:
-    void APP_Initialize ( void )
+    void APP_DSI_Initialize ( void )
 
   Remarks:
-    See prototype in app.h.
+    See prototype in app_dsi.h.
  */
 
-void APP_Initialize ( void )
-{
-    /* Place the App state machine in its initial state. */
-    appData.state = APP_STATE_INIT;
-
-
-
-    /* TODO: Initialize your application's state machine and other
-     * parameters.
-     */
-}
+void APP_DSI_Initialize ( void )
+{ }
 
 
 /******************************************************************************
   Function:
-    void APP_Tasks ( void )
+    void APP_DSI_Tasks ( void )
 
   Remarks:
-    See prototype in app.h.
+    See prototype in app_dsi.h.
  */
 
-void APP_Tasks ( void )
+void APP_DSI_Tasks ( void )
 {
 
     /* Check the application's current state. */
-    switch ( appData.state )
+    switch ( app_dsiData.state )
     {
         /* Application's initial state. */
-        case APP_STATE_INIT:
+        case APP_DSI_STATE_INIT:
         {
             bool appInitialized = true;
-
+            stats_enabled = true;
+            
+            timer = SYS_TIME_CallbackRegisterMS(Timer_Callback, 1, CLOCK_TICK_TIMER_PERIOD_MS, SYS_TIME_PERIODIC);   
 
             if (appInitialized)
             {
 
-                appData.state = APP_STATE_SERVICE_TASKS;
+                app_dsiData.state = APP_DSI_STATE_SERVICE_TASKS;
             }
             break;
         }
 
-        case APP_STATE_SERVICE_TASKS:
+        case APP_DSI_STATE_SERVICE_TASKS:
         {
+#ifdef RTOS_ENABLED
+            static unsigned int sec_count_last;              
 
+            if (stats_enabled == true && 
+                sec_count != sec_count_last)
+            {
+                cpu_free = Task_Usage();
+                sec_count_last = sec_count;
+            }            
+#endif
             break;
         }
-
-        /* TODO: implement your application state machine.*/
-
 
         /* The default state should never be executed. */
         default:

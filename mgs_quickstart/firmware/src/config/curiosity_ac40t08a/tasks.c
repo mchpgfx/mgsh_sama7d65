@@ -96,6 +96,12 @@ void SYS_Tasks ( void )
 
 
 
+    /* Maintain the application's state machine. */
+        /* Call Application task APP_DSI. */
+    APP_DSI_Tasks();
+
+
+
 
 }
 

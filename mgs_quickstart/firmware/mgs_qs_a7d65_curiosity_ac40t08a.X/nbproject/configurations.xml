@@ -63,8 +63,10 @@
               </logicalFolder>
               <logicalFolder name="generated" displayName="generated" projectFiles="true">
                 <logicalFolder name="screen" displayName="screen" projectFiles="true">
-                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Help.h</itemPath>
-                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Home.h</itemPath>
+                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen3.h</itemPath>
+                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen2.h</itemPath>
+                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen1.h</itemPath>
+                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen0.h</itemPath>
                 </logicalFolder>
                 <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/le_gen_assets.h</itemPath>
                 <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/le_gen_harmony.h</itemPath>
@@ -577,8 +579,10 @@
                   <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/image/le_gen_images.c</itemPath>
                 </logicalFolder>
                 <logicalFolder name="screen" displayName="screen" projectFiles="true">
-                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Help.c</itemPath>
-                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Home.c</itemPath>
+                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen3.c</itemPath>
+                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen2.c</itemPath>
+                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen1.c</itemPath>
+                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen0.c</itemPath>
                 </logicalFolder>
                 <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/le_gen_harmony.c</itemPath>
                 <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/le_gen_globalpalette.c</itemPath>
@@ -860,8 +864,12 @@
       </logicalFolder>
       <itemPath>../src/config/curiosity_ac40t08a/pin_configurations.csv</itemPath>
       <itemPath>../src/main.c</itemPath>
-      <itemPath>../src/app_screen_help.c</itemPath>
-      <itemPath>../src/app_screen_home.c</itemPath>
+      <itemPath>../src/app_dsi.c</itemPath>
+      <itemPath>../src/app_dsi.h</itemPath>
+      <itemPath>../src/screen_FPSCounter.c</itemPath>
+      <itemPath>../src/screen_FPSImages.c</itemPath>
+      <itemPath>../src/screen_FPSMotion.c</itemPath>
+      <itemPath>../src/screen_Splash.c</itemPath>
     </logicalFolder>
   </logicalFolder>
   <sourceRootList>

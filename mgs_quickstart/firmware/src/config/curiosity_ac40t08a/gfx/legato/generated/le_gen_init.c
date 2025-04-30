@@ -9,13 +9,15 @@ void legato_initializeScreenState(void)
 
     initializeStrings();
 
-    screenInit_Home();
-    screenInit_Help();
+    screenInit_Screen0();
+    screenInit_Screen1();
+    screenInit_Screen2();
+    screenInit_Screen3();
 
     currentScreen = -1;
     changingToScreen = -1;
 
-    legato_showScreen(screenID_Home);
+    legato_showScreen(screenID_Screen0);
 }
 
 uint32_t legato_getCurrentScreen(void)
@@ -27,15 +29,27 @@ static void legato_hideCurrentScreen(void)
 {
     switch(currentScreen)
     {
-        case screenID_Home:
+        case screenID_Screen0:
         {
-            screenHide_Home();
+            screenHide_Screen0();
             currentScreen = 0;
             break;
         }
-        case screenID_Help:
+        case screenID_Screen1:
         {
-            screenHide_Help();
+            screenHide_Screen1();
+            currentScreen = 0;
+            break;
+        }
+        case screenID_Screen2:
+        {
+            screenHide_Screen2();
+            currentScreen = 0;
+            break;
+        }
+        case screenID_Screen3:
+        {
+            screenHide_Screen3();
             currentScreen = 0;
             break;
         }
@@ -61,14 +75,24 @@ void legato_updateScreenState(void)
 
         switch(changingToScreen)
         {
-            case screenID_Home:
+            case screenID_Screen0:
             {
-                screenShow_Home();
+                screenShow_Screen0();
                 break;
             }
-            case screenID_Help:
+            case screenID_Screen1:
             {
-                screenShow_Help();
+                screenShow_Screen1();
+                break;
+            }
+            case screenID_Screen2:
+            {
+                screenShow_Screen2();
+                break;
+            }
+            case screenID_Screen3:
+            {
+                screenShow_Screen3();
                 break;
             }
         }
@@ -79,14 +103,24 @@ void legato_updateScreenState(void)
 
     switch(currentScreen)
     {
-        case screenID_Home:
+        case screenID_Screen0:
         {
-            screenUpdate_Home();
+            screenUpdate_Screen0();
             break;
         }
-        case screenID_Help:
+        case screenID_Screen1:
         {
-            screenUpdate_Help();
+            screenUpdate_Screen1();
+            break;
+        }
+        case screenID_Screen2:
+        {
+            screenUpdate_Screen2();
+            break;
+        }
+        case screenID_Screen3:
+        {
+            screenUpdate_Screen3();
             break;
         }
     }

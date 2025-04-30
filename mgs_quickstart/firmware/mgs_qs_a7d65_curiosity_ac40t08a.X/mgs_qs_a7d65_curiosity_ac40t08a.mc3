@@ -91,8 +91,11 @@
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;APP0_C&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;app_dsi.c&lt;/Value&gt;
+      &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
@@ -104,8 +107,11 @@
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;APP0_H&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
+      &lt;String dnOrder=&quot;1&quot; id=&quot;name&quot;&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;app_dsi.h&lt;/Value&gt;
+      &lt;/String&gt;
     &lt;/Attributes&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
@@ -165,7 +171,6 @@
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;ENABLE_APP_FILE&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;HarmonyCore&quot; value=&quot;true&quot;/&gt;
-      &lt;User dnOrder=&quot;1&quot; value=&quot;false&quot;/&gt;
     &lt;/Values&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
@@ -2267,7 +2272,7 @@
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;GEN_APP_TASKS&quot;&gt;
     &lt;Attributes dnOrder=&quot;0&quot;&gt;
       &lt;Boolean dnOrder=&quot;0&quot; id=&quot;enabled&quot;&gt;
-        &lt;Value dnOrder=&quot;0&quot;&gt;false&lt;/Value&gt;
+        &lt;Value dnOrder=&quot;0&quot;&gt;true&lt;/Value&gt;
       &lt;/Boolean&gt;
     &lt;/Attributes&gt;
   &lt;/HarmonyCore&gt;
@@ -2467,7 +2472,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="HarmonyCore" name="GEN_APP_TASK_NAME_0"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;HarmonyCore&gt;
   &lt;HarmonyCore dnOrder=&quot;0&quot; id=&quot;GEN_APP_TASK_NAME_0&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;User dnOrder=&quot;0&quot; value=&quot;app_dsi&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/HarmonyCore&gt;
 &lt;/HarmonyCore&gt;
 </value>
@@ -8138,9 +8145,7 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="le_gfx_driver_xlcdc" name="XLMColMode"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;le_gfx_driver_xlcdc&gt;
   &lt;le_gfx_driver_xlcdc dnOrder=&quot;0&quot; id=&quot;XLMColMode&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;&gt;
-      &lt;User dnOrder=&quot;0&quot; value=&quot;0&quot;/&gt;
-    &lt;/Values&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
   &lt;/le_gfx_driver_xlcdc&gt;
 &lt;/le_gfx_driver_xlcdc&gt;
 </value>
@@ -8937,6 +8942,14 @@
    </tokenMap>
    <generatedFileHashHistoryMap class="java.util.TreeMap">
       <entry>
+         <file>..\src\app_dsi.c</file>
+         <hash/>
+      </entry>
+      <entry>
+         <file>..\src\app_dsi.h</file>
+         <hash/>
+      </entry>
+      <entry>
          <file>..\src\config\curiosity_ac40t08a\configuration.h</file>
          <hash>6df2093e218c9a608cbf32525930e124e34d6aa04336d91beec0c508c8084b3a</hash>
       </entry>
@@ -8950,7 +8963,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\definitions.h</file>
-         <hash>f4a4d184287fa13264259608ee574811e96df3bddc3e129129623fe407901232</hash>
+         <hash>dd770273a5676927dafccff244c01109281060e24e1e8e1e545a34692bb4332f</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\device.h</file>
@@ -9014,7 +9027,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\driver\controller\xlcdc\drv_gfx_xlcdc.c</file>
-         <hash>13043e8849ff526c1a2481338d95bb0d7a8dc1af274783181985752dc5210027</hash>
+         <hash>c884df04ce53f56e2a760c416b0343bef99cc910d846428ff9265a230a861b57</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\driver\controller\xlcdc\drv_gfx_xlcdc.h</file>
@@ -9022,7 +9035,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\driver\controller\xlcdc\plib\plib_xlcdc.c</file>
-         <hash>93a1250f50cee3085d466c220c08d1e654054ae0f6315192c4cb3036964b2d52</hash>
+         <hash>e8d0935527151011c0809eb919e93576261e499eb8f37b19a5d0489f1e891fce</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\driver\controller\xlcdc\plib\plib_xlcdc.h</file>
@@ -9206,15 +9219,15 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\font\le_gen_fonts.c</file>
-         <hash>d3be2f64552dab3afa06f8763c7cd39f936419ecc82c0d8bedc6290559808c65</hash>
+         <hash>4692b56da7acbfcaeed07df825e3b985d8728863e8e9ba0abfdd44b09b5e4ea0</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\image\le_gen_images.c</file>
-         <hash>fafc3f105f8914fef76a08a3a573eec55e72009e5af86f3cf9f74c79540572f4</hash>
+         <hash>be68e9c1764dae63563556751789d050af06cc3ba5a209f5d7c6a92bf3f07d2c</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\le_gen_assets.h</file>
-         <hash>c38b453e07db2af4604f92d4de08a8157c970e8b24246cf429491bd584d1a1b8</hash>
+         <hash>337253bd2fda52ffc2c7e7939af3f89c991966d1b79decf87b285f7400ab87a8</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\le_gen_globalpalette.c</file>
@@ -9230,39 +9243,55 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\le_gen_init.c</file>
-         <hash>f272122713709033bf4ddd0d3ae0255dae82e054a43deba58488635163e313ee</hash>
+         <hash>8d995e62b3c8dca680ec19044ce33256ac19225788cc463a51fcdf72b025118e</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\le_gen_init.h</file>
-         <hash>0d15e977b4969ae61968b9ec97cbe98c6b0ef7d1093c499402f668d0414c196d</hash>
+         <hash>ec06b3a8e146351a1b322028e757f0d766ceece1cdbb89f52589e14167fca2db</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\le_gen_scheme.c</file>
-         <hash>72d0243091cac8f99b5eb9306cd9ebc532ec62b13b64d6f7641a405f7f81f238</hash>
+         <hash>49e2389f44af46430f496650ad0419a83e0c0932d18c771fe9021abbb2f90756</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\le_gen_scheme.h</file>
-         <hash>116f3d2f34e8571b8a8c9aa94fccadf8ceed85514192f185fca6c08466e76048</hash>
+         <hash>5e9a14993f4d1257107cb9200f47acf3c7c010546aaf86ecad287e0244a12f64</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\le_gen_stringtable.c</file>
-         <hash>38f97dd5426c5b58a8e948cd834a1a52e0cf5a91c054e720680d4dd95a7b4ce4</hash>
+         <hash>c9a0930ed673a2b01af459ba1cc4766b4eecdfdfa64622c4f03b81bd02eef9ec</hash>
       </entry>
       <entry>
-         <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Help.c</file>
-         <hash>51716c30792b95567df0275f3a8bf0a766e8418d3c817a891adfa2788df652eb</hash>
+         <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Screen0.c</file>
+         <hash>626dc4a0151c67e1fb3ea3bceec4c0229d04f155f81f4c4c666c54305454a7b9</hash>
       </entry>
       <entry>
-         <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Help.h</file>
-         <hash>587f4ba4877220aaabdb8efc9d55b8763646346cad965a18d78434f8c8d25c09</hash>
+         <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Screen0.h</file>
+         <hash>f02046be560f94811c865630c464f6516573741172364333a7c07514a7479486</hash>
       </entry>
       <entry>
-         <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Home.c</file>
-         <hash>a38b4cb0bf1b814995b8a56b3f5a2e1e5d071ebff3ad671cfaa79e7c511132be</hash>
+         <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Screen1.c</file>
+         <hash>562934b9c92a7afd2271d253be5f2d029d2ddf1a6fa7fc94f893535132b43e13</hash>
       </entry>
       <entry>
-         <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Home.h</file>
-         <hash>8d176a2257b4ab8dd7a61e06f58ad3e1057bd26bfaccd3994defd11b0f7c3521</hash>
+         <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Screen1.h</file>
+         <hash>92903b091c0c65ff87731a9a4f11aa03326c49d3d8f6be132eb791dd908f4e1d</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Screen2.c</file>
+         <hash>a6896364a4e847cff4c946206b595112efcbe44337484e67aa58e3db1ab9fc90</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Screen2.h</file>
+         <hash>5dec980e5c8b439e683a6e7b72daa7defef1952db5833f79b106d2448f728816</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Screen3.c</file>
+         <hash>a0e332fdb35d7c141fccf533aa50de1483d4ff183de6764b356c462b1f85b18b</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Screen3.h</file>
+         <hash>08a9a4b471f684ac753209c05c14f89ef299c5390ae12f55896f427830cb3cef</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\image\jpeg\jidctint.c</file>
@@ -9410,7 +9439,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\legato_config.h</file>
-         <hash>d8caf2252efae5f3dfb5954f8ee4569d70a1bf2f9841b4ff7fb0fc0d21b7b81e</hash>
+         <hash>3c842404914f31bbfcd0b44c5055c9ea8073dd6576ddd11b0d794c8fa27391e8</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\memory\legato_fixedheap.c</file>
@@ -10038,7 +10067,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\initialization.c</file>
-         <hash>96325b3caa83003386f7b6392cbe6282ee08ccb773e7d32de2539b8e558bb8b9</hash>
+         <hash>98bb8338ec7aba352fc5f724f538b206c8d0f3c286ffeb43184220f634bb611c</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\interrupts.c</file>
@@ -10234,7 +10263,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\tasks.c</file>
-         <hash>aebb96c8552bd7abf8f273ea6f3f7a1cc2f25da4d609183a602b0c610deca2ce</hash>
+         <hash>e5e08d82cf1635fa68f448b928f11e5aaf33af3993cb422384576c9fff535091</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\toolchain_specifics.h</file>
