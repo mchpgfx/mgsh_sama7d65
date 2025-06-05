@@ -4,7 +4,7 @@
 
 
 project: mgs_quickstart
-creation_date: 2025-04-30T21:10:44.097+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2025-06-06T01:21:47.138+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 11
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.5.2
@@ -17,7 +17,7 @@ modules:
     - {name: "core", version: "v3.15.1"}
     - {name: "csp", version: "v3.22.2"}
     - {name: "CMSIS_5", version: "5.9.0"}
-    - {name: "gfx", version: "ourasi_gpu_support"}
+    - {name: "gfx", version: "dev"}
 
 packs:
     - {name: "SAMA7D65_DFP", version: "1.4.54"}

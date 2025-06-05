@@ -50,6 +50,10 @@
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
       <entry>
+         <string>le_gfx_driver_gpu2dc</string>
+         <string>class com.microchip.mcc.harmony.HarmonyModule</string>
+      </entry>
+      <entry>
          <string>le_gfx_driver_xlcdc</string>
          <string>class com.microchip.mcc.harmony.HarmonyModule</string>
       </entry>
@@ -2929,13 +2933,14 @@
         &lt;ElementPosition dnOrder=&quot;6&quot; id=&quot;flexcom6&quot; x=&quot;133&quot; y=&quot;446&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;7&quot; id=&quot;gfx_bridge_dsi_plib&quot; x=&quot;219&quot; y=&quot;118&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;8&quot; id=&quot;gfx_display_comp_ac40t08a&quot; x=&quot;0&quot; y=&quot;69&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;gfx_legato&quot; x=&quot;567&quot; y=&quot;166&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;9&quot; id=&quot;gfx_legato&quot; x=&quot;574&quot; y=&quot;202&quot;/&gt;
         &lt;ElementPosition dnOrder=&quot;10&quot; id=&quot;gfx_maxtouch_controller&quot; x=&quot;0&quot; y=&quot;165&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;le_gfx_driver_xlcdc&quot; x=&quot;390&quot; y=&quot;120&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;rtt&quot; x=&quot;606&quot; y=&quot;32&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;stdio&quot; x=&quot;146&quot; y=&quot;363&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;sys_input&quot; x=&quot;387&quot; y=&quot;32&quot;/&gt;
-        &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;sys_time&quot; x=&quot;741&quot; y=&quot;12&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;11&quot; id=&quot;le_gfx_driver_gpu2dc&quot; x=&quot;354&quot; y=&quot;238&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;12&quot; id=&quot;le_gfx_driver_xlcdc&quot; x=&quot;390&quot; y=&quot;120&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;13&quot; id=&quot;rtt&quot; x=&quot;606&quot; y=&quot;32&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;14&quot; id=&quot;stdio&quot; x=&quot;146&quot; y=&quot;363&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;15&quot; id=&quot;sys_input&quot; x=&quot;387&quot; y=&quot;32&quot;/&gt;
+        &lt;ElementPosition dnOrder=&quot;16&quot; id=&quot;sys_time&quot; x=&quot;741&quot; y=&quot;12&quot;/&gt;
       &lt;/ElementPositions&gt;
     &lt;/ComponentGraph&gt;
   &lt;/UserData&gt;
@@ -3029,6 +3034,28 @@
   &lt;core dnOrder=&quot;0&quot; id=&quot;FLEXCOM6_INTERRUPT_HANDLER&quot;&gt;
     &lt;Values dnOrder=&quot;0&quot;&gt;
       &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;flexcom6&quot; value=&quot;FLEXCOM6_InterruptHandler&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="GPU2DC_INTERRUPT_ENABLE"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;GPU2DC_INTERRUPT_ENABLE&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;le_gfx_driver_gpu2dc&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
+  &lt;/core&gt;
+&lt;/core&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="core" name="GPU2DC_INTERRUPT_HANDLER"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;core&gt;
+  &lt;core dnOrder=&quot;0&quot; id=&quot;GPU2DC_INTERRUPT_HANDLER&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;le_gfx_driver_gpu2dc&quot; value=&quot;GPU2DC_InterruptHandler&quot;/&gt;
     &lt;/Values&gt;
   &lt;/core&gt;
 &lt;/core&gt;
@@ -7407,6 +7434,16 @@
           &lt;/String&gt;
         &lt;/Attributes&gt;
       &lt;/DirectDependency&gt;
+      &lt;DirectDependency dnOrder=&quot;1&quot; id=&quot;gpu_driver&quot;&gt;
+        &lt;Attributes dnOrder=&quot;0&quot;&gt;
+          &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;le_gfx_driver_gpu2dc&lt;/Value&gt;
+          &lt;/String&gt;
+          &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;gfx_driver_gpu2dc&lt;/Value&gt;
+          &lt;/String&gt;
+        &lt;/Attributes&gt;
+      &lt;/DirectDependency&gt;
     &lt;/Attachments&gt;
   &lt;/gfx_legato&gt;
 &lt;/gfx_legato&gt;
@@ -7420,7 +7457,9 @@
          <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="gfx_legato" name="LeGPUConnected"/>
          <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;gfx_legato&gt;
   &lt;gfx_legato dnOrder=&quot;0&quot; id=&quot;LeGPUConnected&quot;&gt;
-    &lt;Values dnOrder=&quot;0&quot;/&gt;
+    &lt;Values dnOrder=&quot;0&quot;&gt;
+      &lt;Dynamic dnOrder=&quot;0&quot; id=&quot;gfx_legato&quot; value=&quot;true&quot;/&gt;
+    &lt;/Values&gt;
   &lt;/gfx_legato&gt;
 &lt;/gfx_legato&gt;
 </value>
@@ -7625,6 +7664,48 @@
     &lt;/Values&gt;
   &lt;/gfx_maxtouch_controller&gt;
 &lt;/gfx_maxtouch_controller&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="le_gfx_driver_gpu2dc" name="!@#harmonyAttachmentState"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;le_gfx_driver_gpu2dc&gt;
+  &lt;le_gfx_driver_gpu2dc dnOrder=&quot;0&quot;&gt;
+    &lt;Attachments dnOrder=&quot;0&quot;&gt;
+      &lt;DirectCapability dnOrder=&quot;0&quot; id=&quot;gfx_driver_gpu2dc&quot;&gt;
+        &lt;Attributes dnOrder=&quot;0&quot;&gt;
+          &lt;String dnOrder=&quot;0&quot; id=&quot;targetComponentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;gfx_legato&lt;/Value&gt;
+          &lt;/String&gt;
+          &lt;String dnOrder=&quot;1&quot; id=&quot;targetAttachmentID&quot;&gt;
+            &lt;Value dnOrder=&quot;0&quot;&gt;gpu_driver&lt;/Value&gt;
+          &lt;/String&gt;
+        &lt;/Attributes&gt;
+      &lt;/DirectCapability&gt;
+    &lt;/Attachments&gt;
+  &lt;/le_gfx_driver_gpu2dc&gt;
+&lt;/le_gfx_driver_gpu2dc&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="le_gfx_driver_gpu2dc" name="#&amp;__MCC_Group_Parrent_id"/>
+         <value>__ROOTVIEW</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="le_gfx_driver_gpu2dc" name="IP"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;le_gfx_driver_gpu2dc&gt;
+  &lt;le_gfx_driver_gpu2dc dnOrder=&quot;0&quot; id=&quot;IP&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/le_gfx_driver_gpu2dc&gt;
+&lt;/le_gfx_driver_gpu2dc&gt;
+</value>
+      </entry>
+      <entry>
+         <key class="com.microchip.mcc.core.tokenManager.CustomKey" moduleName="le_gfx_driver_gpu2dc" name="Version"/>
+         <value>&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;le_gfx_driver_gpu2dc&gt;
+  &lt;le_gfx_driver_gpu2dc dnOrder=&quot;0&quot; id=&quot;Version&quot;&gt;
+    &lt;Values dnOrder=&quot;0&quot;/&gt;
+  &lt;/le_gfx_driver_gpu2dc&gt;
+&lt;/le_gfx_driver_gpu2dc&gt;
 </value>
       </entry>
       <entry>
@@ -8963,7 +9044,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\definitions.h</file>
-         <hash>dd770273a5676927dafccff244c01109281060e24e1e8e1e545a34692bb4332f</hash>
+         <hash>034a2861233f848ae0e251e47fe4a0ce638b8146fbad5056b83da90af292893a</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\device.h</file>
@@ -9027,7 +9108,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\driver\controller\xlcdc\drv_gfx_xlcdc.c</file>
-         <hash>c884df04ce53f56e2a760c416b0343bef99cc910d846428ff9265a230a861b57</hash>
+         <hash>b01f09a6732f3c8654097f88491e90e800dbd28a94e96167d9ac0613d65ab817</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\driver\controller\xlcdc\drv_gfx_xlcdc.h</file>
@@ -9047,7 +9128,51 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\driver\gfx_driver.h</file>
-         <hash>c49e46dfed4d9a1436d5913fe010c723fd41303c85f712b600ef7a146c513edc</hash>
+         <hash>99c4a55ae198e618fd3590a98f219c38882bde956dc022215ef66df01b108936</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\drv_gfx_gpu2dc.c</file>
+         <hash>9413da046e152cf63d0afb0c702a8aedd193e4f43031ec92601e9f94bf4fc38a</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\drv_gfx_gpu2dc.h</file>
+         <hash>adf9a891094aaeb28b3e81fc94c70fb645630f42c47a8f62e03a975c10d0b932</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\libgpu2dc.a</file>
+         <hash>c61e1a44b978f2c9ca4ac6de7a1b676863eb60e3031f5d74dd10309978341076</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\nano2D.h</file>
+         <hash>bb0d44ac84e6179b652268d5f8680f34bccc6fc7f463803118b39bccaa6e42d9</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\nano2D_base.h</file>
+         <hash>d91ebf57146ab51088b77a27f1110ffb03a7b38ae63f837756c15b8664d6f7a1</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\nano2D_enum.h</file>
+         <hash>748e453272715da60fa5527974c94c8e7d071ea3b20f5fb60c3d6778025d65db</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\nano2D_hal.c</file>
+         <hash>97bf9cce7f1cd769bd503574f90a39f63d3fa0e3199c8113bea38986fa82c5b4</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\nano2D_hal.h</file>
+         <hash>7c54d81c51fdae1da7c46532c64e768d1652227d4d0912fce6a5723f23a1d221</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\nano2D_option.h</file>
+         <hash>568c9ca6ffc5a588a8b45c3973c62984b9617dc6714df7f54fd7cf694a489ff2</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\nano2D_types.h</file>
+         <hash>501302076269cf93f80fb659aa43d2bb47bdb5874c2c94c8f03d5df32780d2b5</hash>
+      </entry>
+      <entry>
+         <file>..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\version.h</file>
+         <hash>9fc2aac606331056e38a1403f92e48568af69d8f4f65939ece44ae8d799a1e5c</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\common\legato_color.c</file>
@@ -9119,7 +9244,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\core\legato_event.c</file>
-         <hash>a19e8f259612783dcf5ffd4010ca0e02f4ab6ba50488bc78bf4097e3296cd746</hash>
+         <hash>9a8cf4a71448333db137d3d82b98f277e9b630df1be65895b2e9ef9cf3a0fe47</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\core\legato_event.h</file>
@@ -9143,7 +9268,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\core\legato_real_u8.c</file>
-         <hash>1791c25479e446edd8e732dcbc5da06e40de5d5cb4e12f18d80951ae0d5f15c1</hash>
+         <hash>1cb1e3692555c36fd1b9a5dedca66d0b52574718e7abb99240040ebc4c8c44c4</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\core\legato_real_u8.h</file>
@@ -9251,11 +9376,11 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\le_gen_scheme.c</file>
-         <hash>49e2389f44af46430f496650ad0419a83e0c0932d18c771fe9021abbb2f90756</hash>
+         <hash>171630bbd432f7e673699432af543f86a36232ed41a061433016d298ca3d8c33</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\le_gen_scheme.h</file>
-         <hash>5e9a14993f4d1257107cb9200f47acf3c7c010546aaf86ecad287e0244a12f64</hash>
+         <hash>ccca435899c0bcd263066b448792c2330fa6213ef9b588a5c46284698ee35b44</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\le_gen_stringtable.c</file>
@@ -9287,11 +9412,11 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Screen3.c</file>
-         <hash>a0e332fdb35d7c141fccf533aa50de1483d4ff183de6764b356c462b1f85b18b</hash>
+         <hash>ba895e4e4b91540fb9e4c65564242c69ca6867192e5a7dcfdd5c0541f846607b</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Screen3.h</file>
-         <hash>08a9a4b471f684ac753209c05c14f89ef299c5390ae12f55896f427830cb3cef</hash>
+         <hash>4c642fe7d4a5215edc024f2e0d389eaabfd01049fc3f458c2b213d10843c2da4</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\image\jpeg\jidctint.c</file>
@@ -9371,7 +9496,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\image\raw\legato_imagedecoder_raw.c</file>
-         <hash>89cbf233c8538b3b659e2f7c8ed799aa48a0762401d8f8bb9c5d41fcb60511f0</hash>
+         <hash>dd3eb7d8f811853d8d2d453ac20b4e2c5dfdfaf845e5d82d215e1d677a0fbd75</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\image\raw\legato_imagedecoder_raw.h</file>
@@ -9491,7 +9616,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\renderer\legato_renderer.c</file>
-         <hash>5c718828afc9b62c3b85a08d52b1ca21f2ff9b97841c26dd79f3b9d43454d059</hash>
+         <hash>e306b427368171d4f51c8e2cb7137cac4482b14f79c0b549945ec157767c99d0</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\renderer\legato_renderer.h</file>
@@ -9543,7 +9668,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\string\legato_stringutils.c</file>
-         <hash>1394864787af92ac726f1112bb743bf620b0bcee496ccf56299f5952b7cf698e</hash>
+         <hash>67aa0cac053fba350b92daf40d636615fa56b4bd3eabb1b93aabd64d991c9f80</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\string\legato_stringutils.h</file>
@@ -9739,7 +9864,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\widget\circularslider\legato_widget_circular_slider.c</file>
-         <hash>998f2dea10e1144d446c6c85ffa700d382f6d5b564e90b887e2f019f0dfe866f</hash>
+         <hash>768a8ca6ccf53721d40502a6bdb12748e7bdf4832f1c22ac9343b2c866d80fbb</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\widget\circularslider\legato_widget_circular_slider.h</file>
@@ -9835,7 +9960,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\widget\keypad\legato_widget_keypad.c</file>
-         <hash>ae9cfd22c5fd788079a46d6603f649cd7636450aa54d5deb2a7367ba607218a3</hash>
+         <hash>a545ad32ff5d9503d8757f4cc5f759b73856e21ec03a35b12c895029f0c64750</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\widget\keypad\legato_widget_keypad.h</file>
@@ -9907,7 +10032,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\widget\linegraph\legato_widget_line_graph_skin_classic.c</file>
-         <hash>f096ec470a4e83e29db6e90423a462656ed53c30184ffaecff2d353d99a16c77</hash>
+         <hash>794fcb2340cb663b9205942e9b0cc8b3bf0448396f4afc5d766868eee449b38d</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\widget\list\legato_widget_list.c</file>
@@ -10003,7 +10128,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\widget\rectangle\legato_widget_rectangle_skin_classic.c</file>
-         <hash>97e7a1eff02f0e85dda8ca00c021fc0edb6dfbd45357bcf27765bf5a3a8e58da</hash>
+         <hash>7b751dea252e480c17973231b91c6e3d15bed97d6a4baf7214f3c550df14f3b7</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\gfx\legato\widget\scrollbar\legato_widget_scrollbar.c</file>
@@ -10067,15 +10192,15 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\initialization.c</file>
-         <hash>98bb8338ec7aba352fc5f724f538b206c8d0f3c286ffeb43184220f634bb611c</hash>
+         <hash>7c0f1b1f703c27b624991acae003185bbfbed78533e7d0e6b85e2cb9b71b44ec</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\interrupts.c</file>
-         <hash>c9c0873f3df64c5c0f086d2b397390386fc60a6fc63c1e6cdb0129f8be7e6f65</hash>
+         <hash>2f3eda9272f0bbefec97f681afa21dbc9362895817bda8551e51f7ed9a324747</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\interrupts.h</file>
-         <hash>cb3df211e3363a840bb05e3de8df148d38d26344aa8c810849213925335fa4d0</hash>
+         <hash>f31aadd621c2046b5736f72af06d5de381ef5947c24630f520ae6d333d2c15b0</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\osal\osal.h</file>
@@ -10131,7 +10256,7 @@
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\peripheral\gic\plib_gic.c</file>
-         <hash>7930c238c8793c728807f0cb0a7c0a8909bcdf359222313963ed63871001c789</hash>
+         <hash>cb4fea92afad342cbe861e03c61d138f605c236131f58db0dc225cbd154886ad</hash>
       </entry>
       <entry>
          <file>..\src\config\curiosity_ac40t08a\peripheral\gic\plib_gic.h</file>

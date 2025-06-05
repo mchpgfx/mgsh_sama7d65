@@ -6,6 +6,8 @@ static leWidget* root0;
 leWidget* Screen3_ImageBackground;
 leImageWidget* Screen3_ImageRenderArea;
 leWidget* Screen3_ImageSideContainer;
+leButtonWidget* Screen3_ButtonWidget_0;
+leButtonWidget* Screen3_ButtonWidget_0_0;
 leButtonWidget* Screen3_ImageUpdateValue;
 leButtonWidget* Screen3_ImageTypeNextButton;
 leButtonWidget* Screen3_ImageTypePrevButton;
@@ -57,6 +59,7 @@ leResult screenShow_Screen3(void)
     Screen3_ImageRenderArea = leImageWidget_New();
     Screen3_ImageRenderArea->fn->setPosition(Screen3_ImageRenderArea, 0, 0);
     Screen3_ImageRenderArea->fn->setSize(Screen3_ImageRenderArea, 720, 1280);
+    Screen3_ImageRenderArea->fn->setScheme(Screen3_ImageRenderArea, &ColoTranspB);
     Screen3_ImageRenderArea->fn->setBackgroundType(Screen3_ImageRenderArea, LE_WIDGET_BACKGROUND_NONE);
     Screen3_ImageRenderArea->fn->setBorderType(Screen3_ImageRenderArea, LE_WIDGET_BORDER_NONE);
     Screen3_ImageRenderArea->fn->setHAlignment(Screen3_ImageRenderArea, LE_HALIGN_LEFT);
@@ -183,6 +186,18 @@ leResult screenShow_Screen3(void)
     Screen3_FPSLabel->fn->setBackgroundType(Screen3_FPSLabel, LE_WIDGET_BACKGROUND_NONE);
     Screen3_ImageSideContainer->fn->addChild(Screen3_ImageSideContainer, (leWidget*)Screen3_FPSLabel);
 
+    Screen3_ButtonWidget_0 = leButtonWidget_New();
+    Screen3_ButtonWidget_0->fn->setPosition(Screen3_ButtonWidget_0, 313, 751);
+    Screen3_ButtonWidget_0->fn->setSize(Screen3_ButtonWidget_0, 204, 99);
+    Screen3_ButtonWidget_0->fn->setScheme(Screen3_ButtonWidget_0, &ColorTransA);
+    root0->fn->addChild(root0, (leWidget*)Screen3_ButtonWidget_0);
+
+    Screen3_ButtonWidget_0_0 = leButtonWidget_New();
+    Screen3_ButtonWidget_0_0->fn->setPosition(Screen3_ButtonWidget_0_0, 173, 751);
+    Screen3_ButtonWidget_0_0->fn->setSize(Screen3_ButtonWidget_0_0, 204, 99);
+    Screen3_ButtonWidget_0_0->fn->setScheme(Screen3_ButtonWidget_0_0, &ColoTranspB);
+    root0->fn->addChild(root0, (leWidget*)Screen3_ButtonWidget_0_0);
+
     leAddRootWidget(root0, 0);
     leSetLayerColorMode(0, LE_COLOR_MODE_RGBA_8888);
 
@@ -212,6 +227,8 @@ void screenHide_Screen3(void)
     Screen3_ImageBackground = NULL;
     Screen3_ImageRenderArea = NULL;
     Screen3_ImageSideContainer = NULL;
+    Screen3_ButtonWidget_0 = NULL;
+    Screen3_ButtonWidget_0_0 = NULL;
     Screen3_ImageUpdateValue = NULL;
     Screen3_ImageTypeNextButton = NULL;
     Screen3_ImageTypePrevButton = NULL;

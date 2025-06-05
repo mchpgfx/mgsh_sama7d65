@@ -25,6 +25,16 @@
               <itemPath>../src/config/curiosity_ac40t08a/gfx/display/touch_display.h</itemPath>
             </logicalFolder>
             <logicalFolder name="driver" displayName="driver" projectFiles="true">
+              <logicalFolder name="gpu2dc" displayName="gpu2dc" projectFiles="true">
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/nano2D_base.h</itemPath>
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/nano2D_enum.h</itemPath>
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/nano2D_hal.h</itemPath>
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/drv_gfx_gpu2dc.h</itemPath>
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/nano2D.h</itemPath>
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/version.h</itemPath>
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/nano2D_option.h</itemPath>
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/nano2D_types.h</itemPath>
+              </logicalFolder>
               <logicalFolder name="xlcdc" displayName="xlcdc" projectFiles="true">
                 <logicalFolder name="bridge" displayName="bridge" projectFiles="true">
                   <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/controller/xlcdc/bridge/dsi/plib_dsi.h</itemPath>
@@ -529,6 +539,10 @@
               <itemPath>../src/config/curiosity_ac40t08a/gfx/display/touch_display.c</itemPath>
             </logicalFolder>
             <logicalFolder name="driver" displayName="driver" projectFiles="true">
+              <logicalFolder name="gpu2dc" displayName="gpu2dc" projectFiles="true">
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/nano2D_hal.c</itemPath>
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/drv_gfx_gpu2dc.c</itemPath>
+              </logicalFolder>
               <logicalFolder name="xlcdc" displayName="xlcdc" projectFiles="true">
                 <logicalFolder name="bridge" displayName="bridge" projectFiles="true">
                   <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/controller/xlcdc/bridge/dsi/plib_dsi.c</itemPath>
@@ -902,6 +916,7 @@
       <compileType>
         <linkerTool>
           <linkerLibItems>
+            <linkerLibFileItem>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/libgpu2dc.a</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
         <archiverTool>
@@ -942,7 +957,7 @@
         <property key="exclude-floating-point" value="false"/>
         <property key="expand-pragma-config" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/curiosity_ac40t08a;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/SAMA7D65_DFP"/>
+                  value="../src;../src/config/curiosity_ac40t08a;../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/SAMA7D65_DFP"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -961,7 +976,8 @@
         <property key="place-data-into-section" value="true"/>
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
-        <property key="preprocessor-macros" value=""/>
+        <property key="preprocessor-macros"
+                  value="LE_NO_CACHE_ATTR=__attribute__((section(\&quot;.region_nocache\&quot;),aligned(16)))"/>
         <property key="scalar-model" value="default"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>

@@ -20,6 +20,8 @@ extern const leScheme PinkFillScheme;
 extern const leScheme YellowFillScheme;
 extern const leScheme WhiteFillScheme;
 extern const leScheme ClearScheme;
+extern const leScheme ColoTranspB;
+extern const leScheme ColorTransA;
 
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
