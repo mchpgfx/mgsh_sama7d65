@@ -109,9 +109,9 @@ M14,PB17,,Available,In,,,,,,,
 M15,PB15,,Available,In,,,,,,,
 N11,PA15,,Available,In,,,,,,,
 N14,PB13,,Available,In,,,,,,,
-N15,PB14,MIPI_DISP_BL_PWM,GPIO,Out,High,No,Disabled,No,No,Glitch Filter,0
+N15,PB14,GPIO_PB14,GPIO,Out,High,No,Disabled,No,No,Glitch Filter,0
 N20,PB16,BSP_MAXTOUCH_CHG,GPIO,In,n/a,No,Disabled,No,No,Glitch Filter,0
-N21,PB18,MIPI_DISP_EN,GPIO,Out,High,No,Disabled,No,No,Glitch Filter,0
+N21,PB18,GPIO_PB18,GPIO,Out,High,No,Disabled,No,No,Glitch Filter,0
 P9,PA24,,Available,In,,,,,,,
 P10,PA22,,Available,In,,,,,,,
 P11,PA13,,Available,In,,,,,,,

@@ -65,8 +65,8 @@
 #include "gfx/driver/controller/xlcdc/plib/plib_xlcdc.h"
 #include "gfx/driver/controller/xlcdc/drv_gfx_xlcdc.h"
 #include "peripheral/rtt/plib_rtt.h"
-#include "gfx/display/touch_display.h"
 #include "driver/input/drv_maxtouch.h"
+#include "gfx/display/touch_display.h"
 #include "system/int/sys_int.h"
 #include "system/cache/sys_cache.h"
 #include "osal/osal.h"
@@ -90,7 +90,7 @@ extern "C" {
 #define DEVICE_SERIES        "SAMA7D6"
 
 /* CPU clock frequency */
-#define CPU_CLOCK_FREQUENCY 800000000U
+#define CPU_CLOCK_FREQUENCY 1000000000U
 
 // *****************************************************************************
 // *****************************************************************************

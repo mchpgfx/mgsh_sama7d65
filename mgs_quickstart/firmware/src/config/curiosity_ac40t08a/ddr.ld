@@ -40,12 +40,12 @@ MEMORY
 }
 
 /* Sizes of the stacks used by the application. NOTE: you need to adjust */
-C_STACK_SIZE   = 4096;
-IRQ_STACK_SIZE = 96;
-FIQ_STACK_SIZE = 96;
-SVC_STACK_SIZE = 4096;
-ABT_STACK_SIZE = 64;
-UND_STACK_SIZE = 64;
+C_STACK_SIZE   = 16384;
+IRQ_STACK_SIZE = 256;
+FIQ_STACK_SIZE = 256;
+SVC_STACK_SIZE = 16384;
+ABT_STACK_SIZE = 256;
+UND_STACK_SIZE = 256;
 
 /* Section Definitions */
 SECTIONS

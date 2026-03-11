@@ -316,19 +316,6 @@
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
-        <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
-          <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
-            <logicalFolder name="Core_A" displayName="Core_A" projectFiles="true">
-              <logicalFolder name="Include" displayName="Include" projectFiles="true">
-                <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/cmsis_compiler.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/cmsis_iccarm.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/core_ca.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/cmsis_cp15.h</itemPath>
-                <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/cmsis_gcc.h</itemPath>
-              </logicalFolder>
-            </logicalFolder>
-          </logicalFolder>
-        </logicalFolder>
         <logicalFolder name="SAMA7D65_DFP"
                        displayName="SAMA7D65_DFP"
                        projectFiles="true">
@@ -505,8 +492,36 @@
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="true">
+      <logicalFolder name="mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a"
+                     displayName="mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a"
+                     projectFiles="true">
+        <logicalFolder name="components" displayName="components" projectFiles="true">
+          <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/flexcom0.yml</itemPath>
+          <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/HarmonyCore.yml</itemPath>
+          <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/rtt.yml</itemPath>
+          <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/gfx_display_comp_ac40t08a.yml</itemPath>
+          <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/sys_time.yml</itemPath>
+          <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/le_gfx_driver_gpu2dc.yml</itemPath>
+          <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/le_gfx_driver_xlcdc.yml</itemPath>
+          <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/drv_i2c.yml</itemPath>
+          <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/gfx_legato.yml</itemPath>
+          <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/drv_i2c_0.yml</itemPath>
+          <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/core.yml</itemPath>
+          <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/dfp.yml</itemPath>
+          <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/gfx_maxtouch_controller.yml</itemPath>
+          <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/stdio.yml</itemPath>
+          <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/flexcom6.yml</itemPath>
+          <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/cmsis.yml</itemPath>
+          <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/sys_input.yml</itemPath>
+          <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/gfx_bridge_dsi_plib.yml</itemPath>
+        </logicalFolder>
+        <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/mcc-config.mc4</itemPath>
+      </logicalFolder>
       <itemPath>Makefile</itemPath>
-      <itemPath>mgs_qs_a7d65_curiosity_ac40t08a.mc3</itemPath>
+    </logicalFolder>
+    <logicalFolder name="LibraryFiles"
+                   displayName="LibraryFiles"
+                   projectFiles="true">
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -899,11 +914,11 @@
         <targetPluginBoard></targetPluginBoard>
         <platformTool>samice</platformTool>
         <languageToolchain>XC32</languageToolchain>
-        <languageToolchainVersion>4.60</languageToolchainVersion>
+        <languageToolchainVersion>5.00</languageToolchainVersion>
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMA7D65_DFP" vendor="Microchip" version="1.4.54"/>
+        <pack name="SAMA7D65_DFP" vendor="Microchip" version="1.10.108"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="boot.load_adr" value=""/>
@@ -1042,7 +1057,7 @@
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-cross-reference-file" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
-        <property key="heap-size" value="512"/>
+        <property key="heap-size" value="16384"/>
         <property key="input-libraries" value=""/>
         <property key="kseg-length" value=""/>
         <property key="kseg-origin" value=""/>

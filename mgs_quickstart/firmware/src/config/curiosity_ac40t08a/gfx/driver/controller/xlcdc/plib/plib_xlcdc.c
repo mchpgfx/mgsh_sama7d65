@@ -511,7 +511,7 @@ bool XLCDC_SetLayerOpts(XLCDC_LAYER layer, uint8_t alpha, bool enable_dma, bool 
                                         LCDC_OVR1CFG9_REP(1) |
                                         LCDC_OVR1CFG9_CRKEY(0) |
                                         LCDC_OVR1CFG9_DSTKEY(0) |
-                                        LCDC_OVR1CFG9_SFACTC(4) |  //A0*As
+                                LCDC_OVR1CFG9_SFACTC(4) |  //A0*As
                                         LCDC_OVR1CFG9_SFACTA(1) |  //1*As
                                         LCDC_OVR1CFG9_DFACTC(6) |  //1-(A0*As)
                                         LCDC_OVR1CFG9_DFACTA(2) |  //1-(A0*As)
@@ -528,7 +528,7 @@ bool XLCDC_SetLayerOpts(XLCDC_LAYER layer, uint8_t alpha, bool enable_dma, bool 
                                         LCDC_HEOCFG12_CRKEY(0) |
                                         LCDC_HEOCFG12_DSTKEY(0) |
                                         LCDC_HEOCFG12_VIDPRI(1) |  //OVR2>HEO>OVR1>BASE
-                                        LCDC_HEOCFG12_SFACTC(4) |  //A0*As
+                                LCDC_HEOCFG12_SFACTC(4) |  //A0*As
                                         LCDC_HEOCFG12_SFACTA(1) |  //1*As
                                         LCDC_HEOCFG12_DFACTC(6) |  //1-(A0*As)
                                         LCDC_HEOCFG12_DFACTA(2) |  //1-(A0*As)

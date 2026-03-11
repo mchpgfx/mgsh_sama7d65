@@ -1,0 +1,53 @@
+configVersion: 1.0.0
+componentName: le_gfx_driver_gpu2dc
+coreVersion: 5.8.4
+device: SAMA7D65
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: le_gfx_driver_gpu2dc
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: gfx
+  type: package
+  version: v3.16.2
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments:
+    children:
+    - children:
+      - attributes:
+          id: gfx_driver_gpu2dc
+        children:
+        - children:
+          - attributes:
+              id: targetComponentID
+            children:
+            - type: Value
+              value: gfx_legato
+            type: String
+          - attributes:
+              id: targetAttachmentID
+            children:
+            - type: Value
+              value: gpu_driver
+            type: String
+          type: Attributes
+        type: DirectCapability
+      type: Attachments
+    type: le_gfx_driver_gpu2dc
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: le_gfx_driver_gpu2dc
+          x: '354'
+          y: '238'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols: {}
+  userData: {}

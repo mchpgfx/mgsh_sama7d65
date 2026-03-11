@@ -104,23 +104,23 @@
 #define MIPI_DISP_SCL_Get()               ((PIOC_REGS->PIO_PDSR >> 6U) & 0x1U)
 #define MIPI_DISP_SCL_PIN                  PIO_PIN_PC6
 
-/*** Macros for MIPI_DISP_BL_PWM pin ***/
-#define MIPI_DISP_BL_PWM_Set()               (PIOB_REGS->PIO_SODR = ((uint32_t)1U<<14U))
-#define MIPI_DISP_BL_PWM_Clear()             (PIOB_REGS->PIO_CODR = ((uint32_t)1U<<14U))
-#define MIPI_DISP_BL_PWM_Toggle()            do {\
+/*** Macros for GPIO_PB14 pin ***/
+#define GPIO_PB14_Set()               (PIOB_REGS->PIO_SODR = ((uint32_t)1U<<14U))
+#define GPIO_PB14_Clear()             (PIOB_REGS->PIO_CODR = ((uint32_t)1U<<14U))
+#define GPIO_PB14_Toggle()            do {\
                                             PIOB_REGS->PIO_MSKR = ((uint32_t)1U<<14U); \
                                             PIOB_REGS->PIO_ODSR ^= ((uint32_t)1U<<14U);\
                                         } while (0)
-#define MIPI_DISP_BL_PWM_OutputEnable()      do {\
+#define GPIO_PB14_OutputEnable()      do {\
                                             PIOB_REGS->PIO_MSKR = ((uint32_t)1U<<14U); \
                                             PIOB_REGS->PIO_CFGR |=((uint32_t)1U << PIO_CFGR_DIR_Pos);\
                                         }while(0)
-#define MIPI_DISP_BL_PWM_InputEnable()       do { \
+#define GPIO_PB14_InputEnable()       do { \
                                             PIOB_REGS->PIO_MSKR = ((uint32_t)1U<<14U); \
                                             PIOB_REGS->PIO_CFGR &= ~((uint32_t)1U << PIO_CFGR_DIR_Pos);\
                                         } while (0)
-#define MIPI_DISP_BL_PWM_Get()               ((PIOB_REGS->PIO_PDSR >> 14U) & 0x1U)
-#define MIPI_DISP_BL_PWM_PIN                  PIO_PIN_PB14
+#define GPIO_PB14_Get()               ((PIOB_REGS->PIO_PDSR >> 14U) & 0x1U)
+#define GPIO_PB14_PIN                  PIO_PIN_PB14
 
 /*** Macros for BSP_MAXTOUCH_CHG pin ***/
 #define BSP_MAXTOUCH_CHG_Set()               (PIOB_REGS->PIO_SODR = ((uint32_t)1U<<16U))
@@ -140,23 +140,23 @@
 #define BSP_MAXTOUCH_CHG_Get()               ((PIOB_REGS->PIO_PDSR >> 16U) & 0x1U)
 #define BSP_MAXTOUCH_CHG_PIN                  PIO_PIN_PB16
 
-/*** Macros for MIPI_DISP_EN pin ***/
-#define MIPI_DISP_EN_Set()               (PIOB_REGS->PIO_SODR = ((uint32_t)1U<<18U))
-#define MIPI_DISP_EN_Clear()             (PIOB_REGS->PIO_CODR = ((uint32_t)1U<<18U))
-#define MIPI_DISP_EN_Toggle()            do {\
+/*** Macros for GPIO_PB18 pin ***/
+#define GPIO_PB18_Set()               (PIOB_REGS->PIO_SODR = ((uint32_t)1U<<18U))
+#define GPIO_PB18_Clear()             (PIOB_REGS->PIO_CODR = ((uint32_t)1U<<18U))
+#define GPIO_PB18_Toggle()            do {\
                                             PIOB_REGS->PIO_MSKR = ((uint32_t)1U<<18U); \
                                             PIOB_REGS->PIO_ODSR ^= ((uint32_t)1U<<18U);\
                                         } while (0)
-#define MIPI_DISP_EN_OutputEnable()      do {\
+#define GPIO_PB18_OutputEnable()      do {\
                                             PIOB_REGS->PIO_MSKR = ((uint32_t)1U<<18U); \
                                             PIOB_REGS->PIO_CFGR |=((uint32_t)1U << PIO_CFGR_DIR_Pos);\
                                         }while(0)
-#define MIPI_DISP_EN_InputEnable()       do { \
+#define GPIO_PB18_InputEnable()       do { \
                                             PIOB_REGS->PIO_MSKR = ((uint32_t)1U<<18U); \
                                             PIOB_REGS->PIO_CFGR &= ~((uint32_t)1U << PIO_CFGR_DIR_Pos);\
                                         } while (0)
-#define MIPI_DISP_EN_Get()               ((PIOB_REGS->PIO_PDSR >> 18U) & 0x1U)
-#define MIPI_DISP_EN_PIN                  PIO_PIN_PB18
+#define GPIO_PB18_Get()               ((PIOB_REGS->PIO_PDSR >> 18U) & 0x1U)
+#define GPIO_PB18_PIN                  PIO_PIN_PB18
 // *****************************************************************************
 /* PIO Ports
 
