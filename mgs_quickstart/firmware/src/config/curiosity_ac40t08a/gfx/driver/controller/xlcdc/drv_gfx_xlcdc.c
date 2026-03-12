@@ -42,6 +42,7 @@
 #include "arm_neon.h"
 #include "toolchain_specifics.h"
 #include "gfx/driver/gfx_driver.h"
+#include "gfx/driver/gpu2dc/drv_gfx_gpu2dc.h"
 #include "gfx/driver/controller/xlcdc/drv_gfx_xlcdc.h"
 #include "gfx/driver/controller/xlcdc/plib/plib_xlcdc.h"
 
@@ -148,127 +149,6 @@ static void DRV_XLCDC_ColorSet (void * fb)
     while(size-- > 0) *ptr++ = 0x0;
 }
 
-/* Perform a CPU based Blit w/ NEON */
-static gfxResult DRV_XLCDC_CPU_Blit(const gfxPixelBuffer* restrict source,
-                                   const gfxRect* restrict rectSrc,
-                                   const gfxPixelBuffer* restrict dest,
-                                   const gfxRect* restrict rectDest)
-{
-    if (!source || !rectSrc || !dest || !rectDest)
-        return GFX_FAILURE;
-
-    // Calculate dimensions
-    const uint32_t width = MIN(rectSrc->width, rectDest->width);
-    const uint32_t height = MIN(rectSrc->height, rectDest->height);
-
-    if (width == 0 || height == 0)
-        return GFX_FAILURE;
-
-    // Calculate row size in bytes
-    const uint32_t pixelSize = gfxColorInfoTable[dest->mode].size;
-    const uint32_t rowSize = width * pixelSize;
-
-    // Calculate source and destination strides based on buffer widths
-    const uint32_t srcStride = source->size.width * pixelSize;
-    const uint32_t destStride = dest->size.width * pixelSize;
-
-    uint8_t* restrict srcBase = (uint8_t*)gfxPixelBufferOffsetGet(source, rectSrc->x, rectSrc->y);
-    uint8_t* restrict destBase = (uint8_t*)gfxPixelBufferOffsetGet(dest, rectDest->x, rectDest->y);
-
-    // Check if we can do a single large transfer i.e. we have contiguous data
-    if (width == source->size.width && width == dest->size.width)
-    {
-        const uint32_t totalSize = rowSize * height;
-
-        if (IS_ALIGNED(srcBase, 4) && IS_ALIGNED(destBase, 4) && totalSize >= 16)
-        {
-            uint8_t* src = srcBase;
-            uint8_t* dst = destBase;
-            uint32_t vectors = totalSize / 16;
-            uint32_t remain = totalSize & 15;
-
-            // Aggressive pre-fetch
-            __builtin_prefetch(src);
-            __builtin_prefetch(src + 32);
-            __builtin_prefetch(src + 64);
-            __builtin_prefetch(src + 96);
-
-            while (vectors--)
-            {
-                // Keep pre-fetching ahead
-                __builtin_prefetch(src + 128);
-                __builtin_prefetch(src + 160);
-
-                uint8x16_t data = vld1q_u8(src);
-                vst1q_u8(dst, data);
-
-                src += 16;
-                dst += 16;
-            }
-
-            if (remain)
-            {
-                memcpy(dst, src, remain);
-            }
-        }
-        else
-        {
-            memcpy(destBase, srcBase, totalSize);
-        }
-
-        return GFX_SUCCESS;
-    }
-
-    // Row by row processing for non-contiguous data
-    for (uint32_t row = 0; row < height; row++)
-    {
-        uint8_t* restrict src = srcBase + row * srcStride;
-        uint8_t* restrict dst = destBase + row * destStride;
-
-        if (IS_ALIGNED(src, 4) && IS_ALIGNED(dst, 4) && rowSize >= 16)
-        {
-            uint32_t vectors = rowSize / 16;
-            uint32_t remain = rowSize & 15;
-
-            // Aggressive pre-fetch
-            if (row < height - 1)
-            {
-                __builtin_prefetch(src + srcStride);
-                __builtin_prefetch(src + srcStride + 32);
-                __builtin_prefetch(src + srcStride + 64);
-                __builtin_prefetch(src + srcStride + 96);
-            }
-
-            uint8_t* vectorSrc = src;
-            uint8_t* vectorDst = dst;
-
-            while (vectors--)
-            {
-                // Keep pre-fetching ahead
-                __builtin_prefetch(vectorSrc + 128);
-                __builtin_prefetch(vectorSrc + 160);
-
-                uint8x16_t data = vld1q_u8(vectorSrc);
-                vst1q_u8(vectorDst, data);
-
-                vectorSrc += 16;
-                vectorDst += 16;
-            }
-
-            if (remain)
-            {
-                memcpy(vectorDst, vectorSrc, remain);
-            }
-        }
-        else
-        {
-            memcpy(dst, src, rowSize);
-        }
-    }
-
-    return GFX_SUCCESS;
-}
-
 void DRV_XLCDC_Update(void)
 {
     switch(state)
@@ -347,10 +227,7 @@ gfxResult DRV_XLCDC_BlitBuffer(int32_t x, int32_t y, gfxPixelBuffer* buf)
     destRect.height = buf->size.height;
     destRect.width = buf->size.width;
 
-    result = DRV_XLCDC_CPU_Blit(buf,
-                                &srcRect,
-                                &drvLayer[activeLayer].pixelBuffer[drvLayer[activeLayer].frontBufferIdx],
-                                &destRect);
+    result = gfxGPUInterface.blitBuffer(buf, &srcRect, &drvLayer[activeLayer].pixelBuffer[drvLayer[activeLayer].frontBufferIdx], &destRect);
 
     gfxPixelBuffer_SetLocked(buf, GFX_FALSE);
 

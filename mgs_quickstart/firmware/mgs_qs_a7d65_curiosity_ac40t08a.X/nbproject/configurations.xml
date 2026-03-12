@@ -25,6 +25,16 @@
               <itemPath>../src/config/curiosity_ac40t08a/gfx/display/touch_display.h</itemPath>
             </logicalFolder>
             <logicalFolder name="driver" displayName="driver" projectFiles="true">
+              <logicalFolder name="gpu2dc" displayName="gpu2dc" projectFiles="true">
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/nano2D.h</itemPath>
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/nano2D_base.h</itemPath>
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/nano2D_enum.h</itemPath>
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/nano2D_hal.h</itemPath>
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/nano2D_option.h</itemPath>
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/nano2D_types.h</itemPath>
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/version.h</itemPath>
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/drv_gfx_gpu2dc.h</itemPath>
+              </logicalFolder>
               <logicalFolder name="xlcdc" displayName="xlcdc" projectFiles="true">
                 <logicalFolder name="bridge" displayName="bridge" projectFiles="true">
                   <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/controller/xlcdc/bridge/dsi/plib_dsi.h</itemPath>
@@ -63,15 +73,15 @@
               </logicalFolder>
               <logicalFolder name="generated" displayName="generated" projectFiles="true">
                 <logicalFolder name="screen" displayName="screen" projectFiles="true">
-                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen3.h</itemPath>
-                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen2.h</itemPath>
-                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen1.h</itemPath>
                   <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen0.h</itemPath>
+                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen1.h</itemPath>
+                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen2.h</itemPath>
+                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen3.h</itemPath>
                 </logicalFolder>
                 <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/le_gen_assets.h</itemPath>
                 <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/le_gen_harmony.h</itemPath>
-                <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/le_gen_scheme.h</itemPath>
                 <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/le_gen_init.h</itemPath>
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/le_gen_scheme.h</itemPath>
               </logicalFolder>
               <logicalFolder name="image" displayName="image" projectFiles="true">
                 <logicalFolder name="jpeg" displayName="jpeg" projectFiles="true">
@@ -540,6 +550,7 @@
           <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/gfx_display_comp_ac40t08a.yml</itemPath>
           <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/sys_time.yml</itemPath>
           <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/FreeRTOS.yml</itemPath>
+          <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/le_gfx_driver_gpu2dc.yml</itemPath>
           <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/le_gfx_driver_xlcdc.yml</itemPath>
           <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/drv_i2c.yml</itemPath>
           <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/gfx_legato.yml</itemPath>
@@ -592,6 +603,10 @@
               <itemPath>../src/config/curiosity_ac40t08a/gfx/display/touch_display.c</itemPath>
             </logicalFolder>
             <logicalFolder name="driver" displayName="driver" projectFiles="true">
+              <logicalFolder name="gpu2dc" displayName="gpu2dc" projectFiles="true">
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/nano2D_hal.c</itemPath>
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/drv_gfx_gpu2dc.c</itemPath>
+              </logicalFolder>
               <logicalFolder name="xlcdc" displayName="xlcdc" projectFiles="true">
                 <logicalFolder name="bridge" displayName="bridge" projectFiles="true">
                   <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/controller/xlcdc/bridge/dsi/plib_dsi.c</itemPath>
@@ -642,15 +657,15 @@
                   <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/image/le_gen_images.c</itemPath>
                 </logicalFolder>
                 <logicalFolder name="screen" displayName="screen" projectFiles="true">
-                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen3.c</itemPath>
-                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen2.c</itemPath>
-                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen1.c</itemPath>
                   <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen0.c</itemPath>
+                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen1.c</itemPath>
+                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen2.c</itemPath>
+                  <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/screen/le_gen_screen_Screen3.c</itemPath>
                 </logicalFolder>
-                <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/le_gen_harmony.c</itemPath>
                 <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/le_gen_globalpalette.c</itemPath>
-                <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/le_gen_scheme.c</itemPath>
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/le_gen_harmony.c</itemPath>
                 <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/le_gen_init.c</itemPath>
+                <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/le_gen_scheme.c</itemPath>
                 <itemPath>../src/config/curiosity_ac40t08a/gfx/legato/generated/le_gen_stringtable.c</itemPath>
               </logicalFolder>
               <logicalFolder name="image" displayName="image" projectFiles="true">
@@ -999,6 +1014,7 @@
       <compileType>
         <linkerTool>
           <linkerLibItems>
+            <linkerLibFileItem>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/libgpu2dc.a</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
         <archiverTool>
@@ -1024,6 +1040,7 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value="-D__CORTEX_A=7 -D__TIM_PRESENT=1 -marm"/>
         <property key="cast-align" value="false"/>
         <property key="code-model" value="default"/>
         <property key="const-model" value="default"/>
@@ -1104,6 +1121,7 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -1149,6 +1167,7 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
+        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>

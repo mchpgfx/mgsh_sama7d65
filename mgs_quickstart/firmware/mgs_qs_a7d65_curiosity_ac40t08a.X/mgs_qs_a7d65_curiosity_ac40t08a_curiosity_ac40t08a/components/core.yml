@@ -3468,8 +3468,9 @@ data:
       children:
       - children:
         - attributes:
-            value: 'false'
-          type: User
+            id: le_gfx_driver_gpu2dc
+            value: 'true'
+          type: Dynamic
         type: Values
       type: Boolean
     SYSTEM_COUNTER_ENABLE:
@@ -3666,6 +3667,17 @@ data:
           type: Dynamic
         type: Values
       type: Integer
+    GPU2DC_INTERRUPT_HANDLER:
+      attributes:
+        id: GPU2DC_INTERRUPT_HANDLER
+      children:
+      - children:
+        - attributes:
+            id: le_gfx_driver_gpu2dc
+            value: GPU2DC_InterruptHandler
+          type: Dynamic
+        type: Values
+      type: String
   userData:
     children:
     - attributes:

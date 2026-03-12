@@ -62,6 +62,11 @@
 
 
 
+/* GPU2DC Interrupt Handler */
+void __attribute__((weak)) GPU2DC_InterruptHandler (void)
+{
+    DRV_GPU2DC_Handle_Interrupt();
+}
 
 
 /*******************************************************************************

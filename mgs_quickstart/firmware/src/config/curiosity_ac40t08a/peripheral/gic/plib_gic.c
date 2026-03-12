@@ -75,6 +75,7 @@ static const struct {
     {SecPhysTimer_IRQn, GENERIC_TIMER_InterruptHandler, GIC_IRQ_CONFIG_LEVEL, 0, GIC_IRQ_GROUP_SECURE},
     {RTT_IRQn, RTT_InterruptHandler, GIC_IRQ_CONFIG_LEVEL, 0, GIC_IRQ_GROUP_SECURE},
     {FLEXCOM0_IRQn, FLEXCOM0_InterruptHandler, GIC_IRQ_CONFIG_LEVEL, 0, GIC_IRQ_GROUP_SECURE},
+    {GPU2DC_IRQn, GPU2DC_InterruptHandler, GIC_IRQ_CONFIG_LEVEL, 0, GIC_IRQ_GROUP_SECURE},
 };
 
 // *****************************************************************************

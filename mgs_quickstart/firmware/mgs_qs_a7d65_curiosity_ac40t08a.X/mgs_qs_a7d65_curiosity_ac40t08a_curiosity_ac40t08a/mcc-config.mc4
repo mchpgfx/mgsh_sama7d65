@@ -19,6 +19,7 @@ modules:
 - gfx_display_comp_ac40t08a
 - gfx_legato
 - gfx_maxtouch_controller
+- le_gfx_driver_gpu2dc
 - le_gfx_driver_xlcdc
 - rtt
 - stdio
@@ -36,7 +37,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\curiosity_ac40t08a\ddr.ld
   hash: 702ca94b9cf590ed0881186e5888827c96ea474d91344ebe483139d00d1dc404
 - file: ..\src\config\curiosity_ac40t08a\definitions.h
-  hash: 19f20d8d5b83a6cf9aaf3c152463e9fd1366507781447486fcf90ef3e510d328
+  hash: fef877ba01756b71306e5a786bf40547e1961aed3fa45771f0b4dfcede79fef5
 - file: ..\src\config\curiosity_ac40t08a\device.h
   hash: 3cf585ea5382f313611833378511af83d16bda35f00a1500229496c745c51767
 - file: ..\src\config\curiosity_ac40t08a\device_cache.h
@@ -70,7 +71,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\curiosity_ac40t08a\gfx\driver\controller\xlcdc\bridge\dsi\plib_dsi.h
   hash: 85f4ff36b89ee4e666a6d9d47e9061550fc7be27053879b8843b8fef7b0fc619
 - file: ..\src\config\curiosity_ac40t08a\gfx\driver\controller\xlcdc\drv_gfx_xlcdc.c
-  hash: c884df04ce53f56e2a760c416b0343bef99cc910d846428ff9265a230a861b57
+  hash: b01f09a6732f3c8654097f88491e90e800dbd28a94e96167d9ac0613d65ab817
 - file: ..\src\config\curiosity_ac40t08a\gfx\driver\controller\xlcdc\drv_gfx_xlcdc.h
   hash: 637d343cc20356dfb08492f7a3e97479ad421b88ffec123181330eb895f50689
 - file: ..\src\config\curiosity_ac40t08a\gfx\driver\controller\xlcdc\plib\plib_xlcdc.c
@@ -80,7 +81,29 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\curiosity_ac40t08a\gfx\driver\gfx_driver.c
   hash: 09c3af304672f8af0e2396e39d075b3666380044092f21647b30b1030d0f0655
 - file: ..\src\config\curiosity_ac40t08a\gfx\driver\gfx_driver.h
-  hash: 5903c7784c0283c868f025adf0a2c55811fe4ddd9a4375d6e689d811b008ca42
+  hash: d52b565fa39043b52a15a2987fa37d2b3f05aab251a08fb18eae05f6a52c8b1d
+- file: ..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\drv_gfx_gpu2dc.c
+  hash: 242ecff8bd5a84b14045aeb94e0f0ddee9a185e4b99f9beed8e9ff2d2144f567
+- file: ..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\drv_gfx_gpu2dc.h
+  hash: adf9a891094aaeb28b3e81fc94c70fb645630f42c47a8f62e03a975c10d0b932
+- file: ..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\libgpu2dc.a
+  hash: c61e1a44b978f2c9ca4ac6de7a1b676863eb60e3031f5d74dd10309978341076
+- file: ..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\nano2D.h
+  hash: bb0d44ac84e6179b652268d5f8680f34bccc6fc7f463803118b39bccaa6e42d9
+- file: ..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\nano2D_base.h
+  hash: d91ebf57146ab51088b77a27f1110ffb03a7b38ae63f837756c15b8664d6f7a1
+- file: ..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\nano2D_enum.h
+  hash: 748e453272715da60fa5527974c94c8e7d071ea3b20f5fb60c3d6778025d65db
+- file: ..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\nano2D_hal.c
+  hash: 97bf9cce7f1cd769bd503574f90a39f63d3fa0e3199c8113bea38986fa82c5b4
+- file: ..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\nano2D_hal.h
+  hash: 7c54d81c51fdae1da7c46532c64e768d1652227d4d0912fce6a5723f23a1d221
+- file: ..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\nano2D_option.h
+  hash: 568c9ca6ffc5a588a8b45c3973c62984b9617dc6714df7f54fd7cf694a489ff2
+- file: ..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\nano2D_types.h
+  hash: 501302076269cf93f80fb659aa43d2bb47bdb5874c2c94c8f03d5df32780d2b5
+- file: ..\src\config\curiosity_ac40t08a\gfx\driver\gpu2dc\version.h
+  hash: 9fc2aac606331056e38a1403f92e48568af69d8f4f65939ece44ae8d799a1e5c
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\common\legato_color.c
   hash: efb7044e3c7f0f79198bd4d5833226517544fe87a4f03a21ca1a7bc34163c0b9
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\common\legato_color.h
@@ -590,11 +613,11 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\widget\window\legato_widget_window_skin_classic.c
   hash: dd6b3e7c710431206685fc51459a31358dae4e99be8dd14849be4fe858ba4cc8
 - file: ..\src\config\curiosity_ac40t08a\initialization.c
-  hash: 0059e5bcc4ffc8f2ccf41777191dc51798d3b46c3e53a2904bc926fa48464b46
+  hash: 1a9db2ae5c4108856fe56158930d737367efb9e5846941f781b35b44f889db4b
 - file: ..\src\config\curiosity_ac40t08a\interrupts.c
-  hash: c9c0873f3df64c5c0f086d2b397390386fc60a6fc63c1e6cdb0129f8be7e6f65
+  hash: 2f3eda9272f0bbefec97f681afa21dbc9362895817bda8551e51f7ed9a324747
 - file: ..\src\config\curiosity_ac40t08a\interrupts.h
-  hash: 064d1bc13ceabf0777cf4e4b198da5f193bc570ee84ef4e68bfc7df726fb3117
+  hash: 99764e8afad65c5e103c77d72bd566dbd4a75fad57449e7b8134619004f0540e
 - file: ..\src\config\curiosity_ac40t08a\osal\osal.h
   hash: 1cfe3b61d9693b2369922041eef33fe16b3c1ccd9c85d4ded808b805f90a869c
 - file: ..\src\config\curiosity_ac40t08a\osal\osal_definitions.h
@@ -628,7 +651,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\curiosity_ac40t08a\peripheral\generic_timer\plib_generic_timer.h
   hash: ea31ca1893dc0a7a5bda0c396ec60669d03161c255f7532f2282ff23cbe5ad9d
 - file: ..\src\config\curiosity_ac40t08a\peripheral\gic\plib_gic.c
-  hash: a31dfc0acb8fbe766cf80f27ed8a68dc03ce9dccb7dcae82b6862a7c1099667a
+  hash: 09240c74bc7f25d7c350b79126cdb99c05feb5fc053938645c39b402784ff13a
 - file: ..\src\config\curiosity_ac40t08a\peripheral\gic\plib_gic.h
   hash: e6e611db30d9530c6a4e5ccebb8db8b342a5b9a41dd16cc73c63b1f74b20fdc5
 - file: ..\src\config\curiosity_ac40t08a\peripheral\mmu\plib_mmu.c
