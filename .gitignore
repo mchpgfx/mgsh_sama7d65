@@ -14,3 +14,7 @@
 
 #Misc
 **/.vscode/
+
+#Python
+**/__pycache__/
+benchmark_host/benchmark_data/

@@ -53,6 +53,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 // *****************************************************************************
 #include "definitions.h"
+#include "app_dsi.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -681,6 +682,31 @@ void Screen3_OnUpdate()
         
         last_sec_count = sec_count;
     }             
+}
+
+void Screen3_BenchSetConfig(uint32_t type, uint32_t size)
+{
+    if (type >= IMG_MAX_TYPE) type = IMG_MAX_TYPE - 1;
+    if (size >= IMG_MAX_SIZE) size = IMG_MAX_SIZE - 1;
+
+    imgType = type;
+    imgSize = size;
+    imgIndex = 0;
+
+    /* Clamp PNG to 100x100 max */
+    if (imgType == IMG_PNG_8888 && imgSize > IMG_100x100)
+    {
+        imgSize = IMG_100x100;
+    }
+
+    /* Update size label */
+    sprintf(charBuff, "%s", imageSizeNames[imgSize]);
+    imgSizeText.fn->setFromCStr(&imgSizeText, charBuff);
+    Screen3_ImageSizeValue->fn->setString(Screen3_ImageSizeValue, (leString*)&imgSizeText);
+
+    /* Update type label */
+    imageTypeStr.fn->setID(&imageTypeStr, imageTypeNames[imgType]);
+    Screen3_ImageTypeValue->fn->setString(Screen3_ImageTypeValue, (leString*)&imageTypeStr);
 }
 
 // event handlers

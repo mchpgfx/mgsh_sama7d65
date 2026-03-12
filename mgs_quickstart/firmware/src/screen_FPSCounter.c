@@ -53,6 +53,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 // *****************************************************************************
 #include "definitions.h"
+#include "app_dsi.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -397,6 +398,23 @@ void Screen1_OnUpdate()
         
         last_sec_count = sec_count;
     }             
+}
+
+void Screen1_BenchSetCounterSize(uint32_t size)
+{
+    if (size < MIN_COUNTER_SIZE) size = MIN_COUNTER_SIZE;
+    if (size > MAX_COUNTER_SIZE) size = MAX_COUNTER_SIZE;
+
+    counterStringSize = size;
+
+    if (Screen1_FPSCounterValue != NULL)
+    {
+        Screen1_FPSCounterValue->fn->invalidate(Screen1_FPSCounterValue);
+    }
+
+    sprintf(charBuff, "%u", (unsigned int)counterStringSize);
+    counterSizeStringText.fn->setFromCStr(&counterSizeStringText, charBuff);
+    Screen1_FPSStringSize->fn->setString(Screen1_FPSStringSize, (leString*)&counterSizeStringText);
 }
 
 // event handlers

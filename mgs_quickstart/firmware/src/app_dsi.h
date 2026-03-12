@@ -44,6 +44,11 @@
 #define NUM_COUNT_TAP_TICK (200/CLOCK_TICK_TIMER_PERIOD_MS) 
 
 #define FPS_STR_SIZE 32
+
+#define BENCH_CMD_BUF_SIZE 32
+#define BENCH_DWELL_SECS   5
+#define BENCH_SETTLE_SECS  1
+#define BENCH_TOTAL_CONFIGS 28
     
 // DOM-IGNORE-BEGIN
 #ifdef __cplusplus  // Provide C++ Compatibility
@@ -75,6 +80,21 @@ extern char fpsStrBuff[];
 extern bool stats_enabled;
 extern leChar fpsStrCharBuff[];
 extern leFixedString fpsStr;
+
+extern bool bench_active;
+
+typedef struct
+{
+    uint32_t screen;       /* 1, 2, or 3 */
+    const char* label;     /* human-readable config name */
+    uint32_t param1;       /* screen1: size, screen2: count, screen3: type */
+    uint32_t param2;       /* screen2: size, screen3: imgSize enum value */
+} BENCH_CONFIG_T;
+
+/* Benchmark setter functions (defined in screen files) */
+void Screen1_BenchSetCounterSize(uint32_t size);
+void Screen2_BenchSetConfig(uint32_t count, uint32_t size);
+void Screen3_BenchSetConfig(uint32_t type, uint32_t size);
 
 // *****************************************************************************
 /* Application states

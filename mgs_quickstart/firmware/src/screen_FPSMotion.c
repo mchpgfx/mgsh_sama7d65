@@ -53,6 +53,7 @@ SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
 // *****************************************************************************
 // *****************************************************************************
 #include "definitions.h"
+#include "app_dsi.h"
 
 #include <stdio.h>
 #include <string.h>
@@ -657,6 +658,61 @@ void Screen2_OnUpdate()
         
         last_sec_count = sec_count;
     }          
+}
+
+void Screen2_BenchSetConfig(uint32_t count, uint32_t size)
+{
+    uint32_t i;
+
+    if (count < 1) count = 1;
+    if (count > MOTION_WIDGETS_NUM) count = MOTION_WIDGETS_NUM;
+
+    motionRectsCount = count;
+    rectSize = size;
+
+    /* Update widget visibility */
+    for (i = 0; i < MOTION_WIDGETS_NUM; i++)
+    {
+        if (motionWidgets[RECT_WIDGET_0 + i].widget != NULL)
+        {
+            motionWidgets[RECT_WIDGET_0 + i].widget->fn->setVisible(
+                motionWidgets[RECT_WIDGET_0 + i].widget,
+                (i < motionRectsCount) ? LE_TRUE : LE_FALSE);
+        }
+    }
+
+    /* Update widget sizes */
+    if (rectSize == FULLSCREEN_RECT_SIZE)
+    {
+        gfxIOCTLArg_DisplaySize dispSize;
+        gfxDriverInterface.ioctl(GFX_IOCTL_GET_DISPLAY_SIZE, (gfxIOCTLArg_DisplaySize*)&dispSize);
+        if (motionWidgets[RECT_WIDGET_0].widget != NULL)
+        {
+            motionWidgets[RECT_WIDGET_0].widget->fn->setWidth(motionWidgets[RECT_WIDGET_0].widget, dispSize.width);
+            motionWidgets[RECT_WIDGET_0].widget->fn->setHeight(motionWidgets[RECT_WIDGET_0].widget, dispSize.height);
+        }
+        Screen2_MotionRectSizeValue->fn->invalidateContents(Screen2_MotionRectSizeValue);
+        Screen2_MotionRectSizeValue->fn->setString(Screen2_MotionRectSizeValue, (leString*)&squareSizeFullScreenStr);
+    }
+    else
+    {
+        for (i = 0; i < MOTION_WIDGETS_NUM; i++)
+        {
+            if (motionWidgets[RECT_WIDGET_0 + i].widget != NULL)
+            {
+                motionWidgets[RECT_WIDGET_0 + i].widget->fn->setWidth(motionWidgets[RECT_WIDGET_0 + i].widget, rectSize);
+                motionWidgets[RECT_WIDGET_0 + i].widget->fn->setHeight(motionWidgets[RECT_WIDGET_0 + i].widget, rectSize);
+            }
+        }
+        sprintf(charBuff, "%u", (unsigned int)rectSize);
+        squareSizeSmallStr.fn->setFromCStr(&squareSizeSmallStr, charBuff);
+        Screen2_MotionRectSizeValue->fn->setString(Screen2_MotionRectSizeValue, (leString*)&squareSizeSmallStr);
+    }
+
+    /* Update count label */
+    sprintf(charBuff, "%u", (unsigned int)motionRectsCount);
+    motionRectsCountText.fn->setFromCStr(&motionRectsCountText, charBuff);
+    Screen2_MotionRectCount->fn->setString(Screen2_MotionRectCount, (leString*)&motionRectsCountText);
 }
 
 // event handlers
