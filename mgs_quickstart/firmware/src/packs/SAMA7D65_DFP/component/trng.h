@@ -19,9 +19,11 @@
  *
  */
 
-/*      file generated from device description file (ATDF) version None       */
+/*  file generated from device description file (ATDF) version 2025-07-09T17:00:00Z  */
 #ifndef _SAMA7D6_TRNG_COMPONENT_H_
 #define _SAMA7D6_TRNG_COMPONENT_H_
+
+#include "core_ca.h"
 
 /* ************************************************************************** */
 /*                      SOFTWARE API DEFINITION FOR TRNG                      */
@@ -56,8 +58,8 @@
 #define TRNG_MR_HD_Pos                        _UINT32_(1)                                          /* (TRNG_MR)  Position */
 #define TRNG_MR_HD_Msk                        (_UINT32_(0x1) << TRNG_MR_HD_Pos)                    /* (TRNG_MR)  Mask */
 #define TRNG_MR_HD(value)                     (TRNG_MR_HD_Msk & (_UINT32_(value) << TRNG_MR_HD_Pos)) /* Assignment of value for HD in the TRNG_MR register */
-#define TRNG_MR_HDSEL_Pos                     _UINT32_(2)                                          /* (TRNG_MR) Minimum Hamming Distance Position */
-#define TRNG_MR_HDSEL_Msk                     (_UINT32_(0x3) << TRNG_MR_HDSEL_Pos)                 /* (TRNG_MR) Minimum Hamming Distance Mask */
+#define TRNG_MR_HDSEL_Pos                     _UINT32_(2)                                          /* (TRNG_MR) Hamming Distance Selection Position */
+#define TRNG_MR_HDSEL_Msk                     (_UINT32_(0x3) << TRNG_MR_HDSEL_Pos)                 /* (TRNG_MR) Hamming Distance Selection Mask */
 #define TRNG_MR_HDSEL(value)                  (TRNG_MR_HDSEL_Msk & (_UINT32_(value) << TRNG_MR_HDSEL_Pos)) /* Assignment of value for HDSEL in the TRNG_MR register */
 #define   TRNG_MR_HDSEL_TWO_Val               _UINT32_(0x0)                                        /* (TRNG_MR) Two consecutive random samples have a minimum Hamming distance of 2.  */
 #define   TRNG_MR_HDSEL_FOUR_Val              _UINT32_(0x1)                                        /* (TRNG_MR) Two consecutive random samples have a minimum Hamming distance of 4.  */

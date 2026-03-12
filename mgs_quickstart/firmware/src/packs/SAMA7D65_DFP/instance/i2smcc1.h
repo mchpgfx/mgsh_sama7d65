@@ -1,5 +1,5 @@
 /*
- * Instance header file for ATSAMA7D65D2GN8
+ * Instance header file for ATSAMA7D65D5M
  *
  * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
@@ -19,15 +19,15 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_I2SMCC1_INSTANCE_
 #define _SAMA7D6_I2SMCC1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for I2SMCC1 peripheral ========== */
-#define I2SMCC1_CLOCK_ID                         (55)       
-#define I2SMCC1_DMAC_ID_RX                       (35)       
-#define I2SMCC1_DMAC_ID_TX                       (36)       
+#define I2SMCC1_CLOCK_ID                         (55)
+#define I2SMCC1_DMAC_ID_RX                       (35)
+#define I2SMCC1_DMAC_ID_TX                       (36)
 #define I2SMCC1_INSTANCE_ID                      (55)       /* Inter-IC Sound Controller 1 */
 
 #endif /* _SAMA7D6_I2SMCC1_INSTANCE_ */

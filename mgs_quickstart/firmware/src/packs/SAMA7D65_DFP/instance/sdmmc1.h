@@ -1,5 +1,5 @@
 /*
- * Instance header file for ATSAMA7D65D2GN8
+ * Instance header file for ATSAMA7D65D5M
  *
  * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
@@ -19,13 +19,13 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_SDMMC1_INSTANCE_
 #define _SAMA7D6_SDMMC1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SDMMC1 peripheral ========== */
-#define SDMMC1_CLOCK_ID                          (76)       
+#define SDMMC1_CLOCK_ID                          (76)
 #define SDMMC1_INSTANCE_ID                       (76)       /* Ultra High Speed SD Host Controller 1 (e.MMC 4.51) */
 #define SDMMC1_INSTANCE_ID_TIMER                 (131)      /* Ultra High Speed SD Host Controller 1 (e.MMC 4.51) Timer interrupt */
 

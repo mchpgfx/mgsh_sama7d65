@@ -1,5 +1,5 @@
 /*
- * Instance header file for ATSAMA7D65D2GN8
+ * Instance header file for ATSAMA7D65D5M
  *
  * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
@@ -19,13 +19,13 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_TRNG_INSTANCE_
 #define _SAMA7D6_TRNG_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for TRNG peripheral ========== */
-#define TRNG_CLOCK_ID                            (92)       
+#define TRNG_CLOCK_ID                            (92)
 #define TRNG_INSTANCE_ID                         (92)       /* True Random Number Generator */
 #define TRNG_INSTANCE_ID_SINT                    (141)      /* True Random Number Generator, Secure Interrupt */
 

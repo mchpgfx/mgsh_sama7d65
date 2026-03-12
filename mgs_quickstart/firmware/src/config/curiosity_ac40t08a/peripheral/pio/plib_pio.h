@@ -96,14 +96,6 @@
 #define PIO_PORT_MAX    5U
 
 
-/*** Macros for MIPI_DISP_SDA pin ***/
-#define MIPI_DISP_SDA_Get()               ((PIOC_REGS->PIO_PDSR >> 7U) & 0x1U)
-#define MIPI_DISP_SDA_PIN                  PIO_PIN_PC7
-
-/*** Macros for MIPI_DISP_SCL pin ***/
-#define MIPI_DISP_SCL_Get()               ((PIOC_REGS->PIO_PDSR >> 6U) & 0x1U)
-#define MIPI_DISP_SCL_PIN                  PIO_PIN_PC6
-
 /*** Macros for GPIO_PB14 pin ***/
 #define GPIO_PB14_Set()               (PIOB_REGS->PIO_SODR = ((uint32_t)1U<<14U))
 #define GPIO_PB14_Clear()             (PIOB_REGS->PIO_CODR = ((uint32_t)1U<<14U))

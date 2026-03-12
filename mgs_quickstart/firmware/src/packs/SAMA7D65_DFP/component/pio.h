@@ -19,9 +19,11 @@
  *
  */
 
-/*      file generated from device description file (ATDF) version None       */
+/*  file generated from device description file (ATDF) version 2025-07-09T17:00:00Z  */
 #ifndef _SAMA7D6_PIO_COMPONENT_H_
 #define _SAMA7D6_PIO_COMPONENT_H_
+
+#include "core_ca.h"
 
 /* ************************************************************************** */
 /*                      SOFTWARE API DEFINITION FOR PIO                       */
@@ -341,14 +343,14 @@
 #define PIO_CFGR_DRVSTR_Pos                   _UINT32_(16)                                         /* (PIO_CFGR) Drive Strength Position */
 #define PIO_CFGR_DRVSTR_Msk                   (_UINT32_(0x3) << PIO_CFGR_DRVSTR_Pos)               /* (PIO_CFGR) Drive Strength Mask */
 #define PIO_CFGR_DRVSTR(value)                (PIO_CFGR_DRVSTR_Msk & (_UINT32_(value) << PIO_CFGR_DRVSTR_Pos)) /* Assignment of value for DRVSTR in the PIO_CFGR register */
-#define   PIO_CFGR_DRVSTR_LO_Val              _UINT32_(0x0)                                        /* (PIO_CFGR) Low drive  */
-#define   PIO_CFGR_DRVSTR_LO_a_Val            _UINT32_(0x1)                                        /* (PIO_CFGR) Low drive  */
-#define   PIO_CFGR_DRVSTR_ME_Val              _UINT32_(0x2)                                        /* (PIO_CFGR) Medium drive  */
-#define   PIO_CFGR_DRVSTR_HI_Val              _UINT32_(0x3)                                        /* (PIO_CFGR) High drive  */
-#define PIO_CFGR_DRVSTR_LO                    (PIO_CFGR_DRVSTR_LO_Val << PIO_CFGR_DRVSTR_Pos)      /* (PIO_CFGR) Low drive Position */
-#define PIO_CFGR_DRVSTR_LO_a                  (PIO_CFGR_DRVSTR_LO_a_Val << PIO_CFGR_DRVSTR_Pos)    /* (PIO_CFGR) Low drive Position */
-#define PIO_CFGR_DRVSTR_ME                    (PIO_CFGR_DRVSTR_ME_Val << PIO_CFGR_DRVSTR_Pos)      /* (PIO_CFGR) Medium drive Position */
-#define PIO_CFGR_DRVSTR_HI                    (PIO_CFGR_DRVSTR_HI_Val << PIO_CFGR_DRVSTR_Pos)      /* (PIO_CFGR) High drive Position */
+#define   PIO_CFGR_DRVSTR_LOW_OR_TYPD_Val     _UINT32_(0x0)                                        /* (PIO_CFGR) Low drive strength when the IO is driven in GPIO mode or by any non high-speed peripheral, else Type D drive for high-speed peripherals.  */
+#define   PIO_CFGR_DRVSTR_HIGH_OR_TYPA_Val    _UINT32_(0x1)                                        /* (PIO_CFGR) High drive strength when the IO is driven in GPIO mode or by any non high-speed peripheral, else Type A drive for high-speed peripherals.  */
+#define   PIO_CFGR_DRVSTR_LOW_OR_TYPC_Val     _UINT32_(0x2)                                        /* (PIO_CFGR) Low drive strength when the IO is driven in GPIO mode or by any non high-speed peripheral, else Type C drive for high-speed peripherals.  */
+#define   PIO_CFGR_DRVSTR_LOW_OR_TYPB_Val     _UINT32_(0x3)                                        /* (PIO_CFGR) Low drive strength when the IO is driven in GPIO mode or by any non high-speed peripheral, else Type B drive for high-speed peripherals.  */
+#define PIO_CFGR_DRVSTR_LOW_OR_TYPD           (PIO_CFGR_DRVSTR_LOW_OR_TYPD_Val << PIO_CFGR_DRVSTR_Pos) /* (PIO_CFGR) Low drive strength when the IO is driven in GPIO mode or by any non high-speed peripheral, else Type D drive for high-speed peripherals. Position */
+#define PIO_CFGR_DRVSTR_HIGH_OR_TYPA          (PIO_CFGR_DRVSTR_HIGH_OR_TYPA_Val << PIO_CFGR_DRVSTR_Pos) /* (PIO_CFGR) High drive strength when the IO is driven in GPIO mode or by any non high-speed peripheral, else Type A drive for high-speed peripherals. Position */
+#define PIO_CFGR_DRVSTR_LOW_OR_TYPC           (PIO_CFGR_DRVSTR_LOW_OR_TYPC_Val << PIO_CFGR_DRVSTR_Pos) /* (PIO_CFGR) Low drive strength when the IO is driven in GPIO mode or by any non high-speed peripheral, else Type C drive for high-speed peripherals. Position */
+#define PIO_CFGR_DRVSTR_LOW_OR_TYPB           (PIO_CFGR_DRVSTR_LOW_OR_TYPB_Val << PIO_CFGR_DRVSTR_Pos) /* (PIO_CFGR) Low drive strength when the IO is driven in GPIO mode or by any non high-speed peripheral, else Type B drive for high-speed peripherals. Position */
 #define PIO_CFGR_EVTSEL_Pos                   _UINT32_(24)                                         /* (PIO_CFGR) Event Selection Position */
 #define PIO_CFGR_EVTSEL_Msk                   (_UINT32_(0x7) << PIO_CFGR_EVTSEL_Pos)               /* (PIO_CFGR) Event Selection Mask */
 #define PIO_CFGR_EVTSEL(value)                (PIO_CFGR_EVTSEL_Msk & (_UINT32_(value) << PIO_CFGR_EVTSEL_Pos)) /* Assignment of value for EVTSEL in the PIO_CFGR register */
@@ -2803,6 +2805,14 @@
 #define PIO_S_PIO_CFGR_DRVSTR_Pos             _UINT32_(16)                                         /* (PIO_S_PIO_CFGR) Drive Strength Position */
 #define PIO_S_PIO_CFGR_DRVSTR_Msk             (_UINT32_(0x3) << PIO_S_PIO_CFGR_DRVSTR_Pos)         /* (PIO_S_PIO_CFGR) Drive Strength Mask */
 #define PIO_S_PIO_CFGR_DRVSTR(value)          (PIO_S_PIO_CFGR_DRVSTR_Msk & (_UINT32_(value) << PIO_S_PIO_CFGR_DRVSTR_Pos)) /* Assignment of value for DRVSTR in the PIO_S_PIO_CFGR register */
+#define   PIO_S_PIO_CFGR_DRVSTR_LOW_OR_HS100_Val _UINT32_(0x0)                                        /* (PIO_S_PIO_CFGR) Low drive strength when the IO is driven in GPIO mode or by any non high-speed peripheral, else lowest drive for high-speed peripherals. Refer to the section Electrical Characteristics for values.  */
+#define   PIO_S_PIO_CFGR_DRVSTR_HIGH_OR_HS33_Val _UINT32_(0x1)                                        /* (PIO_S_PIO_CFGR) High drive strength when the IO is driven in GPIO mode or by any non high-speed peripheral, else highest drive for high-speed peripherals. Refer to the section Electrical Characteristics for values.  */
+#define   PIO_S_PIO_CFGR_DRVSTR_LOW_OR_HS66_Val _UINT32_(0x2)                                        /* (PIO_S_PIO_CFGR) Low drive strength when the IO is driven in GPIO mode or by any non high-speed peripheral, else middle-low drive for high-speed peripherals. Refer to the section Electrical Characteristics for values.  */
+#define   PIO_S_PIO_CFGR_DRVSTR_LOW_OR_HS50_Val _UINT32_(0x3)                                        /* (PIO_S_PIO_CFGR) Low drive strength when the IO is driven in GPIO mode or by any non high-speed peripheral, else middle-high drive for high-speed peripherals. Refer to the section Electrical Characteristics for values.  */
+#define PIO_S_PIO_CFGR_DRVSTR_LOW_OR_HS100    (PIO_S_PIO_CFGR_DRVSTR_LOW_OR_HS100_Val << PIO_S_PIO_CFGR_DRVSTR_Pos) /* (PIO_S_PIO_CFGR) Low drive strength when the IO is driven in GPIO mode or by any non high-speed peripheral, else lowest drive for high-speed peripherals. Refer to the section Electrical Characteristics for values. Position */
+#define PIO_S_PIO_CFGR_DRVSTR_HIGH_OR_HS33    (PIO_S_PIO_CFGR_DRVSTR_HIGH_OR_HS33_Val << PIO_S_PIO_CFGR_DRVSTR_Pos) /* (PIO_S_PIO_CFGR) High drive strength when the IO is driven in GPIO mode or by any non high-speed peripheral, else highest drive for high-speed peripherals. Refer to the section Electrical Characteristics for values. Position */
+#define PIO_S_PIO_CFGR_DRVSTR_LOW_OR_HS66     (PIO_S_PIO_CFGR_DRVSTR_LOW_OR_HS66_Val << PIO_S_PIO_CFGR_DRVSTR_Pos) /* (PIO_S_PIO_CFGR) Low drive strength when the IO is driven in GPIO mode or by any non high-speed peripheral, else middle-low drive for high-speed peripherals. Refer to the section Electrical Characteristics for values. Position */
+#define PIO_S_PIO_CFGR_DRVSTR_LOW_OR_HS50     (PIO_S_PIO_CFGR_DRVSTR_LOW_OR_HS50_Val << PIO_S_PIO_CFGR_DRVSTR_Pos) /* (PIO_S_PIO_CFGR) Low drive strength when the IO is driven in GPIO mode or by any non high-speed peripheral, else middle-high drive for high-speed peripherals. Refer to the section Electrical Characteristics for values. Position */
 #define PIO_S_PIO_CFGR_EVTSEL_Pos             _UINT32_(24)                                         /* (PIO_S_PIO_CFGR) Event Selection Position */
 #define PIO_S_PIO_CFGR_EVTSEL_Msk             (_UINT32_(0x7) << PIO_S_PIO_CFGR_EVTSEL_Pos)         /* (PIO_S_PIO_CFGR) Event Selection Mask */
 #define PIO_S_PIO_CFGR_EVTSEL(value)          (PIO_S_PIO_CFGR_EVTSEL_Msk & (_UINT32_(value) << PIO_S_PIO_CFGR_EVTSEL_Pos)) /* Assignment of value for EVTSEL in the PIO_S_PIO_CFGR register */

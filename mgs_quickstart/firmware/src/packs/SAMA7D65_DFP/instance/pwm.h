@@ -1,5 +1,5 @@
 /*
- * Instance header file for ATSAMA7D65D2GN8
+ * Instance header file for ATSAMA7D65D5M
  *
  * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
@@ -19,14 +19,14 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_PWM_INSTANCE_
 #define _SAMA7D6_PWM_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PWM peripheral ========== */
-#define PWM_CLOCK_ID                             (72)       
-#define PWM_DMAC_ID_TX                           (39)       
+#define PWM_CLOCK_ID                             (72)
+#define PWM_DMAC_ID_TX                           (39)
 #define PWM_INSTANCE_ID                          (72)       /* Pulse Width Modulation */
 
 #endif /* _SAMA7D6_PWM_INSTANCE_ */

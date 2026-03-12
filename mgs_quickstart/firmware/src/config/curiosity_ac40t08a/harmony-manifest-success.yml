@@ -4,7 +4,7 @@
 
 
 project: mgs_qs_a7d65_curiosity_ac40t08a
-creation_date: 2026-03-12T01:42:10.334+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
+creation_date: 2026-03-12T19:36:01.911+05:30[Asia/Calcutta]    # ISO 8601 format: https://www.w3.org/TR/NOTE-datetime
 operating_system: Windows 11
 mcc_mode: IDE            # [IDE|Standalone|Headless]
 mcc_version: v5.6.4
@@ -14,11 +14,12 @@ harmony_version: v5.6.4
 compiler: XC32 5.00
 
 modules:
-    - {name: "core", version: "v3.15.1"}
-    - {name: "csp", version: "v3.22.2"}
+    - {name: "core", version: "v3.16.1"}
+    - {name: "csp", version: "v3.25.1"}
     - {name: "CMSIS_5", version: "5.9.0"}
+    - {name: "FreeRTOS-Kernel", version: "V11.2.0"}
     - {name: "gfx", version: "v3.16.2"}
 
 packs:
-    - {name: "SAMA7D65_DFP", version: "1.4.54"}
+    - {name: "SAMA7D65_DFP", version: "1.8.85"}
 

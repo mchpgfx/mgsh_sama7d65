@@ -1,5 +1,5 @@
 /*
- * Instance header file for ATSAMA7D65D2GN8
+ * Instance header file for ATSAMA7D65D5M
  *
  * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
@@ -19,14 +19,14 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_PDMC1_INSTANCE_
 #define _SAMA7D6_PDMC1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PDMC1 peripheral ========== */
-#define PDMC1_CLOCK_ID                           (65)       
-#define PDMC1_DMAC_ID_RX                         (38)       
+#define PDMC1_CLOCK_ID                           (65)
+#define PDMC1_DMAC_ID_RX                         (38)
 #define PDMC1_INSTANCE_ID                        (65)       /* Pulse Density Modulation Interface Controller 1 */
 
 #endif /* _SAMA7D6_PDMC1_INSTANCE_ */

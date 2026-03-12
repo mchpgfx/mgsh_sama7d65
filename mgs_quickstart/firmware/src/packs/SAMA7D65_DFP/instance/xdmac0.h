@@ -1,5 +1,5 @@
 /*
- * Instance header file for ATSAMA7D65D2GN8
+ * Instance header file for ATSAMA7D65D5M
  *
  * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
@@ -19,13 +19,13 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_XDMAC0_INSTANCE_
 #define _SAMA7D6_XDMAC0_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for XDMAC0 peripheral ========== */
-#define XDMAC0_CLOCK_ID                          (21)       
+#define XDMAC0_CLOCK_ID                          (21)
 #define XDMAC0_INSTANCE_ID                       (21)       /* DMA 0, mem to periph, 32 channels */
 #define XDMAC0_INSTANCE_ID_SINT                  (109)      /* DMA0, mem to periph, 32 channels, Secure Interrupt */
 

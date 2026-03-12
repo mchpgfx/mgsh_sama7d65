@@ -1,5 +1,5 @@
 /*
- * Instance header file for ATSAMA7D65D2GN8
+ * Instance header file for ATSAMA7D65D5M
  *
  * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
@@ -19,13 +19,13 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_HSMC_INSTANCE_
 #define _SAMA7D6_HSMC_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for HSMC peripheral ========== */
-#define HSMC_CLOCK_ID                            (20)       
+#define HSMC_CLOCK_ID                            (20)
 #define HSMC_INSTANCE_ID                         (20)       /* Static Memory Controller - NAND Flash Controller */
 
 #endif /* _SAMA7D6_HSMC_INSTANCE_ */

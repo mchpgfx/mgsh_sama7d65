@@ -1,0 +1,63 @@
+configVersion: 1.0.0
+componentName: FreeRTOS
+coreVersion: 5.8.4
+device: SAMA7D65
+library: []
+dependency:
+- dependencyPackage: class com.microchip.mcc.harmony.HarmonyModule
+  name: FreeRTOS
+  type: module
+  version: ''
+- dependencyPackage: ''
+  name: FreeRTOS-Kernel
+  type: package
+  version: V11.2.0
+- dependencyPackage: ''
+  name: core
+  type: package
+  version: v3.16.1
+customDataClassName: com.microchip.utils_mh3.utils.persistence.CustomModuleData
+data:
+  attachments: {}
+  elementPosition:
+    attributes:
+      id: __ROOTVIEW
+    children:
+    - children:
+      - attributes:
+          id: FreeRTOS
+          x: '585'
+          y: '119'
+        type: ElementPosition
+      type: ElementPositions
+    type: ComponentGraph
+  symbols:
+    FREERTOS_USE_STATS_FORMATTING_FUNCTIONS:
+      attributes:
+        id: FREERTOS_USE_STATS_FORMATTING_FUNCTIONS
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    FREERTOS_GENERATE_RUN_TIME_STATS:
+      attributes:
+        id: FREERTOS_GENERATE_RUN_TIME_STATS
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+  userData: {}

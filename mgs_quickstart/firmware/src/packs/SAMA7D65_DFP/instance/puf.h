@@ -1,5 +1,5 @@
 /*
- * Instance header file for ATSAMA7D65D2GN8
+ * Instance header file for ATSAMA7D65D5M
  *
  * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
@@ -19,13 +19,13 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_PUF_INSTANCE_
 #define _SAMA7D6_PUF_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for PUF peripheral ========== */
-#define PUF_CLOCK_ID                             (15)       
+#define PUF_CLOCK_ID                             (15)
 #define PUF_INSTANCE_ID                          (15)       /* QK QuiddiKey IP + PUFSRAM */
 
 #endif /* _SAMA7D6_PUF_INSTANCE_ */

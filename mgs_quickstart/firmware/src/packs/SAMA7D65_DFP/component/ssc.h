@@ -19,9 +19,11 @@
  *
  */
 
-/*      file generated from device description file (ATDF) version None       */
+/*  file generated from device description file (ATDF) version 2025-07-09T17:00:00Z  */
 #ifndef _SAMA7D6_SSC_COMPONENT_H_
 #define _SAMA7D6_SSC_COMPONENT_H_
+
+#include "core_ca.h"
 
 /* ************************************************************************** */
 /*                      SOFTWARE API DEFINITION FOR SSC                       */

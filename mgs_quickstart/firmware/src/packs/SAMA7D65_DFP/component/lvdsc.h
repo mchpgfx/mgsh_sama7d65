@@ -19,9 +19,11 @@
  *
  */
 
-/*      file generated from device description file (ATDF) version None       */
+/*  file generated from device description file (ATDF) version 2025-07-09T17:00:00Z  */
 #ifndef _SAMA7D6_LVDSC_COMPONENT_H_
 #define _SAMA7D6_LVDSC_COMPONENT_H_
+
+#include "core_ca.h"
 
 /* ************************************************************************** */
 /*                     SOFTWARE API DEFINITION FOR LVDSC                      */
@@ -50,28 +52,21 @@
 #define   LVDSC_CFGR_LCDC_PIXSIZE_18BITS_Val  _UINT32_(0x1)                                        /* (LVDSC_CFGR) LCD controller provides 18 bits per pixel.  */
 #define LVDSC_CFGR_LCDC_PIXSIZE_24BITS        (LVDSC_CFGR_LCDC_PIXSIZE_24BITS_Val << LVDSC_CFGR_LCDC_PIXSIZE_Pos) /* (LVDSC_CFGR) LCD controller provides 24 bits per pixel. Position */
 #define LVDSC_CFGR_LCDC_PIXSIZE_18BITS        (LVDSC_CFGR_LCDC_PIXSIZE_18BITS_Val << LVDSC_CFGR_LCDC_PIXSIZE_Pos) /* (LVDSC_CFGR) LCD controller provides 18 bits per pixel. Position */
-#define LVDSC_CFGR_LCDC_DEN_POL_Pos           _UINT32_(1)                                          /* (LVDSC_CFGR) LCDC Controller Data Enable Polarity Position */
-#define LVDSC_CFGR_LCDC_DEN_POL_Msk           (_UINT32_(0x1) << LVDSC_CFGR_LCDC_DEN_POL_Pos)       /* (LVDSC_CFGR) LCDC Controller Data Enable Polarity Mask */
-#define LVDSC_CFGR_LCDC_DEN_POL(value)        (LVDSC_CFGR_LCDC_DEN_POL_Msk & (_UINT32_(value) << LVDSC_CFGR_LCDC_DEN_POL_Pos)) /* Assignment of value for LCDC_DEN_POL in the LVDSC_CFGR register */
-#define   LVDSC_CFGR_LCDC_DEN_POL_HIGH_Val    _UINT32_(0x0)                                        /* (LVDSC_CFGR) LCD_DEN input is active high  */
-#define   LVDSC_CFGR_LCDC_DEN_POL_LOW_Val     _UINT32_(0x1)                                        /* (LVDSC_CFGR) LCD_DEN input is active low  */
-#define LVDSC_CFGR_LCDC_DEN_POL_HIGH          (LVDSC_CFGR_LCDC_DEN_POL_HIGH_Val << LVDSC_CFGR_LCDC_DEN_POL_Pos) /* (LVDSC_CFGR) LCD_DEN input is active high Position */
-#define LVDSC_CFGR_LCDC_DEN_POL_LOW           (LVDSC_CFGR_LCDC_DEN_POL_LOW_Val << LVDSC_CFGR_LCDC_DEN_POL_Pos) /* (LVDSC_CFGR) LCD_DEN input is active low Position */
 #define LVDSC_CFGR_DC_BAL_Pos                 _UINT32_(5)                                          /* (LVDSC_CFGR) DC Mode Position */
 #define LVDSC_CFGR_DC_BAL_Msk                 (_UINT32_(0x1) << LVDSC_CFGR_DC_BAL_Pos)             /* (LVDSC_CFGR) DC Mode Mask */
 #define LVDSC_CFGR_DC_BAL(value)              (LVDSC_CFGR_DC_BAL_Msk & (_UINT32_(value) << LVDSC_CFGR_DC_BAL_Pos)) /* Assignment of value for DC_BAL in the LVDSC_CFGR register */
-#define   LVDSC_CFGR_DC_BAL_UNBALANCED_Val    _UINT32_(0x0)                                        /* (LVDSC_CFGR) LVDS lane is DC-unbalanced  */
-#define   LVDSC_CFGR_DC_BAL_BALANCED_Val      _UINT32_(0x1)                                        /* (LVDSC_CFGR) LVDS lane is DC-balanced  */
-#define LVDSC_CFGR_DC_BAL_UNBALANCED          (LVDSC_CFGR_DC_BAL_UNBALANCED_Val << LVDSC_CFGR_DC_BAL_Pos) /* (LVDSC_CFGR) LVDS lane is DC-unbalanced Position */
-#define LVDSC_CFGR_DC_BAL_BALANCED            (LVDSC_CFGR_DC_BAL_BALANCED_Val << LVDSC_CFGR_DC_BAL_Pos) /* (LVDSC_CFGR) LVDS lane is DC-balanced Position */
+#define   LVDSC_CFGR_DC_BAL_UNBALANCED_Val    _UINT32_(0x0)                                        /* (LVDSC_CFGR) LVDS lane is DC-unbalanced.  */
+#define   LVDSC_CFGR_DC_BAL_BALANCED_Val      _UINT32_(0x1)                                        /* (LVDSC_CFGR) LVDS lane is DC-balanced.  */
+#define LVDSC_CFGR_DC_BAL_UNBALANCED          (LVDSC_CFGR_DC_BAL_UNBALANCED_Val << LVDSC_CFGR_DC_BAL_Pos) /* (LVDSC_CFGR) LVDS lane is DC-unbalanced. Position */
+#define LVDSC_CFGR_DC_BAL_BALANCED            (LVDSC_CFGR_DC_BAL_BALANCED_Val << LVDSC_CFGR_DC_BAL_Pos) /* (LVDSC_CFGR) LVDS lane is DC-balanced. Position */
 #define LVDSC_CFGR_MAPPING_Pos                _UINT32_(6)                                          /* (LVDSC_CFGR) LVDS mapping format (unbalanced mode only) Position */
 #define LVDSC_CFGR_MAPPING_Msk                (_UINT32_(0x1) << LVDSC_CFGR_MAPPING_Pos)            /* (LVDSC_CFGR) LVDS mapping format (unbalanced mode only) Mask */
 #define LVDSC_CFGR_MAPPING(value)             (LVDSC_CFGR_MAPPING_Msk & (_UINT32_(value) << LVDSC_CFGR_MAPPING_Pos)) /* Assignment of value for MAPPING in the LVDSC_CFGR register */
-#define   LVDSC_CFGR_MAPPING_VESA_Val         _UINT32_(0x0)                                        /* (LVDSC_CFGR) Maps LVDS lanes to VESA format  */
-#define   LVDSC_CFGR_MAPPING_JEIDA_Val        _UINT32_(0x1)                                        /* (LVDSC_CFGR) Maps LVDS lanes to JEIDA format  */
-#define LVDSC_CFGR_MAPPING_VESA               (LVDSC_CFGR_MAPPING_VESA_Val << LVDSC_CFGR_MAPPING_Pos) /* (LVDSC_CFGR) Maps LVDS lanes to VESA format Position */
-#define LVDSC_CFGR_MAPPING_JEIDA              (LVDSC_CFGR_MAPPING_JEIDA_Val << LVDSC_CFGR_MAPPING_Pos) /* (LVDSC_CFGR) Maps LVDS lanes to JEIDA format Position */
-#define LVDSC_CFGR_Msk                        _UINT32_(0x00000063)                                 /* (LVDSC_CFGR) Register Mask  */
+#define   LVDSC_CFGR_MAPPING_VESA_Val         _UINT32_(0x0)                                        /* (LVDSC_CFGR) Maps LVDS lanes to VESA format.  */
+#define   LVDSC_CFGR_MAPPING_JEIDA_Val        _UINT32_(0x1)                                        /* (LVDSC_CFGR) Maps LVDS lanes to JEIDA format.  */
+#define LVDSC_CFGR_MAPPING_VESA               (LVDSC_CFGR_MAPPING_VESA_Val << LVDSC_CFGR_MAPPING_Pos) /* (LVDSC_CFGR) Maps LVDS lanes to VESA format. Position */
+#define LVDSC_CFGR_MAPPING_JEIDA              (LVDSC_CFGR_MAPPING_JEIDA_Val << LVDSC_CFGR_MAPPING_Pos) /* (LVDSC_CFGR) Maps LVDS lanes to JEIDA format. Position */
+#define LVDSC_CFGR_Msk                        _UINT32_(0x00000061)                                 /* (LVDSC_CFGR) Register Mask  */
 
 
 /* -------- LVDSC_UCBR : (LVDSC Offset: 0x08) (R/W 32) User Control Bits Register -------- */
@@ -144,12 +139,19 @@
 #define   LVDSC_WPMR_WPEN_1_Val               _UINT32_(0x1)                                        /* (LVDSC_WPMR) Enables write protection if WPKEY corresponds to 0x4C5644 ("LVD" in ASCII).  */
 #define LVDSC_WPMR_WPEN_0                     (LVDSC_WPMR_WPEN_0_Val << LVDSC_WPMR_WPEN_Pos)       /* (LVDSC_WPMR) Disables write protection if WPKEY corresponds to 0x4C5644 ("LVD" in ASCII). Position */
 #define LVDSC_WPMR_WPEN_1                     (LVDSC_WPMR_WPEN_1_Val << LVDSC_WPMR_WPEN_Pos)       /* (LVDSC_WPMR) Enables write protection if WPKEY corresponds to 0x4C5644 ("LVD" in ASCII). Position */
+#define LVDSC_WPMR_LCKWPEN_Pos                _UINT32_(4)                                          /* (LVDSC_WPMR) Lock Write Protection Enable Until Next System Reset Position */
+#define LVDSC_WPMR_LCKWPEN_Msk                (_UINT32_(0x1) << LVDSC_WPMR_LCKWPEN_Pos)            /* (LVDSC_WPMR) Lock Write Protection Enable Until Next System Reset Mask */
+#define LVDSC_WPMR_LCKWPEN(value)             (LVDSC_WPMR_LCKWPEN_Msk & (_UINT32_(value) << LVDSC_WPMR_LCKWPEN_Pos)) /* Assignment of value for LCKWPEN in the LVDSC_WPMR register */
+#define   LVDSC_WPMR_LCKWPEN_0_Val            _UINT32_(0x0)                                        /* (LVDSC_WPMR) No effect.  */
+#define   LVDSC_WPMR_LCKWPEN_1_Val            _UINT32_(0x1)                                        /* (LVDSC_WPMR) Locks the WPEN bit to 1 until the next system reset if on the same access WPEN=1 and WPKEY corresponds to 0x4C5644 ("LVD" in ASCII).  */
+#define LVDSC_WPMR_LCKWPEN_0                  (LVDSC_WPMR_LCKWPEN_0_Val << LVDSC_WPMR_LCKWPEN_Pos) /* (LVDSC_WPMR) No effect. Position */
+#define LVDSC_WPMR_LCKWPEN_1                  (LVDSC_WPMR_LCKWPEN_1_Val << LVDSC_WPMR_LCKWPEN_Pos) /* (LVDSC_WPMR) Locks the WPEN bit to 1 until the next system reset if on the same access WPEN=1 and WPKEY corresponds to 0x4C5644 ("LVD" in ASCII). Position */
 #define LVDSC_WPMR_WPKEY_Pos                  _UINT32_(8)                                          /* (LVDSC_WPMR) Write Protection Key Position */
 #define LVDSC_WPMR_WPKEY_Msk                  (_UINT32_(0xFFFFFF) << LVDSC_WPMR_WPKEY_Pos)         /* (LVDSC_WPMR) Write Protection Key Mask */
 #define LVDSC_WPMR_WPKEY(value)               (LVDSC_WPMR_WPKEY_Msk & (_UINT32_(value) << LVDSC_WPMR_WPKEY_Pos)) /* Assignment of value for WPKEY in the LVDSC_WPMR register */
 #define   LVDSC_WPMR_WPKEY_PASSWD_Val         _UINT32_(0x4C5644)                                   /* (LVDSC_WPMR) Writing any other value in this field aborts the write operation of the WPEN bit.  Always reads as 0.  */
 #define LVDSC_WPMR_WPKEY_PASSWD               (LVDSC_WPMR_WPKEY_PASSWD_Val << LVDSC_WPMR_WPKEY_Pos) /* (LVDSC_WPMR) Writing any other value in this field aborts the write operation of the WPEN bit.  Always reads as 0. Position */
-#define LVDSC_WPMR_Msk                        _UINT32_(0xFFFFFF01)                                 /* (LVDSC_WPMR) Register Mask  */
+#define LVDSC_WPMR_Msk                        _UINT32_(0xFFFFFF11)                                 /* (LVDSC_WPMR) Register Mask  */
 
 
 /* -------- LVDSC_WPSR : (LVDSC Offset: 0xE8) ( R/ 32) Write Protection Status Register -------- */

@@ -1,5 +1,5 @@
 /*
- * Instance header file for ATSAMA7D65D2GN8
+ * Instance header file for ATSAMA7D65D5M
  *
  * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
@@ -19,13 +19,13 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_MCAN3_INSTANCE_
 #define _SAMA7D6_MCAN3_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for MCAN3 peripheral ========== */
-#define MCAN3_CLOCK_ID                           (61)       
+#define MCAN3_CLOCK_ID                           (61)
 #define MCAN3_INSTANCE_ID                        (61)       /* Host CAN 3 */
 #define MCAN3_INSTANCE_ID_INT1                   (117)      /* MCAN3 Interrupt1 */
 

@@ -19,9 +19,11 @@
  *
  */
 
-/*      file generated from device description file (ATDF) version None       */
+/*  file generated from device description file (ATDF) version 2025-07-09T17:00:00Z  */
 #ifndef _SAMA7D6_GMAC_COMPONENT_H_
 #define _SAMA7D6_GMAC_COMPONENT_H_
+
+#include "core_ca.h"
 
 /* ************************************************************************** */
 /*                      SOFTWARE API DEFINITION FOR GMAC                      */
@@ -211,6 +213,18 @@
 #define GMAC_FRER_STAT_A_VEC_REC_ROGUE_Msk    (_UINT32_(0x3FF) << GMAC_FRER_STAT_A_VEC_REC_ROGUE_Pos) /* (GMAC_FRER_STAT_A) Number of Dropped Frames (Clear on read) Mask */
 #define GMAC_FRER_STAT_A_VEC_REC_ROGUE(value) (GMAC_FRER_STAT_A_VEC_REC_ROGUE_Msk & (_UINT32_(value) << GMAC_FRER_STAT_A_VEC_REC_ROGUE_Pos)) /* Assignment of value for VEC_REC_ROGUE in the GMAC_FRER_STAT_A register */
 #define GMAC_FRER_STAT_A_Msk                  _UINT32_(0x03FF03FF)                                 /* (GMAC_FRER_STAT_A) Register Mask  */
+
+
+/* -------- GMAC_FRER_STAT_B : (GMAC Offset: 0x0C) ( R/ 32) Frame Elimination Statistics B Register  -------- */
+#define GMAC_FRER_STAT_B_RESETVALUE           _UINT32_(0x00)                                       /*  (GMAC_FRER_STAT_B) Frame Elimination Statistics B Register   Reset Value */
+
+#define GMAC_FRER_STAT_B_OUT_OF_ORDER_Pos     _UINT32_(0)                                          /* (GMAC_FRER_STAT_B) Out of Order Sequence Numbers Received (Clear on read) Position */
+#define GMAC_FRER_STAT_B_OUT_OF_ORDER_Msk     (_UINT32_(0x3FF) << GMAC_FRER_STAT_B_OUT_OF_ORDER_Pos) /* (GMAC_FRER_STAT_B) Out of Order Sequence Numbers Received (Clear on read) Mask */
+#define GMAC_FRER_STAT_B_OUT_OF_ORDER(value)  (GMAC_FRER_STAT_B_OUT_OF_ORDER_Msk & (_UINT32_(value) << GMAC_FRER_STAT_B_OUT_OF_ORDER_Pos)) /* Assignment of value for OUT_OF_ORDER in the GMAC_FRER_STAT_B register */
+#define GMAC_FRER_STAT_B_SEQRST_COUNT_Pos     _UINT32_(16)                                         /* (GMAC_FRER_STAT_B) Number of Times the Sequence Recovery Reset Timer Decrements to Zero (Clear on read) Position */
+#define GMAC_FRER_STAT_B_SEQRST_COUNT_Msk     (_UINT32_(0xFF) << GMAC_FRER_STAT_B_SEQRST_COUNT_Pos) /* (GMAC_FRER_STAT_B) Number of Times the Sequence Recovery Reset Timer Decrements to Zero (Clear on read) Mask */
+#define GMAC_FRER_STAT_B_SEQRST_COUNT(value)  (GMAC_FRER_STAT_B_SEQRST_COUNT_Msk & (_UINT32_(value) << GMAC_FRER_STAT_B_SEQRST_COUNT_Pos)) /* Assignment of value for SEQRST_COUNT in the GMAC_FRER_STAT_B register */
+#define GMAC_FRER_STAT_B_Msk                  _UINT32_(0x00FF03FF)                                 /* (GMAC_FRER_STAT_B) Register Mask  */
 
 
 /* -------- GMAC_ST2CW0R : (GMAC Offset: 0x00) (R/W 32) Screening Type 2 Compare Word 0 Register  -------- */
@@ -1381,18 +1395,6 @@
 #define GMAC_SAT1_FILTSORD_0                  (GMAC_SAT1_FILTSORD_0_Val << GMAC_SAT1_FILTSORD_Pos) /* (GMAC_SAT1) The filter is a destination address filter. Position */
 #define GMAC_SAT1_FILTSORD_1                  (GMAC_SAT1_FILTSORD_1_Val << GMAC_SAT1_FILTSORD_Pos) /* (GMAC_SAT1) The filter is a source address filter. Position */
 #define GMAC_SAT1_Msk                         _UINT32_(0x0001FFFF)                                 /* (GMAC_SAT1) Register Mask  */
-
-
-/* -------- GMAC_FRER_STAT_B : (GMAC Offset: 0x8C) ( R/ 32) Frame Elimination Statistics B Register  -------- */
-#define GMAC_FRER_STAT_B_RESETVALUE           _UINT32_(0x00)                                       /*  (GMAC_FRER_STAT_B) Frame Elimination Statistics B Register   Reset Value */
-
-#define GMAC_FRER_STAT_B_OUT_OF_ORDER_Pos     _UINT32_(0)                                          /* (GMAC_FRER_STAT_B) Out of Order Sequence Numbers Received (Clear on read) Position */
-#define GMAC_FRER_STAT_B_OUT_OF_ORDER_Msk     (_UINT32_(0x3FF) << GMAC_FRER_STAT_B_OUT_OF_ORDER_Pos) /* (GMAC_FRER_STAT_B) Out of Order Sequence Numbers Received (Clear on read) Mask */
-#define GMAC_FRER_STAT_B_OUT_OF_ORDER(value)  (GMAC_FRER_STAT_B_OUT_OF_ORDER_Msk & (_UINT32_(value) << GMAC_FRER_STAT_B_OUT_OF_ORDER_Pos)) /* Assignment of value for OUT_OF_ORDER in the GMAC_FRER_STAT_B register */
-#define GMAC_FRER_STAT_B_SEQRST_COUNT_Pos     _UINT32_(16)                                         /* (GMAC_FRER_STAT_B) Number of Times the Sequence Recovery Reset Timer Decrements to Zero (Clear on read) Position */
-#define GMAC_FRER_STAT_B_SEQRST_COUNT_Msk     (_UINT32_(0xFF) << GMAC_FRER_STAT_B_SEQRST_COUNT_Pos) /* (GMAC_FRER_STAT_B) Number of Times the Sequence Recovery Reset Timer Decrements to Zero (Clear on read) Mask */
-#define GMAC_FRER_STAT_B_SEQRST_COUNT(value)  (GMAC_FRER_STAT_B_SEQRST_COUNT_Msk & (_UINT32_(value) << GMAC_FRER_STAT_B_SEQRST_COUNT_Pos)) /* Assignment of value for SEQRST_COUNT in the GMAC_FRER_STAT_B register */
-#define GMAC_FRER_STAT_B_Msk                  _UINT32_(0x00FF03FF)                                 /* (GMAC_FRER_STAT_B) Register Mask  */
 
 
 /* -------- GMAC_SAB2 : (GMAC Offset: 0x90) (R/W 32) Specific Address 2 Bottom Register -------- */
@@ -5630,33 +5632,19 @@
 /* -------- GMAC_EMAC_TSCTL : (GMAC Offset: 0x1580) (R/W 32) Express MACTransmit Schedule Control Register -------- */
 #define GMAC_EMAC_TSCTL_RESETVALUE            _UINT32_(0x00)                                       /*  (GMAC_EMAC_TSCTL) Express MACTransmit Schedule Control Register  Reset Value */
 
-#define GMAC_EMAC_TSCTL_TXSQ0_Pos             _UINT32_(0)                                          /* (GMAC_EMAC_TSCTL) Transmit Schedule for Q0 Position */
-#define GMAC_EMAC_TSCTL_TXSQ0_Msk             (_UINT32_(0x1) << GMAC_EMAC_TSCTL_TXSQ0_Pos)         /* (GMAC_EMAC_TSCTL) Transmit Schedule for Q0 Mask */
-#define GMAC_EMAC_TSCTL_TXSQ0(value)          (GMAC_EMAC_TSCTL_TXSQ0_Msk & (_UINT32_(value) << GMAC_EMAC_TSCTL_TXSQ0_Pos)) /* Assignment of value for TXSQ0 in the GMAC_EMAC_TSCTL register */
-#define   GMAC_EMAC_TSCTL_TXSQ0_FP_Val        _UINT32_(0x0)                                        /* (GMAC_EMAC_TSCTL) Fixed Priority  */
-#define   GMAC_EMAC_TSCTL_TXSQ0_CBS_Val       _UINT32_(0x1)                                        /* (GMAC_EMAC_TSCTL) CBS Enabled only valid if CBS capability selected  */
-#define   GMAC_EMAC_TSCTL_TXSQ0_DWRR_Val      _UINT32_(0x2)                                        /* (GMAC_EMAC_TSCTL) DWRR enabled  */
-#define   GMAC_EMAC_TSCTL_TXSQ0_ETS_Val       _UINT32_(0x3)                                        /* (GMAC_EMAC_TSCTL) ETS enabled  */
-#define GMAC_EMAC_TSCTL_TXSQ0_FP              (GMAC_EMAC_TSCTL_TXSQ0_FP_Val << GMAC_EMAC_TSCTL_TXSQ0_Pos) /* (GMAC_EMAC_TSCTL) Fixed Priority Position */
-#define GMAC_EMAC_TSCTL_TXSQ0_CBS             (GMAC_EMAC_TSCTL_TXSQ0_CBS_Val << GMAC_EMAC_TSCTL_TXSQ0_Pos) /* (GMAC_EMAC_TSCTL) CBS Enabled only valid if CBS capability selected Position */
-#define GMAC_EMAC_TSCTL_TXSQ0_DWRR            (GMAC_EMAC_TSCTL_TXSQ0_DWRR_Val << GMAC_EMAC_TSCTL_TXSQ0_Pos) /* (GMAC_EMAC_TSCTL) DWRR enabled Position */
-#define GMAC_EMAC_TSCTL_TXSQ0_ETS             (GMAC_EMAC_TSCTL_TXSQ0_ETS_Val << GMAC_EMAC_TSCTL_TXSQ0_Pos) /* (GMAC_EMAC_TSCTL) ETS enabled Position */
-#define GMAC_EMAC_TSCTL_TXSQ1_Pos             _UINT32_(1)                                          /* (GMAC_EMAC_TSCTL) Transmit Schedule for Q0 Position */
-#define GMAC_EMAC_TSCTL_TXSQ1_Msk             (_UINT32_(0x1) << GMAC_EMAC_TSCTL_TXSQ1_Pos)         /* (GMAC_EMAC_TSCTL) Transmit Schedule for Q0 Mask */
-#define GMAC_EMAC_TSCTL_TXSQ1(value)          (GMAC_EMAC_TSCTL_TXSQ1_Msk & (_UINT32_(value) << GMAC_EMAC_TSCTL_TXSQ1_Pos)) /* Assignment of value for TXSQ1 in the GMAC_EMAC_TSCTL register */
-#define   GMAC_EMAC_TSCTL_TXSQ1_FP_Val        _UINT32_(0x0)                                        /* (GMAC_EMAC_TSCTL) Fixed Priority  */
-#define   GMAC_EMAC_TSCTL_TXSQ1_CBS_Val       _UINT32_(0x1)                                        /* (GMAC_EMAC_TSCTL) CBS Enabled only valid if CBS capability selected  */
-#define   GMAC_EMAC_TSCTL_TXSQ1_DWRR_Val      _UINT32_(0x2)                                        /* (GMAC_EMAC_TSCTL) DWRR enabled  */
-#define   GMAC_EMAC_TSCTL_TXSQ1_ETS_Val       _UINT32_(0x3)                                        /* (GMAC_EMAC_TSCTL) ETS enabled  */
-#define GMAC_EMAC_TSCTL_TXSQ1_FP              (GMAC_EMAC_TSCTL_TXSQ1_FP_Val << GMAC_EMAC_TSCTL_TXSQ1_Pos) /* (GMAC_EMAC_TSCTL) Fixed Priority Position */
-#define GMAC_EMAC_TSCTL_TXSQ1_CBS             (GMAC_EMAC_TSCTL_TXSQ1_CBS_Val << GMAC_EMAC_TSCTL_TXSQ1_Pos) /* (GMAC_EMAC_TSCTL) CBS Enabled only valid if CBS capability selected Position */
-#define GMAC_EMAC_TSCTL_TXSQ1_DWRR            (GMAC_EMAC_TSCTL_TXSQ1_DWRR_Val << GMAC_EMAC_TSCTL_TXSQ1_Pos) /* (GMAC_EMAC_TSCTL) DWRR enabled Position */
-#define GMAC_EMAC_TSCTL_TXSQ1_ETS             (GMAC_EMAC_TSCTL_TXSQ1_ETS_Val << GMAC_EMAC_TSCTL_TXSQ1_Pos) /* (GMAC_EMAC_TSCTL) ETS enabled Position */
+#define GMAC_EMAC_TSCTL_TXSQ_Pos              _UINT32_(0)                                          /* (GMAC_EMAC_TSCTL) Transmit Schedule for Q0 Position */
+#define GMAC_EMAC_TSCTL_TXSQ_Msk              (_UINT32_(0x3) << GMAC_EMAC_TSCTL_TXSQ_Pos)          /* (GMAC_EMAC_TSCTL) Transmit Schedule for Q0 Mask */
+#define GMAC_EMAC_TSCTL_TXSQ(value)           (GMAC_EMAC_TSCTL_TXSQ_Msk & (_UINT32_(value) << GMAC_EMAC_TSCTL_TXSQ_Pos)) /* Assignment of value for TXSQ in the GMAC_EMAC_TSCTL register */
+#define   GMAC_EMAC_TSCTL_TXSQ_FP_Val         _UINT32_(0x0)                                        /* (GMAC_EMAC_TSCTL) Fixed Priority  */
+#define   GMAC_EMAC_TSCTL_TXSQ_CBS_Val        _UINT32_(0x1)                                        /* (GMAC_EMAC_TSCTL) CBS Enabled only valid if CBS capability selected  */
+#define   GMAC_EMAC_TSCTL_TXSQ_DWRR_Val       _UINT32_(0x2)                                        /* (GMAC_EMAC_TSCTL) DWRR enabled  */
+#define   GMAC_EMAC_TSCTL_TXSQ_ETS_Val        _UINT32_(0x3)                                        /* (GMAC_EMAC_TSCTL) ETS enabled  */
+#define GMAC_EMAC_TSCTL_TXSQ_FP               (GMAC_EMAC_TSCTL_TXSQ_FP_Val << GMAC_EMAC_TSCTL_TXSQ_Pos) /* (GMAC_EMAC_TSCTL) Fixed Priority Position */
+#define GMAC_EMAC_TSCTL_TXSQ_CBS              (GMAC_EMAC_TSCTL_TXSQ_CBS_Val << GMAC_EMAC_TSCTL_TXSQ_Pos) /* (GMAC_EMAC_TSCTL) CBS Enabled only valid if CBS capability selected Position */
+#define GMAC_EMAC_TSCTL_TXSQ_DWRR             (GMAC_EMAC_TSCTL_TXSQ_DWRR_Val << GMAC_EMAC_TSCTL_TXSQ_Pos) /* (GMAC_EMAC_TSCTL) DWRR enabled Position */
+#define GMAC_EMAC_TSCTL_TXSQ_ETS              (GMAC_EMAC_TSCTL_TXSQ_ETS_Val << GMAC_EMAC_TSCTL_TXSQ_Pos) /* (GMAC_EMAC_TSCTL) ETS enabled Position */
 #define GMAC_EMAC_TSCTL_Msk                   _UINT32_(0x00000003)                                 /* (GMAC_EMAC_TSCTL) Register Mask  */
 
-#define GMAC_EMAC_TSCTL_TXSQ_Pos              _UINT32_(0)                                          /* (GMAC_EMAC_TSCTL Position) Transmit Schedule for Qx */
-#define GMAC_EMAC_TSCTL_TXSQ_Msk              (_UINT32_(0x3) << GMAC_EMAC_TSCTL_TXSQ_Pos)          /* (GMAC_EMAC_TSCTL Mask) TXSQ */
-#define GMAC_EMAC_TSCTL_TXSQ(value)           (GMAC_EMAC_TSCTL_TXSQ_Msk & (_UINT32_(value) << GMAC_EMAC_TSCTL_TXSQ_Pos)) 
 
 /* -------- GMAC_EMAC_TQBWRL : (GMAC Offset: 0x1590) (R/W 32) Express MAC Transmit Queue Bandwidth Rate Limit Register -------- */
 #define GMAC_EMAC_TQBWRL_RESETVALUE           _UINT32_(0x00)                                       /*  (GMAC_EMAC_TQBWRL) Express MAC Transmit Queue Bandwidth Rate Limit Register  Reset Value */
@@ -5994,6 +5982,7 @@
 #define GMAC_FRER_CTRL_A_REG_OFST      _UINT32_(0x00)      /* (GMAC_FRER_CTRL_A) Frame Elimination Control A Register  Offset */
 #define GMAC_FRER_CTRL_B_REG_OFST      _UINT32_(0x04)      /* (GMAC_FRER_CTRL_B) Frame Elimination Control B Register  Offset */
 #define GMAC_FRER_STAT_A_REG_OFST      _UINT32_(0x08)      /* (GMAC_FRER_STAT_A) Frame Elimination Statistics A Register  Offset */
+#define GMAC_FRER_STAT_B_REG_OFST      _UINT32_(0x0C)      /* (GMAC_FRER_STAT_B) Frame Elimination Statistics B Register  Offset */
 #define GMAC_ST2CW0R_REG_OFST          _UINT32_(0x00)      /* (GMAC_ST2CW0R) Screening Type 2 Compare Word 0 Register  Offset */
 #define GMAC_ST2CW1R_REG_OFST          _UINT32_(0x04)      /* (GMAC_ST2CW1R) Screening Type 2 Compare Word 1 Register  Offset */
 #define GMAC_NCR_REG_OFST              _UINT32_(0x00)      /* (GMAC_NCR) Network Control Register Offset */
@@ -6026,7 +6015,6 @@
 #define GMAC_HRT_REG_OFST              _UINT32_(0x84)      /* (GMAC_HRT) Hash Register Top Offset */
 #define GMAC_SAB1_REG_OFST             _UINT32_(0x88)      /* (GMAC_SAB1) Specific Address 1 Bottom Register Offset */
 #define GMAC_SAT1_REG_OFST             _UINT32_(0x8C)      /* (GMAC_SAT1) Specific Address 1 Top Register Offset */
-#define GMAC_FRER_STAT_B_REG_OFST      _UINT32_(0x8C)      /* (GMAC_FRER_STAT_B) Frame Elimination Statistics B Register  Offset */
 #define GMAC_SAB2_REG_OFST             _UINT32_(0x90)      /* (GMAC_SAB2) Specific Address 2 Bottom Register Offset */
 #define GMAC_SAT2_REG_OFST             _UINT32_(0x94)      /* (GMAC_SAT2) Specific Address 2 Top Register Offset */
 #define GMAC_SAB3_REG_OFST             _UINT32_(0x98)      /* (GMAC_SAB3) Specific Address 3 Bottom Register Offset */
@@ -6421,7 +6409,7 @@ typedef struct
   __IO  uint32_t                       GMAC_FRER_CTRL_A;   /* Offset: 0x00 (R/W  32) Frame Elimination Control A Register  */
   __IO  uint32_t                       GMAC_FRER_CTRL_B;   /* Offset: 0x04 (R/W  32) Frame Elimination Control B Register  */
   __I   uint32_t                       GMAC_FRER_STAT_A;   /* Offset: 0x08 (R/   32) Frame Elimination Statistics A Register  */
-  __I   uint8_t                        Reserved1[0x04];
+  __I   uint32_t                       GMAC_FRER_STAT_B;   /* Offset: 0x0C (R/   32) Frame Elimination Statistics B Register  */
 } gmac_frer_registers_t;
 
 /* GMAC_ST2CW register API structure */
@@ -6433,7 +6421,7 @@ typedef struct
 
 #define GMAC_ST2CW_NUMBER 24
 
-#define GMAC_FRER_NUMBER 1
+#define GMAC_FRER_NUMBER 4
 
 #define GMAC_EMAC_SA_NUMBER 4
 
@@ -6477,11 +6465,7 @@ typedef struct
   __IO  uint32_t                       GMAC_HRB;           /* Offset: 0x80 (R/W  32) Hash Register Bottom */
   __IO  uint32_t                       GMAC_HRT;           /* Offset: 0x84 (R/W  32) Hash Register Top */
   __IO  uint32_t                       GMAC_SAB1;          /* Offset: 0x88 (R/W  32) Specific Address 1 Bottom Register */
-  union
-  {
-      __I   uint32_t                       GMAC_FRER_STAT_B;   /* Offset: 0x8C (R/   32) Frame Elimination Statistics B Register  */
-      __IO  uint32_t                       GMAC_SAT1;          /* Offset: 0x8C (R/W  32) Specific Address 1 Top Register */
-  };
+  __IO  uint32_t                       GMAC_SAT1;          /* Offset: 0x8C (R/W  32) Specific Address 1 Top Register */
   __IO  uint32_t                       GMAC_SAB2;          /* Offset: 0x90 (R/W  32) Specific Address 2 Bottom Register */
   __IO  uint32_t                       GMAC_SAT2;          /* Offset: 0x94 (R/W  32) Specific Address 2 Top Register */
   __IO  uint32_t                       GMAC_SAB3;          /* Offset: 0x98 (R/W  32) Specific Address 3 Bottom Register */
@@ -6633,7 +6617,7 @@ typedef struct
   __IO  uint32_t                       GMAC_FRER_REDTAG;   /* Offset: 0x8A4 (R/W  32) Frame Elimination Redundancy Tag Register */
   __I   uint8_t                        Reserved31[0x18];
         gmac_frer_registers_t          GMAC_FRER[GMAC_FRER_NUMBER]; /* Offset: 0x8C0  */
-  __I   uint8_t                        Reserved32[0x230];
+  __I   uint8_t                        Reserved32[0x200];
   __IO  uint32_t                       GMAC_RX_FLUSH_Q[6]; /* Offset: 0xB00 (R/W  32) Receive Queue Flush Register (index = 0) */
   __I   uint8_t                        Reserved33[0x28];
   __IO  uint32_t                       GMAC_SCR2_RATE_LIMIT[8]; /* Offset: 0xB40 (R/W  32) Screening 2 Rate Limit Register (index = 0) */

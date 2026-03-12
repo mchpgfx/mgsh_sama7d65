@@ -1,5 +1,5 @@
 /*
- * Instance header file for ATSAMA7D65D2GN8
+ * Instance header file for ATSAMA7D65D5M
  *
  * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
@@ -19,15 +19,15 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_QSPI1_INSTANCE_
 #define _SAMA7D6_QSPI1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for QSPI1 peripheral ========== */
-#define QSPI1_CLOCK_ID                           (74)       
-#define QSPI1_DMAC_ID_RX                         (42)       
-#define QSPI1_DMAC_ID_TX                         (43)       
+#define QSPI1_CLOCK_ID                           (74)
+#define QSPI1_DMAC_ID_RX                         (42)
+#define QSPI1_DMAC_ID_TX                         (43)
 #define QSPI1_INSTANCE_ID                        (74)       /* Quad IO Serial Peripheral Interface 1 */
 
 #endif /* _SAMA7D6_QSPI1_INSTANCE_ */

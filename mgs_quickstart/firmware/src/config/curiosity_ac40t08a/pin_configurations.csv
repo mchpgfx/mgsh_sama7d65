@@ -15,7 +15,7 @@ AA16,PE8,,Available,In,,,,,,,
 AA18,PE12,,Available,In,,,,,,,
 AA19,PE10,,Available,In,,,,,,,
 AA20,PA23,,Available,In,,,,,,,
-B1,PC7,MIPI_DISP_SDA,FLEXCOM0_IO0,n/a,n/a,No,Disabled,No,No,Glitch Filter,0
+B1,PC7,,FLEXCOM0_IO0,n/a,n/a,No,Disabled,No,No,Glitch Filter,0
 B3,PC25,,Available,In,,,,,,,
 B15,PB24,,Available,In,,,,,,,
 B16,PC29,,Available,In,,,,,,,
@@ -77,7 +77,7 @@ G20,PE1,,Available,In,,,,,,,
 G21,PB1,,Available,In,,,,,,,
 H4,PC16,,Available,In,,,,,,,
 H5,PC12,,Available,In,,,,,,,
-H6,PC6,MIPI_DISP_SCL,FLEXCOM0_IO1,n/a,n/a,No,Disabled,No,No,Glitch Filter,0
+H6,PC6,,FLEXCOM0_IO1,n/a,n/a,No,Disabled,No,No,Glitch Filter,0
 H7,PC10,,Available,In,,,,,,,
 H11,PD11,,Available,In,,,,,,,
 H12,PD15,,Available,In,,,,,,,

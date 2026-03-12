@@ -1,5 +1,5 @@
 /*
- * Instance header file for ATSAMA7D65D2GN8
+ * Instance header file for ATSAMA7D65D5M
  *
  * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
@@ -19,15 +19,15 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_TDES_INSTANCE_
 #define _SAMA7D6_TDES_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for TDES peripheral ========== */
-#define TDES_CLOCK_ID                            (91)       
-#define TDES_DMAC_ID_RX                          (53)       
-#define TDES_DMAC_ID_TX                          (54)       
+#define TDES_CLOCK_ID                            (91)
+#define TDES_DMAC_ID_RX                          (53)
+#define TDES_DMAC_ID_TX                          (54)
 #define TDES_INSTANCE_ID                         (91)       /* Triple Data Encryption Standard */
 #define TDES_INSTANCE_ID_SINT                    (140)      /* Triple Data Encryption Standard, Secure Interrupt */
 

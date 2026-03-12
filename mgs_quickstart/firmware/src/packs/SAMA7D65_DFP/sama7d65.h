@@ -19,7 +19,7 @@
  *
  */
 
-/* File generated from device description file (ATDF) version None */
+/* File generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D65_H_
 #define _SAMA7D65_H_
 
@@ -250,7 +250,7 @@ typedef enum IRQn
 /* CMSIS includes */
 #include "core_ca.h"
 #if defined USE_CMSIS_INIT
-#include "system_sama7d6.h"
+#include "system_sama7d65.h"
 #endif /* USE_CMSIS_INIT */
 
 /* ************************************************************************** */
@@ -407,15 +407,12 @@ typedef enum IRQn
 #include "instance/trng.h"
 #include "instance/tzaesb.h"
 #include "instance/tzaesbasc.h"
-#include "instance/tzaesbns.h"
-#include "instance/tzaesbs.h"
 #include "instance/tzc.h"
 #include "instance/tzpm.h"
 #include "instance/udphsa.h"
 #include "instance/udphsb.h"
+#include "instance/uhpfs.h"
 #include "instance/uhphs.h"
-#include "instance/uhphs_ehci.h"
-#include "instance/uhphs_ohci.h"
 #include "instance/xdmac0.h"
 #include "instance/xdmac1.h"
 #include "instance/xdmac2.h"
@@ -437,7 +434,7 @@ typedef enum IRQn
 #define ID_PIOB          ( 11) /* For PIO 32 to 63 (PIOB) */
 #define ID_PIOC          ( 12) /* For PIO 64 to 95 (PIOC) */
 #define ID_PIOD          ( 13) /* For PIO 96 to 127 (PIOD) */
-#define ID_PIOE          ( 14) /* For PIO 128 to xxx (TBD - PIO MUX) (PIOE) */
+#define ID_PIOE          ( 14) /* For PIO 128 to 141 (PIOE) */
 #define ID_PUF           ( 15) /* QK QuiddiKey IP + PUFSRAM (PUF) */
 #define ID_SECUMOD       ( 16) /* Security Module (SECUMOD) */
 #define ID_SECURAM       ( 17) /* Secret RAM (SECURAM) */
@@ -543,7 +540,7 @@ typedef enum IRQn
 #define ID_PIOB_SINT     (120) /* For PIO 32 to 63, Secure Interrupt (PIOB_SINT) */
 #define ID_PIOC_SINT     (121) /* For PIO 64 to 95, Secure Interrupt (PIOC_SINT) */
 #define ID_PIOD_SINT     (122) /* For PIO 96 to 127, Secure Interrupt (PIOD_SINT) */
-#define ID_PIOE_SINT     (123) /* For PIO 128 to 147, Secure Interrupt (PIOE_SINT) */
+#define ID_PIOE_SINT     (123) /* For PIO 128 to 141, Secure Interrupt (PIOE_SINT) */
 #define ID_SDMMC0_TIMER  (130) /* Ultra High Speed SD Host Controller 0 (e.MMC 5.1) Timer interrupt (SDMMC0_TIMER) */
 #define ID_SDMMC1_TIMER  (131) /* Ultra High Speed SD Host Controller 1 (e.MMC 4.51) Timer interrupt (SDMMC1_TIMER) */
 #define ID_SDMMC2_TIMER  (132) /* Ultra High Speed SD Host controller 2 (eMMC 4.51) Timer interrupt (SDMMC2_TIMER) */
@@ -652,16 +649,16 @@ typedef enum IRQn
 #define TCPCB_REGS                       ((tcpc_registers_t*)0xe0840000)               /* TCPCB Registers Address      */
 #define TDES_REGS                        ((tdes_registers_t*)0xe1608000)               /* TDES Registers Address       */
 #define TRNG_REGS                        ((trng_registers_t*)0xe160c000)               /* TRNG Registers Address       */
-#define TZAESBNS_REGS                    ((tzaesb_registers_t*)0xe0820000)             /* TZAESBNS Registers Address   */
-#define TZAESBS_REGS                     ((tzaesb_registers_t*)0xe0824000)             /* TZAESBS Registers Address    */
+#define TZAESB_REGS                      ((tzaesb_registers_t*)0xe0820000)             /* TZAESB Registers Address     */
+#define TZAESBS_REGS                     ((tzaesb_registers_t*)0xe0824000)             /* TZAESB Registers Address     */
 #define TZAESBASC_REGS                   ((tzaesbasc_registers_t*)0xe2000000)          /* TZAESBASC Registers Address  */
 #define TZC_REGS                         ((tzc_registers_t*)0xe3000000)                /* TZC Registers Address        */
 #define TZPM_REGS                        ((tzpm_registers_t*)0xe0010000)               /* TZPM Registers Address       */
 #define DDRUMCTL_REGS                    ((uddrc_registers_t*)0xe3800000)              /* DDRUMCTL Registers Address   */
 #define UDPHSA_REGS                      ((udphs_registers_t*)0xe0814000)              /* UDPHSA Registers Address     */
 #define UDPHSB_REGS                      ((udphs_registers_t*)0xe0818000)              /* UDPHSB Registers Address     */
-#define UHPHS_OHCI_REGS                  ((uhpfs_registers_t*)0x00400000)              /* UHPHS_OHCI Registers Address */
-#define UHPHS_EHCI_REGS                  ((uhphs_registers_t*)0x00500000)              /* UHPHS_EHCI Registers Address */
+#define UHPFS_REGS                       ((uhpfs_registers_t*)0x00400000)              /* UHPFS Registers Address      */
+#define UHPHS_REGS                       ((uhphs_registers_t*)0x00500000)              /* UHPHS Registers Address      */
 #define XDMAC0_REGS                      ((xdmac_registers_t*)0xe1610000)              /* XDMAC0 Registers Address     */
 #define XDMAC1_REGS                      ((xdmac_registers_t*)0xe1614000)              /* XDMAC1 Registers Address     */
 #define XDMAC2_REGS                      ((xdmac_registers_t*)0xe1200000)              /* XDMAC2 Registers Address     */
@@ -749,16 +746,16 @@ typedef enum IRQn
 #define TCPCB_BASE_ADDRESS               _UINT32_(0xe0840000)                          /* TCPCB Base Address */
 #define TDES_BASE_ADDRESS                _UINT32_(0xe1608000)                          /* TDES Base Address */
 #define TRNG_BASE_ADDRESS                _UINT32_(0xe160c000)                          /* TRNG Base Address */
-#define TZAESBNS_BASE_ADDRESS            _UINT32_(0xe0820000)                          /* TZAESBNS Base Address */
-#define TZAESBS_BASE_ADDRESS             _UINT32_(0xe0824000)                          /* TZAESBS Base Address */
+#define TZAESB_BASE_ADDRESS              _UINT32_(0xe0820000)                          /* TZAESB Base Address */
+#define TZAESBS_BASE_ADDRESS             _UINT32_(0xe0824000)                          /* TZAESB Base Address */
 #define TZAESBASC_BASE_ADDRESS           _UINT32_(0xe2000000)                          /* TZAESBASC Base Address */
 #define TZC_BASE_ADDRESS                 _UINT32_(0xe3000000)                          /* TZC Base Address */
 #define TZPM_BASE_ADDRESS                _UINT32_(0xe0010000)                          /* TZPM Base Address */
 #define DDRUMCTL_BASE_ADDRESS            _UINT32_(0xe3800000)                          /* DDRUMCTL Base Address */
 #define UDPHSA_BASE_ADDRESS              _UINT32_(0xe0814000)                          /* UDPHSA Base Address */
 #define UDPHSB_BASE_ADDRESS              _UINT32_(0xe0818000)                          /* UDPHSB Base Address */
-#define UHPHS_OHCI_BASE_ADDRESS          _UINT32_(0x00400000)                          /* UHPHS_OHCI Base Address */
-#define UHPHS_EHCI_BASE_ADDRESS          _UINT32_(0x00500000)                          /* UHPHS_EHCI Base Address */
+#define UHPFS_BASE_ADDRESS               _UINT32_(0x00400000)                          /* UHPFS Base Address */
+#define UHPHS_BASE_ADDRESS               _UINT32_(0x00500000)                          /* UHPHS Base Address */
 #define XDMAC0_BASE_ADDRESS              _UINT32_(0xe1610000)                          /* XDMAC0 Base Address */
 #define XDMAC1_BASE_ADDRESS              _UINT32_(0xe1614000)                          /* XDMAC1 Base Address */
 #define XDMAC2_BASE_ADDRESS              _UINT32_(0xe1200000)                          /* XDMAC2 Base Address */

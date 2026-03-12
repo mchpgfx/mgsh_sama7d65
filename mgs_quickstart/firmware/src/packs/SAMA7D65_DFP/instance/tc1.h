@@ -1,5 +1,5 @@
 /*
- * Instance header file for ATSAMA7D65D2GN8
+ * Instance header file for ATSAMA7D65D5M
  *
  * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
@@ -19,20 +19,20 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_TC1_INSTANCE_
 #define _SAMA7D6_TC1_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for TC1 peripheral ========== */
-#define TC1_CLOCK_ID_CHANNEL0                    (86)       
-#define TC1_CLOCK_ID_CHANNEL1                    (87)       
-#define TC1_CLOCK_ID_CHANNEL2                    (88)       
-#define TC1_DMAC_ID_CHANNEL1_CPA                 (64)       
-#define TC1_DMAC_ID_CHANNEL1_CPB                 (66)       
-#define TC1_DMAC_ID_CHANNEL1_CPC                 (68)       
-#define TC1_DMAC_ID_CHANNEL1_ETRG                (70)       
-#define TC1_DMAC_ID_RX                           (52)       
+#define TC1_CLOCK_ID_CHANNEL0                    (86)
+#define TC1_CLOCK_ID_CHANNEL1                    (87)
+#define TC1_CLOCK_ID_CHANNEL2                    (88)
+#define TC1_DMAC_ID_CHANNEL1_CPA                 (64)
+#define TC1_DMAC_ID_CHANNEL1_CPB                 (66)
+#define TC1_DMAC_ID_CHANNEL1_CPC                 (68)
+#define TC1_DMAC_ID_CHANNEL1_ETRG                (70)
+#define TC1_DMAC_ID_RX                           (52)
 #define TC1_INSTANCE_ID_CHANNEL0                 (86)       /* 32-bit Timer Counter 1 Channel 1. Max Generic Clock Frequency = FPCLOCK  3. */
 #define TC1_INSTANCE_ID_CHANNEL1                 (87)       /* 32-bit Timer Counter 1 Channel 1 */
 #define TC1_INSTANCE_ID_CHANNEL2                 (88)       /* 32-bit Timer Counter 1 Channel 2 */

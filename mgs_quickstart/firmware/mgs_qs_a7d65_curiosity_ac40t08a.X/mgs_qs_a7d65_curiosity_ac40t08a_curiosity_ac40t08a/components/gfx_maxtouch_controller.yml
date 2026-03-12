@@ -75,7 +75,7 @@ data:
       - children:
         - attributes:
             id: gfx_maxtouch_controller
-            value: Asynchronous
+            value: Synchronous
           type: Dynamic
         type: Values
       type: Combo
@@ -118,6 +118,78 @@ data:
             id: gfx_maxtouch_controller
             value: '720'
           type: Dynamic
+        type: Values
+      type: Integer
+    DRV_MAXTOUCH_C:
+      attributes:
+        id: DRV_MAXTOUCH_C
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'false'
+          type: Boolean
+        type: Attributes
+      type: File
+    DRV_I2C_SYNC_SRC:
+      attributes:
+        id: DRV_I2C_SYNC_SRC
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: File
+    RTOSEnabled:
+      attributes:
+        id: RTOSEnabled
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: Boolean
+    TOUCH_DRV_RTOS_TASK_C:
+      attributes:
+        id: TOUCH_DRV_RTOS_TASK_C
+      children:
+      - children:
+        - attributes:
+            id: enabled
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      type: File
+    RTOSStackSize:
+      attributes:
+        id: RTOSStackSize
+      children:
+      - children:
+        - attributes:
+            value: '2048'
+          type: User
+        type: Values
+      type: Integer
+    RTOSTaskDelay:
+      attributes:
+        id: RTOSTaskDelay
+      children:
+      - children:
+        - attributes:
+            value: '2'
+          type: User
         type: Values
       type: Integer
   userData: {}

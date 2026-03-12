@@ -165,7 +165,7 @@ n2d_error_t n2d_hal_signal_wait(n2d_pointer signal, uint32_t timeout_ms)
 
     while (!s->signaled)
     {
-        if (((n2d_hal_get_ticks() - start) >= timeout_ms))
+        if (timeout_ms != UINT32_MAX && ((n2d_hal_get_ticks() - start) >= timeout_ms))
             return N2D_TIMEOUT;
     }
 

@@ -19,9 +19,11 @@
  *
  */
 
-/*      file generated from device description file (ATDF) version None       */
+/*  file generated from device description file (ATDF) version 2025-07-09T17:00:00Z  */
 #ifndef _SAMA7D6_MCAN_COMPONENT_H_
 #define _SAMA7D6_MCAN_COMPONENT_H_
+
+#include "core_ca.h"
 
 /* ************************************************************************** */
 /*                      SOFTWARE API DEFINITION FOR MCAN                      */
@@ -109,7 +111,7 @@
 #define MCAN_SIDFE_0_Msk                      _UINT32_(0xFFFF07FF)                                 /* (MCAN_SIDFE_0) Register Mask  */
 
 
-/* -------- MCAN_TXEFE_0 : (MCAN Offset: 0x00) (R/W 32) Tx Event FIFO Element 0 -------- */
+/* -------- MCAN_TXEFE_0 : (MCAN Offset: 0x00) (R/W 32) Tx Event FIFO Element -------- */
 #define MCAN_TXEFE_0_ID_Pos                   _UINT32_(0)                                          /* (MCAN_TXEFE_0) Identifier Position */
 #define MCAN_TXEFE_0_ID_Msk                   (_UINT32_(0x1FFFFFFF) << MCAN_TXEFE_0_ID_Pos)        /* (MCAN_TXEFE_0) Identifier Mask */
 #define MCAN_TXEFE_0_ID(value)                (MCAN_TXEFE_0_ID_Msk & (_UINT32_(value) << MCAN_TXEFE_0_ID_Pos)) /* Assignment of value for ID in the MCAN_TXEFE_0 register */
@@ -3818,7 +3820,7 @@
 #define MCAN_XIDFE_0_REG_OFST          _UINT32_(0x00)      /* (MCAN_XIDFE_0) Extended Message ID Filter Element 0 Offset */
 #define MCAN_XIDFE_1_REG_OFST          _UINT32_(0x04)      /* (MCAN_XIDFE_1) Extended Message ID Filter Element 1 Offset */
 #define MCAN_SIDFE_0_REG_OFST          _UINT32_(0x00)      /* (MCAN_SIDFE_0) Standard Message ID Filter Element 0 Offset */
-#define MCAN_TXEFE_0_REG_OFST          _UINT32_(0x00)      /* (MCAN_TXEFE_0) Tx Event FIFO Element 0 Offset */
+#define MCAN_TXEFE_0_REG_OFST          _UINT32_(0x00)      /* (MCAN_TXEFE_0) Tx Event FIFO Element Offset */
 #define MCAN_TXEFE_1_REG_OFST          _UINT32_(0x04)      /* (MCAN_TXEFE_1) Tx Event FIFO Element 1 Offset */
 #define MCAN_TXBE_0_REG_OFST           _UINT32_(0x00)      /* (MCAN_TXBE_0) Tx Buffer Element 0 Offset */
 #define MCAN_TXBE_1_REG_OFST           _UINT32_(0x04)      /* (MCAN_TXBE_1) Tx Buffer Element 1 Offset */
@@ -3924,7 +3926,7 @@ typedef struct
 /* MCAN_TXEFE register API structure */
 typedef struct
 {  /* Tx Event FIFO Element */
-  __IO  uint32_t                       MCAN_TXEFE_0;       /* Offset: 0x00 (R/W  32) Tx Event FIFO Element 0 */
+  __IO  uint32_t                       MCAN_TXEFE_0;       /* Offset: 0x00 (R/W  32) Tx Event FIFO Element */
   __IO  uint32_t                       MCAN_TXEFE_1;       /* Offset: 0x04 (R/W  32) Tx Event FIFO Element 1 */
 } mcan_txefe_registers_t
 #ifdef __GNUC__

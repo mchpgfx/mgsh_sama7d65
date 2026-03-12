@@ -90,4 +90,24 @@ data:
           type: Dynamic
         type: Values
       type: String
+    rtosTaskSize:
+      attributes:
+        id: rtosTaskSize
+      children:
+      - children:
+        - attributes:
+            value: '4096'
+          type: User
+        type: Values
+      type: Integer
+    rtosTaskDelay:
+      attributes:
+        id: rtosTaskDelay
+      children:
+      - children:
+        - attributes:
+            value: '1'
+          type: User
+        type: Values
+      type: Integer
   userData: {}

@@ -1,5 +1,5 @@
 /*
- * Instance header file for ATSAMA7D65D2GN8
+ * Instance header file for ATSAMA7D65D5M
  *
  * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
@@ -19,8 +19,8 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
-#ifndef _SAMA7D6_TZAESBNS_INSTANCE_
-#define _SAMA7D6_TZAESBNS_INSTANCE_
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
+#ifndef _SAMA7D6_UHPFS_INSTANCE_
+#define _SAMA7D6_UHPFS_INSTANCE_
 
-#endif /* _SAMA7D6_TZAESBNS_INSTANCE_ */
+#endif /* _SAMA7D6_UHPFS_INSTANCE_ */

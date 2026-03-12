@@ -241,8 +241,8 @@
           </logicalFolder>
           <logicalFolder name="osal" displayName="osal" projectFiles="true">
             <itemPath>../src/config/curiosity_ac40t08a/osal/osal.h</itemPath>
-            <itemPath>../src/config/curiosity_ac40t08a/osal/osal_impl_basic.h</itemPath>
             <itemPath>../src/config/curiosity_ac40t08a/osal/osal_definitions.h</itemPath>
+            <itemPath>../src/config/curiosity_ac40t08a/osal/osal_freertos.h</itemPath>
           </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
             <logicalFolder name="clk" displayName="clk" projectFiles="true">
@@ -262,6 +262,11 @@
                 <itemPath>../src/config/curiosity_ac40t08a/peripheral/flexcom/usart/plib_flexcom_usart_local.h</itemPath>
                 <itemPath>../src/config/curiosity_ac40t08a/peripheral/flexcom/usart/plib_flexcom6_usart.h</itemPath>
               </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="generic_timer"
+                           displayName="generic_timer"
+                           projectFiles="true">
+              <itemPath>../src/config/curiosity_ac40t08a/peripheral/generic_timer/plib_generic_timer.h</itemPath>
             </logicalFolder>
             <logicalFolder name="gic" displayName="gic" projectFiles="true">
               <itemPath>../src/config/curiosity_ac40t08a/peripheral/gic/plib_gic.h</itemPath>
@@ -313,9 +318,55 @@
           <itemPath>../src/config/curiosity_ac40t08a/device.h</itemPath>
           <itemPath>../src/config/curiosity_ac40t08a/device_cache.h</itemPath>
           <itemPath>../src/config/curiosity_ac40t08a/configuration.h</itemPath>
+          <itemPath>../src/config/curiosity_ac40t08a/FreeRTOSConfig.h</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
+        <logicalFolder name="Source" displayName="Source" projectFiles="true">
+          <logicalFolder name="include" displayName="include" projectFiles="true">
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/croutine.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/event_groups.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/FreeRTOS.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/list.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_wrappers.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/portable.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/projdefs.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/queue.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/semphr.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/stack_macros.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/deprecated_definitions.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/task.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/timers.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_prototypes.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/mpu_syscall_numbers.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/stream_buffer.h</itemPath>
+            <itemPath>../src/third_party/rtos/FreeRTOS/Source/include/message_buffer.h</itemPath>
+          </logicalFolder>
+          <logicalFolder name="portable" displayName="portable" projectFiles="true">
+            <logicalFolder name="XC32" displayName="XC32" projectFiles="true">
+              <logicalFolder name="SAM" displayName="SAM" projectFiles="true">
+                <logicalFolder name="CA7" displayName="CA7" projectFiles="true">
+                  <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA7/portmacro.h</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
         </logicalFolder>
       </logicalFolder>
       <logicalFolder name="packs" displayName="packs" projectFiles="true">
+        <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
+          <logicalFolder name="CMSIS" displayName="CMSIS" projectFiles="true">
+            <logicalFolder name="Core_A" displayName="Core_A" projectFiles="true">
+              <logicalFolder name="Include" displayName="Include" projectFiles="true">
+                <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/cmsis_compiler.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/cmsis_gcc.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/cmsis_iccarm.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/cmsis_cp15.h</itemPath>
+                <itemPath>../src/packs/CMSIS/CMSIS/Core_A/Include/core_ca.h</itemPath>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+        </logicalFolder>
         <logicalFolder name="SAMA7D65_DFP"
                        displayName="SAMA7D65_DFP"
                        projectFiles="true">
@@ -384,7 +435,6 @@
             <itemPath>../src/packs/SAMA7D65_DFP/instance/flexcom4.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/shdwc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/qspi1.h</itemPath>
-            <itemPath>../src/packs/SAMA7D65_DFP/instance/tzaesbns.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/icm.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/flexcom3.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/qspi0.h</itemPath>
@@ -418,7 +468,6 @@
             <itemPath>../src/packs/SAMA7D65_DFP/instance/sdmmc1.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/ssc0.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/xdmac2.h</itemPath>
-            <itemPath>../src/packs/SAMA7D65_DFP/instance/uhphs_ohci.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/udphsb.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/gpbr.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/sdmmc0.h</itemPath>
@@ -426,7 +475,6 @@
             <itemPath>../src/packs/SAMA7D65_DFP/instance/ddrumctl.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/securam.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/bsc.h</itemPath>
-            <itemPath>../src/packs/SAMA7D65_DFP/instance/tzaesbs.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/flexcom10.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/i3cc.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/tcpcb.h</itemPath>
@@ -446,7 +494,6 @@
             <itemPath>../src/packs/SAMA7D65_DFP/instance/pit64b3.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/tzpm.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/eic.h</itemPath>
-            <itemPath>../src/packs/SAMA7D65_DFP/instance/uhphs_ehci.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/tzaesb.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/sfrbu.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/pio.h</itemPath>
@@ -481,6 +528,7 @@
             <itemPath>../src/packs/SAMA7D65_DFP/instance/nicgpv0.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/flexcom5.h</itemPath>
             <itemPath>../src/packs/SAMA7D65_DFP/instance/mcan1.h</itemPath>
+            <itemPath>../src/packs/SAMA7D65_DFP/instance/uhpfs.h</itemPath>
           </logicalFolder>
           <logicalFolder name="pio" displayName="pio" projectFiles="true">
             <itemPath>../src/packs/SAMA7D65_DFP/pio/sama7d65.h</itemPath>
@@ -501,6 +549,7 @@
           <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/rtt.yml</itemPath>
           <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/gfx_display_comp_ac40t08a.yml</itemPath>
           <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/sys_time.yml</itemPath>
+          <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/FreeRTOS.yml</itemPath>
           <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/le_gfx_driver_gpu2dc.yml</itemPath>
           <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/le_gfx_driver_xlcdc.yml</itemPath>
           <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/drv_i2c.yml</itemPath>
@@ -836,6 +885,9 @@
               </logicalFolder>
             </logicalFolder>
           </logicalFolder>
+          <logicalFolder name="osal" displayName="osal" projectFiles="true">
+            <itemPath>../src/config/curiosity_ac40t08a/osal/osal_freertos.c</itemPath>
+          </logicalFolder>
           <logicalFolder name="peripheral" displayName="peripheral" projectFiles="true">
             <logicalFolder name="clk" displayName="clk" projectFiles="true">
               <itemPath>../src/config/curiosity_ac40t08a/peripheral/clk/plib_clk.c</itemPath>
@@ -852,6 +904,11 @@
               <logicalFolder name="usart" displayName="usart" projectFiles="true">
                 <itemPath>../src/config/curiosity_ac40t08a/peripheral/flexcom/usart/plib_flexcom6_usart.c</itemPath>
               </logicalFolder>
+            </logicalFolder>
+            <logicalFolder name="generic_timer"
+                           displayName="generic_timer"
+                           projectFiles="true">
+              <itemPath>../src/config/curiosity_ac40t08a/peripheral/generic_timer/plib_generic_timer.c</itemPath>
             </logicalFolder>
             <logicalFolder name="gic" displayName="gic" projectFiles="true">
               <itemPath>../src/config/curiosity_ac40t08a/peripheral/gic/plib_gic.c</itemPath>
@@ -889,6 +946,32 @@
           <itemPath>../src/config/curiosity_ac40t08a/interrupts.c</itemPath>
           <itemPath>../src/config/curiosity_ac40t08a/cstartup.S</itemPath>
           <itemPath>../src/config/curiosity_ac40t08a/fault_handlers.c</itemPath>
+          <itemPath>../src/config/curiosity_ac40t08a/freertos_hooks.c</itemPath>
+        </logicalFolder>
+      </logicalFolder>
+      <logicalFolder name="FreeRTOS" displayName="FreeRTOS" projectFiles="true">
+        <logicalFolder name="Source" displayName="Source" projectFiles="true">
+          <logicalFolder name="portable" displayName="portable" projectFiles="true">
+            <logicalFolder name="MemMang" displayName="MemMang" projectFiles="true">
+              <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/MemMang/heap_1.c</itemPath>
+            </logicalFolder>
+            <logicalFolder name="XC32" displayName="XC32" projectFiles="true">
+              <logicalFolder name="SAM" displayName="SAM" projectFiles="true">
+                <logicalFolder name="CA7" displayName="CA7" projectFiles="true">
+                  <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA7/FreeRTOS_tick_config.c</itemPath>
+                  <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA7/port.c</itemPath>
+                  <itemPath>../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA7/portASM.S</itemPath>
+                </logicalFolder>
+              </logicalFolder>
+            </logicalFolder>
+          </logicalFolder>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/croutine.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/list.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/queue.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/FreeRTOS_tasks.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/timers.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/event_groups.c</itemPath>
+          <itemPath>../src/third_party/rtos/FreeRTOS/Source/stream_buffer.c</itemPath>
         </logicalFolder>
       </logicalFolder>
       <itemPath>../src/config/curiosity_ac40t08a/pin_configurations.csv</itemPath>
@@ -957,7 +1040,6 @@
       <C32>
         <property key="additional-warnings" value="true"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value="-D__CORTEX_A=7 -D__TIM_PRESENT=1 -marm"/>
         <property key="cast-align" value="false"/>
         <property key="code-model" value="default"/>
         <property key="const-model" value="default"/>
@@ -972,7 +1054,7 @@
         <property key="exclude-floating-point" value="false"/>
         <property key="expand-pragma-config" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/curiosity_ac40t08a;../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/SAMA7D65_DFP"/>
+                  value="../src;../src/config/curiosity_ac40t08a;../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/SAMA7D65_DFP;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA7"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>
@@ -992,7 +1074,7 @@
         <property key="post-instruction-scheduling" value="default"/>
         <property key="pre-instruction-scheduling" value="default"/>
         <property key="preprocessor-macros"
-                  value="LE_NO_CACHE_ATTR=__attribute__((section(\&quot;.region_nocache\&quot;),aligned(16)))"/>
+                  value="LE_NO_CACHE_ATTR=__attribute__((section(\&quot;.region_nocache\&quot;),aligned(16)));RTOS_ENABLED"/>
         <property key="scalar-model" value="default"/>
         <property key="strict-ansi" value="false"/>
         <property key="support-ansi" value="false"/>
@@ -1038,7 +1120,6 @@
         <property key="additional-options-use-response-files" value="false"/>
         <property key="additional-options-write-sla" value="false"/>
         <property key="allocate-dinit" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="code-dinit" value="false"/>
         <property key="ebase-addr" value=""/>
         <property key="enable-check-sections" value="false"/>
@@ -1084,7 +1165,6 @@
       <C32CPP>
         <property key="additional-warnings" value="false"/>
         <property key="addresss-attribute-use" value="false"/>
-        <property key="appendMe" value=""/>
         <property key="check-new" value="false"/>
         <property key="eh-specs" value="true"/>
         <property key="enable-app-io" value="false"/>
@@ -1094,7 +1174,7 @@
         <property key="exceptions" value="true"/>
         <property key="exclude-floating-point" value="false"/>
         <property key="extra-include-directories"
-                  value="../src;../src/config/curiosity_ac40t08a;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/SAMA7D65_DFP"/>
+                  value="../src;../src/config/curiosity_ac40t08a;../src/packs/CMSIS/;../src/packs/CMSIS/CMSIS/Core_A/Include;../src/packs/SAMA7D65_DFP;../src/third_party/rtos/FreeRTOS/Source/include;../src/third_party/rtos/FreeRTOS/Source/portable/XC32/SAM/CA7"/>
         <property key="generate-16-bit-code" value="false"/>
         <property key="generate-micro-compressed-code" value="false"/>
         <property key="isolate-each-function" value="true"/>

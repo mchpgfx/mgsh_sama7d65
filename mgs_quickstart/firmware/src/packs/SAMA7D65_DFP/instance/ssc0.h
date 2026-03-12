@@ -1,5 +1,5 @@
 /*
- * Instance header file for ATSAMA7D65D2GN8
+ * Instance header file for ATSAMA7D65D5M
  *
  * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
@@ -19,15 +19,15 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_SSC0_INSTANCE_
 #define _SAMA7D6_SSC0_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for SSC0 peripheral ========== */
-#define SSC0_CLOCK_ID                            (81)       
-#define SSC0_DMAC_ID_RX                          (44)       
-#define SSC0_DMAC_ID_TX                          (45)       
+#define SSC0_CLOCK_ID                            (81)
+#define SSC0_DMAC_ID_RX                          (44)
+#define SSC0_DMAC_ID_TX                          (45)
 #define SSC0_INSTANCE_ID                         (81)       /* Synchronous Serial Interface 0 */
 
 #endif /* _SAMA7D6_SSC0_INSTANCE_ */

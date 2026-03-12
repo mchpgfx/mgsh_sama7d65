@@ -19,9 +19,11 @@
  *
  */
 
-/*      file generated from device description file (ATDF) version None       */
+/*  file generated from device description file (ATDF) version 2025-07-09T17:00:00Z  */
 #ifndef _SAMA7D6_SDMMC_COMPONENT_H_
 #define _SAMA7D6_SDMMC_COMPONENT_H_
+
+#include "core_ca.h"
 
 /* ************************************************************************** */
 /*                     SOFTWARE API DEFINITION FOR SDMMC                      */
@@ -405,30 +407,30 @@
 #define SDMMC_BGCR_SD_SDIO_Msk                _UINT8_(0x0F)                                        /* (SDMMC_BGCR_SD_SDIO) Register Mask  */
 
 
-/* -------- SDMMC_WCR : (SDMMC Offset: 0x2B) (R/W 8) Wakeup Control Register -------- */
-#define SDMMC_WCR_RESETVALUE                  _UINT8_(0x00)                                        /*  (SDMMC_WCR) Wakeup Control Register  Reset Value */
+/* -------- SDMMC_WCR : (SDMMC Offset: 0x2B) (R/W 8) Wake-up Control Register -------- */
+#define SDMMC_WCR_RESETVALUE                  _UINT8_(0x00)                                        /*  (SDMMC_WCR) Wake-up Control Register  Reset Value */
 
-#define SDMMC_WCR_WKENCINT_Pos                _UINT8_(0)                                           /* (SDMMC_WCR) Wakeup Event Enable on Card Interrupt Position */
-#define SDMMC_WCR_WKENCINT_Msk                (_UINT8_(0x1) << SDMMC_WCR_WKENCINT_Pos)             /* (SDMMC_WCR) Wakeup Event Enable on Card Interrupt Mask */
+#define SDMMC_WCR_WKENCINT_Pos                _UINT8_(0)                                           /* (SDMMC_WCR) Wake-up Event Enable on Card Interrupt Position */
+#define SDMMC_WCR_WKENCINT_Msk                (_UINT8_(0x1) << SDMMC_WCR_WKENCINT_Pos)             /* (SDMMC_WCR) Wake-up Event Enable on Card Interrupt Mask */
 #define SDMMC_WCR_WKENCINT(value)             (SDMMC_WCR_WKENCINT_Msk & (_UINT8_(value) << SDMMC_WCR_WKENCINT_Pos)) /* Assignment of value for WKENCINT in the SDMMC_WCR register */
-#define   SDMMC_WCR_WKENCINT_DISABLED_Val     _UINT8_(0x0)                                         /* (SDMMC_WCR) Wakeup Event disabled.  */
-#define   SDMMC_WCR_WKENCINT_ENABLED_Val      _UINT8_(0x1)                                         /* (SDMMC_WCR) Wakeup Event enabled.  */
-#define SDMMC_WCR_WKENCINT_DISABLED           (SDMMC_WCR_WKENCINT_DISABLED_Val << SDMMC_WCR_WKENCINT_Pos) /* (SDMMC_WCR) Wakeup Event disabled. Position */
-#define SDMMC_WCR_WKENCINT_ENABLED            (SDMMC_WCR_WKENCINT_ENABLED_Val << SDMMC_WCR_WKENCINT_Pos) /* (SDMMC_WCR) Wakeup Event enabled. Position */
-#define SDMMC_WCR_WKENCINS_Pos                _UINT8_(1)                                           /* (SDMMC_WCR) Wakeup Event Enable on Card Insertion Position */
-#define SDMMC_WCR_WKENCINS_Msk                (_UINT8_(0x1) << SDMMC_WCR_WKENCINS_Pos)             /* (SDMMC_WCR) Wakeup Event Enable on Card Insertion Mask */
+#define   SDMMC_WCR_WKENCINT_DISABLED_Val     _UINT8_(0x0)                                         /* (SDMMC_WCR) Wake-up Event disabled.  */
+#define   SDMMC_WCR_WKENCINT_ENABLED_Val      _UINT8_(0x1)                                         /* (SDMMC_WCR) Wake-up Event enabled.  */
+#define SDMMC_WCR_WKENCINT_DISABLED           (SDMMC_WCR_WKENCINT_DISABLED_Val << SDMMC_WCR_WKENCINT_Pos) /* (SDMMC_WCR) Wake-up Event disabled. Position */
+#define SDMMC_WCR_WKENCINT_ENABLED            (SDMMC_WCR_WKENCINT_ENABLED_Val << SDMMC_WCR_WKENCINT_Pos) /* (SDMMC_WCR) Wake-up Event enabled. Position */
+#define SDMMC_WCR_WKENCINS_Pos                _UINT8_(1)                                           /* (SDMMC_WCR) Wake-up Event Enable on Card Insertion Position */
+#define SDMMC_WCR_WKENCINS_Msk                (_UINT8_(0x1) << SDMMC_WCR_WKENCINS_Pos)             /* (SDMMC_WCR) Wake-up Event Enable on Card Insertion Mask */
 #define SDMMC_WCR_WKENCINS(value)             (SDMMC_WCR_WKENCINS_Msk & (_UINT8_(value) << SDMMC_WCR_WKENCINS_Pos)) /* Assignment of value for WKENCINS in the SDMMC_WCR register */
-#define   SDMMC_WCR_WKENCINS_DISABLED_Val     _UINT8_(0x0)                                         /* (SDMMC_WCR) Wakeup Event disabled.  */
-#define   SDMMC_WCR_WKENCINS_ENABLED_Val      _UINT8_(0x1)                                         /* (SDMMC_WCR) Wakeup Event enabled.  */
-#define SDMMC_WCR_WKENCINS_DISABLED           (SDMMC_WCR_WKENCINS_DISABLED_Val << SDMMC_WCR_WKENCINS_Pos) /* (SDMMC_WCR) Wakeup Event disabled. Position */
-#define SDMMC_WCR_WKENCINS_ENABLED            (SDMMC_WCR_WKENCINS_ENABLED_Val << SDMMC_WCR_WKENCINS_Pos) /* (SDMMC_WCR) Wakeup Event enabled. Position */
-#define SDMMC_WCR_WKENCREM_Pos                _UINT8_(2)                                           /* (SDMMC_WCR) Wakeup Event Enable on Card Removal Position */
-#define SDMMC_WCR_WKENCREM_Msk                (_UINT8_(0x1) << SDMMC_WCR_WKENCREM_Pos)             /* (SDMMC_WCR) Wakeup Event Enable on Card Removal Mask */
+#define   SDMMC_WCR_WKENCINS_DISABLED_Val     _UINT8_(0x0)                                         /* (SDMMC_WCR) Wake-up Event disabled.  */
+#define   SDMMC_WCR_WKENCINS_ENABLED_Val      _UINT8_(0x1)                                         /* (SDMMC_WCR) Wake-up Event enabled.  */
+#define SDMMC_WCR_WKENCINS_DISABLED           (SDMMC_WCR_WKENCINS_DISABLED_Val << SDMMC_WCR_WKENCINS_Pos) /* (SDMMC_WCR) Wake-up Event disabled. Position */
+#define SDMMC_WCR_WKENCINS_ENABLED            (SDMMC_WCR_WKENCINS_ENABLED_Val << SDMMC_WCR_WKENCINS_Pos) /* (SDMMC_WCR) Wake-up Event enabled. Position */
+#define SDMMC_WCR_WKENCREM_Pos                _UINT8_(2)                                           /* (SDMMC_WCR) Wake-up Event Enable on Card Removal Position */
+#define SDMMC_WCR_WKENCREM_Msk                (_UINT8_(0x1) << SDMMC_WCR_WKENCREM_Pos)             /* (SDMMC_WCR) Wake-up Event Enable on Card Removal Mask */
 #define SDMMC_WCR_WKENCREM(value)             (SDMMC_WCR_WKENCREM_Msk & (_UINT8_(value) << SDMMC_WCR_WKENCREM_Pos)) /* Assignment of value for WKENCREM in the SDMMC_WCR register */
-#define   SDMMC_WCR_WKENCREM_DISABLED_Val     _UINT8_(0x0)                                         /* (SDMMC_WCR) Wakeup Event disabled.  */
-#define   SDMMC_WCR_WKENCREM_ENABLED_Val      _UINT8_(0x1)                                         /* (SDMMC_WCR) Wakeup Event enabled.  */
-#define SDMMC_WCR_WKENCREM_DISABLED           (SDMMC_WCR_WKENCREM_DISABLED_Val << SDMMC_WCR_WKENCREM_Pos) /* (SDMMC_WCR) Wakeup Event disabled. Position */
-#define SDMMC_WCR_WKENCREM_ENABLED            (SDMMC_WCR_WKENCREM_ENABLED_Val << SDMMC_WCR_WKENCREM_Pos) /* (SDMMC_WCR) Wakeup Event enabled. Position */
+#define   SDMMC_WCR_WKENCREM_DISABLED_Val     _UINT8_(0x0)                                         /* (SDMMC_WCR) Wake-up Event disabled.  */
+#define   SDMMC_WCR_WKENCREM_ENABLED_Val      _UINT8_(0x1)                                         /* (SDMMC_WCR) Wake-up Event enabled.  */
+#define SDMMC_WCR_WKENCREM_DISABLED           (SDMMC_WCR_WKENCREM_DISABLED_Val << SDMMC_WCR_WKENCREM_Pos) /* (SDMMC_WCR) Wake-up Event disabled. Position */
+#define SDMMC_WCR_WKENCREM_ENABLED            (SDMMC_WCR_WKENCREM_ENABLED_Val << SDMMC_WCR_WKENCREM_Pos) /* (SDMMC_WCR) Wake-up Event enabled. Position */
 #define SDMMC_WCR_Msk                         _UINT8_(0x07)                                        /* (SDMMC_WCR) Register Mask  */
 
 
@@ -1946,12 +1948,12 @@
 #define   SDMMC_MC3R_ESMEN_ENABLED_Val        _UINT8_(0x1)                                         /* (SDMMC_MC3R) Enhanced Strobe mode is enabled.  */
 #define SDMMC_MC3R_ESMEN_DISABLED             (SDMMC_MC3R_ESMEN_DISABLED_Val << SDMMC_MC3R_ESMEN_Pos) /* (SDMMC_MC3R) Enhanced Strobe mode is disabled. Position */
 #define SDMMC_MC3R_ESMEN_ENABLED              (SDMMC_MC3R_ESMEN_ENABLED_Val << SDMMC_MC3R_ESMEN_Pos) /* (SDMMC_MC3R) Enhanced Strobe mode is enabled. Position */
-#define SDMMC_MC3R_DQSUPVAL_Pos               _UINT8_(3)                                           /* (SDMMC_MC3R) DQS Delay Update Timer Value Position */
+#define SDMMC_MC3R_DQSUPVAL_Pos               _UINT8_(4)                                           /* (SDMMC_MC3R) DQS Delay Update Timer Value Position */
 #define SDMMC_MC3R_DQSUPVAL_Msk               (_UINT8_(0x7) << SDMMC_MC3R_DQSUPVAL_Pos)            /* (SDMMC_MC3R) DQS Delay Update Timer Value Mask */
 #define SDMMC_MC3R_DQSUPVAL(value)            (SDMMC_MC3R_DQSUPVAL_Msk & (_UINT8_(value) << SDMMC_MC3R_DQSUPVAL_Pos)) /* Assignment of value for DQSUPVAL in the SDMMC_MC3R register */
 #define   SDMMC_MC3R_DQSUPVAL_0_Val           _UINT8_(0x0)                                         /* (SDMMC_MC3R) DQS delay update is performed each time a command is sent to the device.  */
 #define SDMMC_MC3R_DQSUPVAL_0                 (SDMMC_MC3R_DQSUPVAL_0_Val << SDMMC_MC3R_DQSUPVAL_Pos) /* (SDMMC_MC3R) DQS delay update is performed each time a command is sent to the device. Position */
-#define SDMMC_MC3R_Msk                        _UINT8_(0x3B)                                        /* (SDMMC_MC3R) Register Mask  */
+#define SDMMC_MC3R_Msk                        _UINT8_(0x73)                                        /* (SDMMC_MC3R) Register Mask  */
 
 
 /* -------- SDMMC_DEBR : (SDMMC Offset: 0x207) (R/W 8) Debounce Register -------- */
@@ -2212,7 +2214,7 @@
 #define SDMMC_HC1R_REG_OFST            _UINT32_(0x28)      /* (SDMMC_HC1R) Host Control 1 Register Offset */
 #define SDMMC_PCR_REG_OFST             _UINT32_(0x29)      /* (SDMMC_PCR) Power Control Register Offset */
 #define SDMMC_BGCR_REG_OFST            _UINT32_(0x2A)      /* (SDMMC_BGCR) Block Gap Control Register Offset */
-#define SDMMC_WCR_REG_OFST             _UINT32_(0x2B)      /* (SDMMC_WCR) Wakeup Control Register Offset */
+#define SDMMC_WCR_REG_OFST             _UINT32_(0x2B)      /* (SDMMC_WCR) Wake-up Control Register Offset */
 #define SDMMC_CCR_REG_OFST             _UINT32_(0x2C)      /* (SDMMC_CCR) Clock Control Register Offset */
 #define SDMMC_TCR_REG_OFST             _UINT32_(0x2E)      /* (SDMMC_TCR) Timeout Control Register Offset */
 #define SDMMC_SRR_REG_OFST             _UINT32_(0x2F)      /* (SDMMC_SRR) Software Reset Register Offset */
@@ -2278,7 +2280,7 @@ typedef struct
   __IO  uint8_t                        SDMMC_HC1R;         /* Offset: 0x28 (R/W  8) Host Control 1 Register */
   __IO  uint8_t                        SDMMC_PCR;          /* Offset: 0x29 (R/W  8) Power Control Register */
   __IO  uint8_t                        SDMMC_BGCR;         /* Offset: 0x2A (R/W  8) Block Gap Control Register */
-  __IO  uint8_t                        SDMMC_WCR;          /* Offset: 0x2B (R/W  8) Wakeup Control Register */
+  __IO  uint8_t                        SDMMC_WCR;          /* Offset: 0x2B (R/W  8) Wake-up Control Register */
   __IO  uint16_t                       SDMMC_CCR;          /* Offset: 0x2C (R/W  16) Clock Control Register */
   __IO  uint8_t                        SDMMC_TCR;          /* Offset: 0x2E (R/W  8) Timeout Control Register */
   __IO  uint8_t                        SDMMC_SRR;          /* Offset: 0x2F (R/W  8) Software Reset Register */

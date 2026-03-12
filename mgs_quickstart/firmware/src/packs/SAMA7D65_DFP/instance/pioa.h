@@ -1,5 +1,5 @@
 /*
- * Instance header file for ATSAMA7D65D2GN8
+ * Instance header file for ATSAMA7D65D5M
  *
  * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
@@ -19,7 +19,7 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_PIOA_INSTANCE_
 #define _SAMA7D6_PIOA_INSTANCE_
 
@@ -29,7 +29,6 @@
 #define PIOA_ABCDSR2_DEFAULT_VAL                 (0x00000000) /* Register value at reset */
 #define PIOA_ABCDSR3_DEFAULT_VAL                 (0x00000000) /* Register value at reset */
 #define PIOA_ABCDSR4_DEFAULT_VAL                 (0x00000000) /* Register value at reset */
-#define PIOA_CLOCK_ID                            (10)       
 #define PIOA_FILTRS_DEFAULT_VAL                  (0x00000000) /* Register value at reset */
 #define PIOA_INSTANCE_ID                         (10)       /* For PIO 0 to 31 */
 #define PIOA_INSTANCE_ID_SINT                    (119)      /* For PIO 0 to 31, Secure Interrupt */

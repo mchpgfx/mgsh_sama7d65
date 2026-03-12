@@ -1,5 +1,5 @@
 /*
- * Instance header file for ATSAMA7D65D2GN8
+ * Instance header file for ATSAMA7D65D5M
  *
  * Copyright (c) 2025 Microchip Technology Inc. and its subsidiaries.
  *
@@ -19,15 +19,15 @@
  *
  */
 
-/* file generated from device description file (ATDF) version None */
+/* file generated from device description file (ATDF) version 2025-07-09T17:00:00Z */
 #ifndef _SAMA7D6_FLEXCOM4_INSTANCE_
 #define _SAMA7D6_FLEXCOM4_INSTANCE_
 
 
 /* ========== Instance Parameter definitions for FLEXCOM4 peripheral ========== */
-#define FLEXCOM4_CLOCK_ID                        (38)       
-#define FLEXCOM4_DMAC_ID_RX                      (13)       
-#define FLEXCOM4_DMAC_ID_TX                      (14)       
+#define FLEXCOM4_CLOCK_ID                        (38)
+#define FLEXCOM4_DMAC_ID_RX                      (13)
+#define FLEXCOM4_DMAC_ID_TX                      (14)
 #define FLEXCOM4_INSTANCE_ID                     (38)       /* FLEXCOM4. Max Generic Clock Frequency = FPCLOCK  3. */
 #define FLEXCOM4_SPI_FIFO_SIZE                   (32)       /* SPI FIFO size */
 #define FLEXCOM4_TWI_FIFO_SIZE                   (32)       /* TWI FIFO size */
