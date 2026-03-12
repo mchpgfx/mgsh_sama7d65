@@ -272,8 +272,6 @@ void SYS_Initialize ( void* data )
     // initialize UI library
     Legato_Initialize();
 
-    DRV_GPU2DC_Initialize();
-
     DISP_Initialize();
 
 

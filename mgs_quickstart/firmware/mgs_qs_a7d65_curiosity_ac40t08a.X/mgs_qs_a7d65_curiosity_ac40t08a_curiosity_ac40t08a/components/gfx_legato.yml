@@ -35,24 +35,6 @@ data:
             type: String
           type: Attributes
         type: DirectDependency
-      - attributes:
-          id: gpu_driver
-        children:
-        - children:
-          - attributes:
-              id: targetComponentID
-            children:
-            - type: Value
-              value: le_gfx_driver_gpu2dc
-            type: String
-          - attributes:
-              id: targetAttachmentID
-            children:
-            - type: Value
-              value: gfx_driver_gpu2dc
-            type: String
-          type: Attributes
-        type: DirectDependency
       type: Attachments
     type: gfx_legato
   elementPosition:
@@ -75,7 +57,7 @@ data:
       - children:
         - attributes:
             id: gfx_legato
-            value: 'true'
+            value: 'false'
           type: Dynamic
         type: Values
       type: Boolean

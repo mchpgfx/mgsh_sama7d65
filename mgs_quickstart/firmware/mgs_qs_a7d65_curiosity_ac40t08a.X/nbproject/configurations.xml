@@ -25,16 +25,6 @@
               <itemPath>../src/config/curiosity_ac40t08a/gfx/display/touch_display.h</itemPath>
             </logicalFolder>
             <logicalFolder name="driver" displayName="driver" projectFiles="true">
-              <logicalFolder name="gpu2dc" displayName="gpu2dc" projectFiles="true">
-                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/nano2D_base.h</itemPath>
-                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/nano2D_enum.h</itemPath>
-                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/nano2D_hal.h</itemPath>
-                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/drv_gfx_gpu2dc.h</itemPath>
-                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/nano2D.h</itemPath>
-                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/version.h</itemPath>
-                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/nano2D_option.h</itemPath>
-                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/nano2D_types.h</itemPath>
-              </logicalFolder>
               <logicalFolder name="xlcdc" displayName="xlcdc" projectFiles="true">
                 <logicalFolder name="bridge" displayName="bridge" projectFiles="true">
                   <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/controller/xlcdc/bridge/dsi/plib_dsi.h</itemPath>
@@ -550,7 +540,6 @@
           <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/gfx_display_comp_ac40t08a.yml</itemPath>
           <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/sys_time.yml</itemPath>
           <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/FreeRTOS.yml</itemPath>
-          <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/le_gfx_driver_gpu2dc.yml</itemPath>
           <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/le_gfx_driver_xlcdc.yml</itemPath>
           <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/drv_i2c.yml</itemPath>
           <itemPath>mgs_qs_a7d65_curiosity_ac40t08a_curiosity_ac40t08a/components/gfx_legato.yml</itemPath>
@@ -603,10 +592,6 @@
               <itemPath>../src/config/curiosity_ac40t08a/gfx/display/touch_display.c</itemPath>
             </logicalFolder>
             <logicalFolder name="driver" displayName="driver" projectFiles="true">
-              <logicalFolder name="gpu2dc" displayName="gpu2dc" projectFiles="true">
-                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/nano2D_hal.c</itemPath>
-                <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/drv_gfx_gpu2dc.c</itemPath>
-              </logicalFolder>
               <logicalFolder name="xlcdc" displayName="xlcdc" projectFiles="true">
                 <logicalFolder name="bridge" displayName="bridge" projectFiles="true">
                   <itemPath>../src/config/curiosity_ac40t08a/gfx/driver/controller/xlcdc/bridge/dsi/plib_dsi.c</itemPath>
@@ -1014,7 +999,6 @@
       <compileType>
         <linkerTool>
           <linkerLibItems>
-            <linkerLibFileItem>../src/config/curiosity_ac40t08a/gfx/driver/gpu2dc/libgpu2dc.a</linkerLibFileItem>
           </linkerLibItems>
         </linkerTool>
         <archiverTool>

@@ -3468,11 +3468,7 @@ data:
       children:
       - children:
         - attributes:
-            id: le_gfx_driver_gpu2dc
-            value: 'true'
-          type: Dynamic
-        - attributes:
-            value: 'true'
+            value: 'false'
           type: User
         type: Values
       type: Boolean
