@@ -16,8 +16,6 @@ extern "C" {
 extern leWidget* Screen3_ImageBackground;
 extern leImageWidget* Screen3_ImageRenderArea;
 extern leWidget* Screen3_ImageSideContainer;
-extern leButtonWidget* Screen3_ButtonWidget_0;
-extern leButtonWidget* Screen3_ButtonWidget_0_0;
 extern leButtonWidget* Screen3_ImageUpdateValue;
 extern leButtonWidget* Screen3_ImageTypeNextButton;
 extern leButtonWidget* Screen3_ImageTypePrevButton;

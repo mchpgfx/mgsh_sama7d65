@@ -6,8 +6,6 @@ static leWidget* root0;
 leWidget* Screen3_ImageBackground;
 leImageWidget* Screen3_ImageRenderArea;
 leWidget* Screen3_ImageSideContainer;
-leButtonWidget* Screen3_ButtonWidget_0;
-leButtonWidget* Screen3_ButtonWidget_0_0;
 leButtonWidget* Screen3_ImageUpdateValue;
 leButtonWidget* Screen3_ImageTypeNextButton;
 leButtonWidget* Screen3_ImageTypePrevButton;
@@ -68,15 +66,15 @@ leResult screenShow_Screen3(void)
 
     Screen3_ImageSideContainer = leWidget_New();
     Screen3_ImageSideContainer->fn->setPosition(Screen3_ImageSideContainer, 570, 150);
-    Screen3_ImageSideContainer->fn->setSize(Screen3_ImageSideContainer, 150, 460);
+    Screen3_ImageSideContainer->fn->setSize(Screen3_ImageSideContainer, 150, 470);
     Screen3_ImageSideContainer->fn->setScheme(Screen3_ImageSideContainer, &WhiteBackgroundScheme);
     Screen3_ImageSideContainer->fn->setBackgroundType(Screen3_ImageSideContainer, LE_WIDGET_BACKGROUND_NONE);
     Screen3_ImageSideContainer->fn->setBorderType(Screen3_ImageSideContainer, LE_WIDGET_BORDER_LINE);
     root0->fn->addChild(root0, (leWidget*)Screen3_ImageSideContainer);
 
     Screen3_ImageUpdateValue = leButtonWidget_New();
-    Screen3_ImageUpdateValue->fn->setPosition(Screen3_ImageUpdateValue, 5, 39);
-    Screen3_ImageUpdateValue->fn->setSize(Screen3_ImageUpdateValue, 140, 31);
+    Screen3_ImageUpdateValue->fn->setPosition(Screen3_ImageUpdateValue, 25, 39);
+    Screen3_ImageUpdateValue->fn->setSize(Screen3_ImageUpdateValue, 100, 31);
     Screen3_ImageUpdateValue->fn->setBackgroundType(Screen3_ImageUpdateValue, LE_WIDGET_BACKGROUND_NONE);
     Screen3_ImageUpdateValue->fn->setToggleable(Screen3_ImageUpdateValue, LE_TRUE);
     Screen3_ImageUpdateValue->fn->setString(Screen3_ImageUpdateValue, (leString*)&string_NumsLittle);
@@ -113,21 +111,21 @@ leResult screenShow_Screen3(void)
     Screen3_ImageSideContainer->fn->addChild(Screen3_ImageSideContainer, (leWidget*)Screen3_ImageTypeLabel);
 
     Screen3_ImageSizeValue = leLabelWidget_New();
-    Screen3_ImageSizeValue->fn->setPosition(Screen3_ImageSizeValue, 35, 112);
+    Screen3_ImageSizeValue->fn->setPosition(Screen3_ImageSizeValue, 55, 112);
     Screen3_ImageSizeValue->fn->setSize(Screen3_ImageSizeValue, 75, 23);
     Screen3_ImageSizeValue->fn->setBackgroundType(Screen3_ImageSizeValue, LE_WIDGET_BACKGROUND_NONE);
     Screen3_ImageSizeValue->fn->setString(Screen3_ImageSizeValue, (leString*)&string_NumsTiny);
     Screen3_ImageSideContainer->fn->addChild(Screen3_ImageSideContainer, (leWidget*)Screen3_ImageSizeValue);
 
     Screen3_ImageSizeLabel = leLabelWidget_New();
-    Screen3_ImageSizeLabel->fn->setPosition(Screen3_ImageSizeLabel, 4, 113);
+    Screen3_ImageSizeLabel->fn->setPosition(Screen3_ImageSizeLabel, 24, 113);
     Screen3_ImageSizeLabel->fn->setSize(Screen3_ImageSizeLabel, 33, 19);
     Screen3_ImageSizeLabel->fn->setBackgroundType(Screen3_ImageSizeLabel, LE_WIDGET_BACKGROUND_NONE);
     Screen3_ImageSizeLabel->fn->setString(Screen3_ImageSizeLabel, (leString*)&string_Size);
     Screen3_ImageSideContainer->fn->addChild(Screen3_ImageSideContainer, (leWidget*)Screen3_ImageSizeLabel);
 
     Screen3_ImageSizeUpButton = leButtonWidget_New();
-    Screen3_ImageSizeUpButton->fn->setPosition(Screen3_ImageSizeUpButton, 57, 136);
+    Screen3_ImageSizeUpButton->fn->setPosition(Screen3_ImageSizeUpButton, 77, 136);
     Screen3_ImageSizeUpButton->fn->setSize(Screen3_ImageSizeUpButton, 55, 30);
     Screen3_ImageSizeUpButton->fn->setBackgroundType(Screen3_ImageSizeUpButton, LE_WIDGET_BACKGROUND_NONE);
     Screen3_ImageSizeUpButton->fn->setString(Screen3_ImageSizeUpButton, (leString*)&string_Plus);
@@ -135,7 +133,7 @@ leResult screenShow_Screen3(void)
     Screen3_ImageSideContainer->fn->addChild(Screen3_ImageSideContainer, (leWidget*)Screen3_ImageSizeUpButton);
 
     Screen3_ImageSizeDownButton = leButtonWidget_New();
-    Screen3_ImageSizeDownButton->fn->setPosition(Screen3_ImageSizeDownButton, 1, 136);
+    Screen3_ImageSizeDownButton->fn->setPosition(Screen3_ImageSizeDownButton, 21, 136);
     Screen3_ImageSizeDownButton->fn->setSize(Screen3_ImageSizeDownButton, 55, 30);
     Screen3_ImageSizeDownButton->fn->setBackgroundType(Screen3_ImageSizeDownButton, LE_WIDGET_BACKGROUND_NONE);
     Screen3_ImageSizeDownButton->fn->setString(Screen3_ImageSizeDownButton, (leString*)&string_Minus);
@@ -143,7 +141,7 @@ leResult screenShow_Screen3(void)
     Screen3_ImageSideContainer->fn->addChild(Screen3_ImageSideContainer, (leWidget*)Screen3_ImageSizeDownButton);
 
     Screen3_ImageNextButton = leButtonWidget_New();
-    Screen3_ImageNextButton->fn->setPosition(Screen3_ImageNextButton, 57, 400);
+    Screen3_ImageNextButton->fn->setPosition(Screen3_ImageNextButton, 35, 400);
     Screen3_ImageNextButton->fn->setSize(Screen3_ImageNextButton, 90, 50);
     Screen3_ImageNextButton->fn->setBackgroundType(Screen3_ImageNextButton, LE_WIDGET_BACKGROUND_NONE);
     Screen3_ImageNextButton->fn->setString(Screen3_ImageNextButton, (leString*)&string_Next);
@@ -151,7 +149,7 @@ leResult screenShow_Screen3(void)
     Screen3_ImageSideContainer->fn->addChild(Screen3_ImageSideContainer, (leWidget*)Screen3_ImageNextButton);
 
     Screen3_ImageContainerTitle = leLabelWidget_New();
-    Screen3_ImageContainerTitle->fn->setPosition(Screen3_ImageContainerTitle, 0, 2);
+    Screen3_ImageContainerTitle->fn->setPosition(Screen3_ImageContainerTitle, 20, 2);
     Screen3_ImageContainerTitle->fn->setSize(Screen3_ImageContainerTitle, 111, 25);
     Screen3_ImageContainerTitle->fn->setBackgroundType(Screen3_ImageContainerTitle, LE_WIDGET_BACKGROUND_NONE);
     Screen3_ImageContainerTitle->fn->setHAlignment(Screen3_ImageContainerTitle, LE_HALIGN_CENTER);
@@ -159,7 +157,7 @@ leResult screenShow_Screen3(void)
     Screen3_ImageSideContainer->fn->addChild(Screen3_ImageSideContainer, (leWidget*)Screen3_ImageContainerTitle);
 
     Screen3_ImageRefreshValue = leLabelWidget_New();
-    Screen3_ImageRefreshValue->fn->setPosition(Screen3_ImageRefreshValue, 7, 89);
+    Screen3_ImageRefreshValue->fn->setPosition(Screen3_ImageRefreshValue, 27, 89);
     Screen3_ImageRefreshValue->fn->setSize(Screen3_ImageRefreshValue, 101, 24);
     Screen3_ImageRefreshValue->fn->setBackgroundType(Screen3_ImageRefreshValue, LE_WIDGET_BACKGROUND_NONE);
     Screen3_ImageRefreshValue->fn->setHAlignment(Screen3_ImageRefreshValue, LE_HALIGN_CENTER);
@@ -167,14 +165,14 @@ leResult screenShow_Screen3(void)
     Screen3_ImageSideContainer->fn->addChild(Screen3_ImageSideContainer, (leWidget*)Screen3_ImageRefreshValue);
 
     Screen3_ImageRefreshLabel = leLabelWidget_New();
-    Screen3_ImageRefreshLabel->fn->setPosition(Screen3_ImageRefreshLabel, 1, 68);
+    Screen3_ImageRefreshLabel->fn->setPosition(Screen3_ImageRefreshLabel, 21, 68);
     Screen3_ImageRefreshLabel->fn->setSize(Screen3_ImageRefreshLabel, 109, 18);
     Screen3_ImageRefreshLabel->fn->setBackgroundType(Screen3_ImageRefreshLabel, LE_WIDGET_BACKGROUND_NONE);
     Screen3_ImageRefreshLabel->fn->setString(Screen3_ImageRefreshLabel, (leString*)&string_RefreshRate);
     Screen3_ImageSideContainer->fn->addChild(Screen3_ImageSideContainer, (leWidget*)Screen3_ImageRefreshLabel);
 
     Screen3_ImageUpdateLabel = leLabelWidget_New();
-    Screen3_ImageUpdateLabel->fn->setPosition(Screen3_ImageUpdateLabel, 1, 22);
+    Screen3_ImageUpdateLabel->fn->setPosition(Screen3_ImageUpdateLabel, 21, 22);
     Screen3_ImageUpdateLabel->fn->setSize(Screen3_ImageUpdateLabel, 110, 19);
     Screen3_ImageUpdateLabel->fn->setBackgroundType(Screen3_ImageUpdateLabel, LE_WIDGET_BACKGROUND_NONE);
     Screen3_ImageUpdateLabel->fn->setString(Screen3_ImageUpdateLabel, (leString*)&string_FPS);
@@ -182,21 +180,9 @@ leResult screenShow_Screen3(void)
 
     Screen3_FPSLabel = leLabelWidget_New();
     Screen3_FPSLabel->fn->setPosition(Screen3_FPSLabel, 5, 220);
-    Screen3_FPSLabel->fn->setSize(Screen3_FPSLabel, 110, 80);
+    Screen3_FPSLabel->fn->setSize(Screen3_FPSLabel, 143, 80);
     Screen3_FPSLabel->fn->setBackgroundType(Screen3_FPSLabel, LE_WIDGET_BACKGROUND_NONE);
     Screen3_ImageSideContainer->fn->addChild(Screen3_ImageSideContainer, (leWidget*)Screen3_FPSLabel);
-
-    Screen3_ButtonWidget_0 = leButtonWidget_New();
-    Screen3_ButtonWidget_0->fn->setPosition(Screen3_ButtonWidget_0, 313, 751);
-    Screen3_ButtonWidget_0->fn->setSize(Screen3_ButtonWidget_0, 204, 99);
-    Screen3_ButtonWidget_0->fn->setScheme(Screen3_ButtonWidget_0, &ColorTransA);
-    root0->fn->addChild(root0, (leWidget*)Screen3_ButtonWidget_0);
-
-    Screen3_ButtonWidget_0_0 = leButtonWidget_New();
-    Screen3_ButtonWidget_0_0->fn->setPosition(Screen3_ButtonWidget_0_0, 173, 751);
-    Screen3_ButtonWidget_0_0->fn->setSize(Screen3_ButtonWidget_0_0, 204, 99);
-    Screen3_ButtonWidget_0_0->fn->setScheme(Screen3_ButtonWidget_0_0, &ColoTranspB);
-    root0->fn->addChild(root0, (leWidget*)Screen3_ButtonWidget_0_0);
 
     leAddRootWidget(root0, 0);
     leSetLayerColorMode(0, LE_COLOR_MODE_RGBA_8888);
@@ -227,8 +213,6 @@ void screenHide_Screen3(void)
     Screen3_ImageBackground = NULL;
     Screen3_ImageRenderArea = NULL;
     Screen3_ImageSideContainer = NULL;
-    Screen3_ButtonWidget_0 = NULL;
-    Screen3_ButtonWidget_0_0 = NULL;
     Screen3_ImageUpdateValue = NULL;
     Screen3_ImageTypeNextButton = NULL;
     Screen3_ImageTypePrevButton = NULL;

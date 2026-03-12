@@ -172,24 +172,4 @@ data:
           type: Boolean
         type: Attributes
       type: File
-    RTOSStackSize:
-      attributes:
-        id: RTOSStackSize
-      children:
-      - children:
-        - attributes:
-            value: '2048'
-          type: User
-        type: Values
-      type: Integer
-    RTOSTaskDelay:
-      attributes:
-        id: RTOSTaskDelay
-      children:
-      - children:
-        - attributes:
-            value: '2'
-          type: User
-        type: Values
-      type: Integer
   userData: {}

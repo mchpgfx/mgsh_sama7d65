@@ -156,6 +156,10 @@ static lePixelBuffer _widgetBuffer;
 
 static uint32_t maxScratchPixels;
 
+//CUSTOM CODE - DO NOT REMOVE OR MODIFY!!!
+static uint32_t scratchBuff = SCRATCH_BUFFER_SZ;
+//END OF CUSTOM CODE
+
 static LE_COHERENT_ATTR struct leScratchBuffer _scratchBuffers[LE_SCRATCH_BUFFER_COUNT];
 
 static leEvent paintEvt = { LE_WIDGET_EVENT_PAINT };
@@ -189,6 +193,21 @@ size_t leRenderer_GetDrawCount(void)
 {
     return _rendererState.drawCount;
 }
+
+//CUSTOM CODE - DO NOT REMOVE OR MODIFY!!!
+void leSetScratchBufferSizeKB(uint32_t sizeKB)
+{
+    sizeKB = (sizeKB > LE_SCRATCH_BUFFER_SIZE_KB) ?
+            LE_SCRATCH_BUFFER_SIZE_KB : sizeKB;
+    
+    scratchBuff = sizeKB * 1024;
+}
+
+uint32_t leGetScratchBufferSizeKB(void)
+{
+    return scratchBuff / 1024;
+}
+//END OF CUSTOM CODE
 
 lePixelBuffer* leGetRenderBuffer(void)
 {

@@ -144,15 +144,15 @@ leResult screenShow_Screen2(void)
     root0->fn->addChild(root0, (leWidget*)Screen2_RectMotionWidget1);
 
     Screen2_MotionSideContainer = leWidget_New();
-    Screen2_MotionSideContainer->fn->setPosition(Screen2_MotionSideContainer, 600, 150);
-    Screen2_MotionSideContainer->fn->setSize(Screen2_MotionSideContainer, 120, 460);
+    Screen2_MotionSideContainer->fn->setPosition(Screen2_MotionSideContainer, 570, 150);
+    Screen2_MotionSideContainer->fn->setSize(Screen2_MotionSideContainer, 150, 470);
     Screen2_MotionSideContainer->fn->setScheme(Screen2_MotionSideContainer, &WhiteBackgroundScheme);
     Screen2_MotionSideContainer->fn->setBackgroundType(Screen2_MotionSideContainer, LE_WIDGET_BACKGROUND_NONE);
     Screen2_MotionSideContainer->fn->setBorderType(Screen2_MotionSideContainer, LE_WIDGET_BORDER_LINE);
     root0->fn->addChild(root0, (leWidget*)Screen2_MotionSideContainer);
 
     Screen2_MotionUpdateValue = leButtonWidget_New();
-    Screen2_MotionUpdateValue->fn->setPosition(Screen2_MotionUpdateValue, 4, 39);
+    Screen2_MotionUpdateValue->fn->setPosition(Screen2_MotionUpdateValue, 24, 39);
     Screen2_MotionUpdateValue->fn->setSize(Screen2_MotionUpdateValue, 105, 30);
     Screen2_MotionUpdateValue->fn->setBackgroundType(Screen2_MotionUpdateValue, LE_WIDGET_BACKGROUND_NONE);
     Screen2_MotionUpdateValue->fn->setToggleable(Screen2_MotionUpdateValue, LE_TRUE);
@@ -160,7 +160,7 @@ leResult screenShow_Screen2(void)
     Screen2_MotionSideContainer->fn->addChild(Screen2_MotionSideContainer, (leWidget*)Screen2_MotionUpdateValue);
 
     Screen2_MotionSizeUpButton = leButtonWidget_New();
-    Screen2_MotionSizeUpButton->fn->setPosition(Screen2_MotionSizeUpButton, 57, 184);
+    Screen2_MotionSizeUpButton->fn->setPosition(Screen2_MotionSizeUpButton, 77, 184);
     Screen2_MotionSizeUpButton->fn->setSize(Screen2_MotionSizeUpButton, 55, 30);
     Screen2_MotionSizeUpButton->fn->setBackgroundType(Screen2_MotionSizeUpButton, LE_WIDGET_BACKGROUND_NONE);
     Screen2_MotionSizeUpButton->fn->setString(Screen2_MotionSizeUpButton, (leString*)&string_Plus);
@@ -168,7 +168,7 @@ leResult screenShow_Screen2(void)
     Screen2_MotionSideContainer->fn->addChild(Screen2_MotionSideContainer, (leWidget*)Screen2_MotionSizeUpButton);
 
     Screen2_MotionSizeDownButton = leButtonWidget_New();
-    Screen2_MotionSizeDownButton->fn->setPosition(Screen2_MotionSizeDownButton, 1, 184);
+    Screen2_MotionSizeDownButton->fn->setPosition(Screen2_MotionSizeDownButton, 21, 184);
     Screen2_MotionSizeDownButton->fn->setSize(Screen2_MotionSizeDownButton, 55, 30);
     Screen2_MotionSizeDownButton->fn->setBackgroundType(Screen2_MotionSizeDownButton, LE_WIDGET_BACKGROUND_NONE);
     Screen2_MotionSizeDownButton->fn->setString(Screen2_MotionSizeDownButton, (leString*)&string_Minus);
@@ -176,35 +176,35 @@ leResult screenShow_Screen2(void)
     Screen2_MotionSideContainer->fn->addChild(Screen2_MotionSideContainer, (leWidget*)Screen2_MotionSizeDownButton);
 
     Screen2_MotionRectSizeValue = leLabelWidget_New();
-    Screen2_MotionRectSizeValue->fn->setPosition(Screen2_MotionRectSizeValue, 44, 167);
+    Screen2_MotionRectSizeValue->fn->setPosition(Screen2_MotionRectSizeValue, 64, 167);
     Screen2_MotionRectSizeValue->fn->setSize(Screen2_MotionRectSizeValue, 62, 16);
     Screen2_MotionRectSizeValue->fn->setBackgroundType(Screen2_MotionRectSizeValue, LE_WIDGET_BACKGROUND_NONE);
     Screen2_MotionRectSizeValue->fn->setString(Screen2_MotionRectSizeValue, (leString*)&string_NumsTiny);
     Screen2_MotionSideContainer->fn->addChild(Screen2_MotionSideContainer, (leWidget*)Screen2_MotionRectSizeValue);
 
     Screen2_MotionRectSizeLabel = leLabelWidget_New();
-    Screen2_MotionRectSizeLabel->fn->setPosition(Screen2_MotionRectSizeLabel, 2, 162);
+    Screen2_MotionRectSizeLabel->fn->setPosition(Screen2_MotionRectSizeLabel, 22, 162);
     Screen2_MotionRectSizeLabel->fn->setSize(Screen2_MotionRectSizeLabel, 38, 22);
     Screen2_MotionRectSizeLabel->fn->setBackgroundType(Screen2_MotionRectSizeLabel, LE_WIDGET_BACKGROUND_NONE);
     Screen2_MotionRectSizeLabel->fn->setString(Screen2_MotionRectSizeLabel, (leString*)&string_Size);
     Screen2_MotionSideContainer->fn->addChild(Screen2_MotionSideContainer, (leWidget*)Screen2_MotionRectSizeLabel);
 
     Screen2_MotionRectCount = leLabelWidget_New();
-    Screen2_MotionRectCount->fn->setPosition(Screen2_MotionRectCount, 44, 114);
+    Screen2_MotionRectCount->fn->setPosition(Screen2_MotionRectCount, 64, 114);
     Screen2_MotionRectCount->fn->setSize(Screen2_MotionRectCount, 24, 16);
     Screen2_MotionRectCount->fn->setBackgroundType(Screen2_MotionRectCount, LE_WIDGET_BACKGROUND_NONE);
     Screen2_MotionRectCount->fn->setString(Screen2_MotionRectCount, (leString*)&string_NumsTiny);
     Screen2_MotionSideContainer->fn->addChild(Screen2_MotionSideContainer, (leWidget*)Screen2_MotionRectCount);
 
     Screen2_MotionNumLabel = leLabelWidget_New();
-    Screen2_MotionNumLabel->fn->setPosition(Screen2_MotionNumLabel, 2, 112);
+    Screen2_MotionNumLabel->fn->setPosition(Screen2_MotionNumLabel, 22, 112);
     Screen2_MotionNumLabel->fn->setSize(Screen2_MotionNumLabel, 38, 19);
     Screen2_MotionNumLabel->fn->setBackgroundType(Screen2_MotionNumLabel, LE_WIDGET_BACKGROUND_NONE);
     Screen2_MotionNumLabel->fn->setString(Screen2_MotionNumLabel, (leString*)&string_RectanglesNum);
     Screen2_MotionSideContainer->fn->addChild(Screen2_MotionSideContainer, (leWidget*)Screen2_MotionNumLabel);
 
     Screen2_MotionPlusButton = leButtonWidget_New();
-    Screen2_MotionPlusButton->fn->setPosition(Screen2_MotionPlusButton, 57, 133);
+    Screen2_MotionPlusButton->fn->setPosition(Screen2_MotionPlusButton, 77, 133);
     Screen2_MotionPlusButton->fn->setSize(Screen2_MotionPlusButton, 55, 30);
     Screen2_MotionPlusButton->fn->setBackgroundType(Screen2_MotionPlusButton, LE_WIDGET_BACKGROUND_NONE);
     Screen2_MotionPlusButton->fn->setString(Screen2_MotionPlusButton, (leString*)&string_Plus);
@@ -212,7 +212,7 @@ leResult screenShow_Screen2(void)
     Screen2_MotionSideContainer->fn->addChild(Screen2_MotionSideContainer, (leWidget*)Screen2_MotionPlusButton);
 
     Screen2_MotionMinusButton = leButtonWidget_New();
-    Screen2_MotionMinusButton->fn->setPosition(Screen2_MotionMinusButton, 1, 133);
+    Screen2_MotionMinusButton->fn->setPosition(Screen2_MotionMinusButton, 21, 133);
     Screen2_MotionMinusButton->fn->setSize(Screen2_MotionMinusButton, 55, 30);
     Screen2_MotionMinusButton->fn->setBackgroundType(Screen2_MotionMinusButton, LE_WIDGET_BACKGROUND_NONE);
     Screen2_MotionMinusButton->fn->setString(Screen2_MotionMinusButton, (leString*)&string_Minus);
@@ -220,7 +220,7 @@ leResult screenShow_Screen2(void)
     Screen2_MotionSideContainer->fn->addChild(Screen2_MotionSideContainer, (leWidget*)Screen2_MotionMinusButton);
 
     Screen2_MotionNextButton = leButtonWidget_New();
-    Screen2_MotionNextButton->fn->setPosition(Screen2_MotionNextButton, 30, 400);
+    Screen2_MotionNextButton->fn->setPosition(Screen2_MotionNextButton, 35, 400);
     Screen2_MotionNextButton->fn->setSize(Screen2_MotionNextButton, 90, 50);
     Screen2_MotionNextButton->fn->setBackgroundType(Screen2_MotionNextButton, LE_WIDGET_BACKGROUND_NONE);
     Screen2_MotionNextButton->fn->setString(Screen2_MotionNextButton, (leString*)&string_Next);
@@ -228,7 +228,7 @@ leResult screenShow_Screen2(void)
     Screen2_MotionSideContainer->fn->addChild(Screen2_MotionSideContainer, (leWidget*)Screen2_MotionNextButton);
 
     Screen2_MotionContainerTitle = leLabelWidget_New();
-    Screen2_MotionContainerTitle->fn->setPosition(Screen2_MotionContainerTitle, 5, 1);
+    Screen2_MotionContainerTitle->fn->setPosition(Screen2_MotionContainerTitle, 25, 1);
     Screen2_MotionContainerTitle->fn->setSize(Screen2_MotionContainerTitle, 103, 25);
     Screen2_MotionContainerTitle->fn->setBackgroundType(Screen2_MotionContainerTitle, LE_WIDGET_BACKGROUND_NONE);
     Screen2_MotionContainerTitle->fn->setHAlignment(Screen2_MotionContainerTitle, LE_HALIGN_CENTER);
@@ -236,7 +236,7 @@ leResult screenShow_Screen2(void)
     Screen2_MotionSideContainer->fn->addChild(Screen2_MotionSideContainer, (leWidget*)Screen2_MotionContainerTitle);
 
     Screen2_MotionRefreshValue = leLabelWidget_New();
-    Screen2_MotionRefreshValue->fn->setPosition(Screen2_MotionRefreshValue, 6, 88);
+    Screen2_MotionRefreshValue->fn->setPosition(Screen2_MotionRefreshValue, 26, 88);
     Screen2_MotionRefreshValue->fn->setSize(Screen2_MotionRefreshValue, 101, 27);
     Screen2_MotionRefreshValue->fn->setBackgroundType(Screen2_MotionRefreshValue, LE_WIDGET_BACKGROUND_NONE);
     Screen2_MotionRefreshValue->fn->setHAlignment(Screen2_MotionRefreshValue, LE_HALIGN_CENTER);
@@ -244,14 +244,14 @@ leResult screenShow_Screen2(void)
     Screen2_MotionSideContainer->fn->addChild(Screen2_MotionSideContainer, (leWidget*)Screen2_MotionRefreshValue);
 
     Screen2_MotionRefreshLabel = leLabelWidget_New();
-    Screen2_MotionRefreshLabel->fn->setPosition(Screen2_MotionRefreshLabel, 1, 69);
+    Screen2_MotionRefreshLabel->fn->setPosition(Screen2_MotionRefreshLabel, 21, 69);
     Screen2_MotionRefreshLabel->fn->setSize(Screen2_MotionRefreshLabel, 108, 18);
     Screen2_MotionRefreshLabel->fn->setBackgroundType(Screen2_MotionRefreshLabel, LE_WIDGET_BACKGROUND_NONE);
     Screen2_MotionRefreshLabel->fn->setString(Screen2_MotionRefreshLabel, (leString*)&string_RefreshRate);
     Screen2_MotionSideContainer->fn->addChild(Screen2_MotionSideContainer, (leWidget*)Screen2_MotionRefreshLabel);
 
     Screen2_MotionUpdateLabel = leLabelWidget_New();
-    Screen2_MotionUpdateLabel->fn->setPosition(Screen2_MotionUpdateLabel, 1, 22);
+    Screen2_MotionUpdateLabel->fn->setPosition(Screen2_MotionUpdateLabel, 21, 22);
     Screen2_MotionUpdateLabel->fn->setSize(Screen2_MotionUpdateLabel, 108, 18);
     Screen2_MotionUpdateLabel->fn->setBackgroundType(Screen2_MotionUpdateLabel, LE_WIDGET_BACKGROUND_NONE);
     Screen2_MotionUpdateLabel->fn->setString(Screen2_MotionUpdateLabel, (leString*)&string_FPS);
@@ -259,7 +259,7 @@ leResult screenShow_Screen2(void)
 
     Screen2_FPSLabel = leLabelWidget_New();
     Screen2_FPSLabel->fn->setPosition(Screen2_FPSLabel, 5, 240);
-    Screen2_FPSLabel->fn->setSize(Screen2_FPSLabel, 110, 80);
+    Screen2_FPSLabel->fn->setSize(Screen2_FPSLabel, 141, 80);
     Screen2_FPSLabel->fn->setBackgroundType(Screen2_FPSLabel, LE_WIDGET_BACKGROUND_NONE);
     Screen2_MotionSideContainer->fn->addChild(Screen2_MotionSideContainer, (leWidget*)Screen2_FPSLabel);
 

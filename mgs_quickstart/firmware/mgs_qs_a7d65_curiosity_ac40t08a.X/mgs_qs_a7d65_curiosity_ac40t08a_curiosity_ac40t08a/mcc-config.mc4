@@ -29,7 +29,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\app_dsi.c
 - file: ..\src\app_dsi.h
 - file: ..\src\config\curiosity_ac40t08a\FreeRTOSConfig.h
-  hash: af77806ff77e34b789065d382bca0999a4b11067ae72f0cba133a5b2e7371690
+  hash: f6cfda6c19890e2898e16ba8bd3ca2d7466888a79fd4921e5b6c38b4624d73e5
 - file: ..\src\config\curiosity_ac40t08a\configuration.h
   hash: a68054d0be416f40acc9ad8980261488b2ea8d4183470e3e085f37429acd2b18
 - file: ..\src\config\curiosity_ac40t08a\cstartup.S
@@ -37,7 +37,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\curiosity_ac40t08a\ddr.ld
   hash: 702ca94b9cf590ed0881186e5888827c96ea474d91344ebe483139d00d1dc404
 - file: ..\src\config\curiosity_ac40t08a\definitions.h
-  hash: fef877ba01756b71306e5a786bf40547e1961aed3fa45771f0b4dfcede79fef5
+  hash: 237255d9c62974c23840ba864d8356e1aa0368fec7cd8c920de13bd0a717b663
 - file: ..\src\config\curiosity_ac40t08a\device.h
   hash: 3cf585ea5382f313611833378511af83d16bda35f00a1500229496c745c51767
 - file: ..\src\config\curiosity_ac40t08a\device_cache.h
@@ -55,7 +55,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\curiosity_ac40t08a\driver\i2c\src\drv_i2c_local.h
   hash: a5b8e0e4f5644b88470600c3e52e76f9492bfc52e65210d6f94d6b87374e9bce
 - file: ..\src\config\curiosity_ac40t08a\driver\input\drv_maxtouch.c
-  hash: 2344ce6bc66316aedbc7d52da1d8b8e705eb99ffba4ea6489b49dd3fb7f68286
+  hash: ba0152be04e0827a925667465f8449b763404752451803587d6faaae745381f8
 - file: ..\src\config\curiosity_ac40t08a\driver\input\drv_maxtouch.h
   hash: 375f0ff61553b5486cbdc9447e45998c6aa003d3a3745cfc833ebf8de74c2ce9
 - file: ..\src\config\curiosity_ac40t08a\fault_handlers.c
@@ -139,11 +139,11 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\common\legato_utils.h
   hash: 6d1b21c69618c4d05fd85b4415a1a51bc414e4d9a3c85c6dffda10054d28d01b
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\core\legato_event.c
-  hash: 9a8cf4a71448333db137d3d82b98f277e9b630df1be65895b2e9ef9cf3a0fe47
+  hash: c19a45f0b3dce177ddbc0de4f1b9a20ded5be7c0b13953cdbb9e09a72be82483
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\core\legato_event.h
-  hash: fb2f37dbfb7508bf5c493b34f5dd8ff2e853ce27fad53ce2057079a781363561
+  hash: 3fc2e5d685f6d174f8feebaf4f47219ba5691859c0a0228008a4f1be930bcea9
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\core\legato_input.c
-  hash: 6d54fbccee2fe81f89e851d6475ff48b565b93edcdf2a00baae59351405af480
+  hash: f58178c9e04d5f2a6fddfb62fed72d28848a3c8b76256e10bd0ff7265945ea58
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\core\legato_input.h
   hash: b64b85f2884b54b5e9fb5c735d91a0ae7923990cdcfd9d28792d6dc1af7d4a62
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\core\legato_real_i16.c
@@ -201,7 +201,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\generated\le_gen_harmony.h
   hash: a913b0cf5f6029be4a46db040144b14d9949f2e52d9b00576e2373403d530213
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\generated\le_gen_init.c
-  hash: 8d995e62b3c8dca680ec19044ce33256ac19225788cc463a51fcdf72b025118e
+  hash: 8bf8f5bc9e3d1c0c536c3aa0c51ebbd321ac27146fff5c93f2ff5826a6afb324
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\generated\le_gen_init.h
   hash: ec06b3a8e146351a1b322028e757f0d766ceece1cdbb89f52589e14167fca2db
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\generated\le_gen_scheme.c
@@ -211,21 +211,21 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\generated\le_gen_stringtable.c
   hash: c9a0930ed673a2b01af459ba1cc4766b4eecdfdfa64622c4f03b81bd02eef9ec
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Screen0.c
-  hash: 626dc4a0151c67e1fb3ea3bceec4c0229d04f155f81f4c4c666c54305454a7b9
+  hash: 4b488757d46391739adaf28ccd9c53b25a1ab5531d2dd479d0f907cb5b2ccfa4
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Screen0.h
   hash: f02046be560f94811c865630c464f6516573741172364333a7c07514a7479486
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Screen1.c
-  hash: 562934b9c92a7afd2271d253be5f2d029d2ddf1a6fa7fc94f893535132b43e13
+  hash: 5b064aff6f9b70127b0e94bf6a151ea21fbac23a78417fb2c7e7bde85ae010a6
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Screen1.h
   hash: 92903b091c0c65ff87731a9a4f11aa03326c49d3d8f6be132eb791dd908f4e1d
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Screen2.c
-  hash: a6896364a4e847cff4c946206b595112efcbe44337484e67aa58e3db1ab9fc90
+  hash: 574348c26fc565b12a314b7600ee4d55193d6b46669b439f59d5c6763b02e917
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Screen2.h
   hash: 5dec980e5c8b439e683a6e7b72daa7defef1952db5833f79b106d2448f728816
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Screen3.c
-  hash: ba895e4e4b91540fb9e4c65564242c69ca6867192e5a7dcfdd5c0541f846607b
+  hash: 77895c74a7c33a08a07034cf4614883f65d7250197778d056944577b92347802
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\generated\screen\le_gen_screen_Screen3.h
-  hash: 4c642fe7d4a5215edc024f2e0d389eaabfd01049fc3f458c2b213d10843c2da4
+  hash: 08a9a4b471f684ac753209c05c14f89ef299c5390ae12f55896f427830cb3cef
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\image\jpeg\jidctint.c
   hash: 8997d893fe52e5702acd160837989e558b8ee3b3c918055eef8647b2d0a8e7d3
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\image\jpeg\legato_imagedecoder_jpeg.c
@@ -299,7 +299,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\legato.h
   hash: b4ce875200132b2bf0aa6b5a3271b8bc363107741378e3079cbaa14037fbf807
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\legato_config.h
-  hash: 3c842404914f31bbfcd0b44c5055c9ea8073dd6576ddd11b0d794c8fa27391e8
+  hash: 8cb7778808cf2802a0b6dc22ed992274c18b0f6233012fad69d76c2ca8c7559c
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\memory\legato_fixedheap.c
   hash: 197174ddbc7c7ef5c966bee36da8114e64dec8ce734d374c0b31401f800e21bf
 - file: ..\src\config\curiosity_ac40t08a\gfx\legato\memory\legato_fixedheap.h
@@ -717,7 +717,7 @@ generatedFileHashHistoryMap:
 - file: ..\src\config\curiosity_ac40t08a\system\time\sys_time_definitions.h
   hash: 46537746b1d12ece6b682c9be1c8f3f219663c638c21a51a973762b7b393afe6
 - file: ..\src\config\curiosity_ac40t08a\tasks.c
-  hash: 3126d14a8e4bfa19a89cca42980e5c9a4aa7b291034ec80f8de8eac84767ee8e
+  hash: d928b887c4d5dfd6c3e24f4fb82d9411398e0d6c7f76f8395cd85134209daab7
 - file: ..\src\config\curiosity_ac40t08a\toolchain_specifics.h
   hash: 6a9af1e683d2794186c9c57169950fb13e7ebff09b63ce75cd3702405da4b88b
 - file: ..\src\config\curiosity_ac40t08a\user.h

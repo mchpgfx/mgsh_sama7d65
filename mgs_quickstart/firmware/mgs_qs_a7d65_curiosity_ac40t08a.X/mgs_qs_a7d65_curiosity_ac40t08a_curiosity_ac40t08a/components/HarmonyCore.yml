@@ -893,4 +893,32 @@ data:
           type: Dynamic
         type: Values
       type: Combo
+    GEN_APP_RTOS_TASK_0_USE_DELAY:
+      attributes:
+        id: GEN_APP_RTOS_TASK_0_USE_DELAY
+      children:
+      - children:
+        - attributes:
+            value: 'true'
+          type: User
+        type: Values
+      type: Boolean
+    GEN_APP_RTOS_TASK_0_DELAY:
+      attributes:
+        id: GEN_APP_RTOS_TASK_0_DELAY
+      children:
+      - children:
+        - attributes:
+            id: visible
+          children:
+          - type: Value
+            value: 'true'
+          type: Boolean
+        type: Attributes
+      - children:
+        - attributes:
+            value: '0'
+          type: User
+        type: Values
+      type: Integer
   userData: {}

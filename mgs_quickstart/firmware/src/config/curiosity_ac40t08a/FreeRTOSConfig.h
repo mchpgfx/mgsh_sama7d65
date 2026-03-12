@@ -268,7 +268,7 @@
  * or heap_4.c are included in the build.  This value is defaulted to 4096 bytes but
  * it must be tailored to each application.  Note the heap will appear in the .bss
  * section.  See https://www.freertos.org/a00111.html. */
-#define configTOTAL_HEAP_SIZE                   ( ( size_t ) 40960 )
+#define configTOTAL_HEAP_SIZE                   ( ( size_t ) 128960 )
 
 /* Set configAPPLICATION_ALLOCATED_HEAP to 1 to have the application allocate
  * the array used as the FreeRTOS heap.  Set to 0 to have the linker allocate the
@@ -305,7 +305,7 @@
  * functionality in the build.  Set to 0 to exclude the hook functionality from the
  * build.  The application writer is responsible for providing the hook function
  * for any set to 1.  See https://www.freertos.org/a00016.html. */
-#define configUSE_IDLE_HOOK                     0
+#define configUSE_IDLE_HOOK                     1
 #define configUSE_TICK_HOOK                     0
 #define configUSE_MALLOC_FAILED_HOOK            1
 #define configUSE_DAEMON_TASK_STARTUP_HOOK      0
@@ -345,7 +345,7 @@
  * are used by trace and visualisation functions and tools.  Set to 0 to exclude
  * the additional information from the structures. Defaults to 0 if left
  * undefined. */
-#define configUSE_TRACE_FACILITY                0
+#define configUSE_TRACE_FACILITY                1
 
 /* Set to 1 to include the vTaskList() and vTaskGetRunTimeStats() functions in
  * the build.  Set to 0 to exclude these functions from the build.  These two
@@ -399,12 +399,12 @@
 #define INCLUDE_xTaskGetSchedulerState          0
 #define INCLUDE_xTaskGetCurrentTaskHandle       1
 #define INCLUDE_uxTaskGetStackHighWaterMark     0
-#define INCLUDE_xTaskGetIdleTaskHandle          0
+#define INCLUDE_xTaskGetIdleTaskHandle          1
 #define INCLUDE_eTaskGetState                   0
 #define INCLUDE_xEventGroupSetBitFromISR        1
 #define INCLUDE_xTimerPendFunctionCall          0
 #define INCLUDE_xTaskAbortDelay                 0
-#define INCLUDE_xTaskGetHandle                  0
+#define INCLUDE_xTaskGetHandle                  1
 #define INCLUDE_xQueueGetMutexHolder            0
 #define INCLUDE_xSemaphoreGetMutexHolder        0
 #define INCLUDE_uxTaskGetStackHighWaterMark2    0

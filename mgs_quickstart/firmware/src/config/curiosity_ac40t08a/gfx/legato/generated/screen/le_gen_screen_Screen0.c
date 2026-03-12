@@ -42,7 +42,7 @@ leResult screenShow_Screen0(void)
     root0->fn->addChild(root0, (leWidget*)Screen0_SplashBackground);
 
     Screen0_SplashPIC32Logo = leImageWidget_New();
-    Screen0_SplashPIC32Logo->fn->setPosition(Screen0_SplashPIC32Logo, 230, 470);
+    Screen0_SplashPIC32Logo->fn->setPosition(Screen0_SplashPIC32Logo, 200, 469);
     Screen0_SplashPIC32Logo->fn->setSize(Screen0_SplashPIC32Logo, 300, 300);
     Screen0_SplashPIC32Logo->fn->setBackgroundType(Screen0_SplashPIC32Logo, LE_WIDGET_BACKGROUND_NONE);
     Screen0_SplashPIC32Logo->fn->setBorderType(Screen0_SplashPIC32Logo, LE_WIDGET_BORDER_NONE);
@@ -50,8 +50,8 @@ leResult screenShow_Screen0(void)
     root0->fn->addChild(root0, (leWidget*)Screen0_SplashPIC32Logo);
 
     Screen0_SplashHarmonyLogo = leImageWidget_New();
-    Screen0_SplashHarmonyLogo->fn->setPosition(Screen0_SplashHarmonyLogo, 220, 470);
-    Screen0_SplashHarmonyLogo->fn->setSize(Screen0_SplashHarmonyLogo, 320, 300);
+    Screen0_SplashHarmonyLogo->fn->setPosition(Screen0_SplashHarmonyLogo, 190, 465);
+    Screen0_SplashHarmonyLogo->fn->setSize(Screen0_SplashHarmonyLogo, 320, 305);
     Screen0_SplashHarmonyLogo->fn->setVisible(Screen0_SplashHarmonyLogo, LE_FALSE);
     Screen0_SplashHarmonyLogo->fn->setScheme(Screen0_SplashHarmonyLogo, &WhiteBackgroundScheme);
     Screen0_SplashHarmonyLogo->fn->setBorderType(Screen0_SplashHarmonyLogo, LE_WIDGET_BORDER_NONE);
