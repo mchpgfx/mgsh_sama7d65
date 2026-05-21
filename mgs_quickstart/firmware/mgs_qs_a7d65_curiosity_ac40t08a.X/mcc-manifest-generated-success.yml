@@ -2,7 +2,7 @@
 
 manifest_file_version: 1.0.0
 project: mgs_qs_a7d65_curiosity_ac40t08a
-creation_date: 2026-03-13T03:42:49.691+05:30[Asia/Calcutta]
+creation_date: 2026-05-21T15:08:08.270+05:30[Asia/Calcutta]
 operating_system: Windows 11
 mcc_mode: IDE
 mcc_mode_version: v6.30
@@ -22,4 +22,4 @@ modules:
 - {name: csp, type: HARMONY, version: v3.25.1}
 - {name: CMSIS_5, type: HARMONY, version: 5.9.0}
 - {name: FreeRTOS-Kernel, type: HARMONY, version: V11.2.0}
-- {name: gfx, type: HARMONY, version: v3.16.2}
+- {name: gfx, type: HARMONY, version: v3.17.0}

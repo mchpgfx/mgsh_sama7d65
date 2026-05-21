@@ -1001,7 +1001,7 @@
         <platform>3</platform>
       </toolsSet>
       <packs>
-        <pack name="SAMA7D65_DFP" vendor="Microchip" version="1.10.108"/>
+        <pack name="SAMA7D65_DFP" vendor="Microchip" version="1.12.120"/>
       </packs>
       <ScriptingSettings>
         <ScriptingSetting key="boot.load_adr" value=""/>
